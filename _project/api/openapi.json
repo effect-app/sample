@@ -160,6 +160,173 @@
         }
       }
     },
+    "/graph/mutate": {
+      "post": {
+        "operationId": "GraphMutationRequest",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "CreatePost": {
+                    "properties": {
+                      "input": {
+                        "properties": {
+                          "title": {
+                            "minLength": 1,
+                            "maxLength": 255,
+                            "type": "string"
+                          },
+                          "body": {
+                            "minLength": 1,
+                            "maxLength": 2047,
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "title",
+                          "body"
+                        ],
+                        "type": "object"
+                      },
+                      "query": {
+                        "properties": {
+                          "FindBlogPost": {
+                            "properties": {
+                              "input": {
+                                "properties": {
+                                  "id": {
+                                    "minLength": 6,
+                                    "maxLength": 50,
+                                    "title": "BlogPostId",
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "id"
+                                ],
+                                "type": "object"
+                              }
+                            },
+                            "required": [
+                              "input"
+                            ],
+                            "type": "object"
+                          },
+                          "GetAllBlogPosts": {
+                            "properties": {
+                              "input": {
+                                "properties": {},
+                                "type": "object"
+                              }
+                            },
+                            "required": [
+                              "input"
+                            ],
+                            "type": "object"
+                          },
+                          "result": {
+                            "type": "boolean"
+                          }
+                        },
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "input"
+                    ],
+                    "type": "object"
+                  }
+                },
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GraphMutationResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "ValidationError"
+          }
+        }
+      }
+    },
+    "/graph/query": {
+      "post": {
+        "operationId": "GraphQueryRequest",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "FindBlogPost": {
+                    "properties": {
+                      "input": {
+                        "properties": {
+                          "id": {
+                            "minLength": 6,
+                            "maxLength": 50,
+                            "title": "BlogPostId",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "id"
+                        ],
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "input"
+                    ],
+                    "type": "object"
+                  },
+                  "GetAllBlogPosts": {
+                    "properties": {
+                      "input": {
+                        "properties": {},
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "input"
+                    ],
+                    "type": "object"
+                  }
+                },
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GraphQueryResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "ValidationError"
+          }
+        }
+      }
+    },
     "/hello-world": {
       "get": {
         "parameters": [],
@@ -319,6 +486,337 @@
           "body",
           "createdAt"
         ],
+        "type": "object"
+      },
+      "InvalidStateError": {
+        "title": "InvalidStateError",
+        "properties": {
+          "_tag": {
+            "enum": [
+              "InvalidStateError"
+            ],
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "_tag",
+          "message"
+        ],
+        "type": "object"
+      },
+      "OptimisticConcurrencyException": {
+        "title": "OptimisticConcurrencyException",
+        "properties": {
+          "_tag": {
+            "enum": [
+              "OptimisticConcurrencyException"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "_tag"
+        ],
+        "type": "object"
+      },
+      "NotFoundError": {
+        "title": "NotFoundError",
+        "properties": {
+          "_tag": {
+            "enum": [
+              "NotFoundError"
+            ],
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "_tag",
+          "message"
+        ],
+        "type": "object"
+      },
+      "NotLoggedInError": {
+        "title": "NotLoggedInError",
+        "properties": {
+          "_tag": {
+            "enum": [
+              "NotLoggedInError"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "_tag"
+        ],
+        "type": "object"
+      },
+      "UnauthorizedError": {
+        "title": "UnauthorizedError",
+        "properties": {
+          "_tag": {
+            "enum": [
+              "UnauthorizedError"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "_tag"
+        ],
+        "type": "object"
+      },
+      "ValidationError": {
+        "title": "ValidationError",
+        "properties": {
+          "_tag": {
+            "enum": [
+              "ValidationError"
+            ],
+            "type": "string"
+          },
+          "errors": {
+            "items": {
+              "properties": {},
+              "type": "object"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "_tag",
+          "errors"
+        ],
+        "type": "object"
+      },
+      "GraphMutationResponse": {
+        "title": "GraphMutationResponse",
+        "properties": {
+          "CreatePost": {
+            "oneOf": [
+              {
+                "properties": {
+                  "_tag": {
+                    "enum": [
+                      "Left"
+                    ]
+                  },
+                  "left": {
+                    "title": "SupportedErrors",
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/InvalidStateError"
+                      },
+                      {
+                        "$ref": "#/components/schemas/OptimisticConcurrencyException"
+                      },
+                      {
+                        "$ref": "#/components/schemas/NotFoundError"
+                      },
+                      {
+                        "$ref": "#/components/schemas/NotLoggedInError"
+                      },
+                      {
+                        "$ref": "#/components/schemas/UnauthorizedError"
+                      },
+                      {
+                        "$ref": "#/components/schemas/ValidationError"
+                      }
+                    ],
+                    "discriminator": {
+                      "propertyName": "_tag"
+                    }
+                  }
+                },
+                "required": [
+                  "_tag",
+                  "left"
+                ],
+                "type": "object"
+              },
+              {
+                "properties": {
+                  "_tag": {
+                    "enum": [
+                      "Right"
+                    ]
+                  },
+                  "right": {
+                    "properties": {
+                      "response": {
+                        "minLength": 6,
+                        "maxLength": 50,
+                        "title": "BlogPostId",
+                        "type": "string"
+                      },
+                      "query": {
+                        "properties": {
+                          "FindBlogPost": {
+                            "oneOf": [
+                              {
+                                "properties": {
+                                  "_tag": {
+                                    "enum": [
+                                      "Left"
+                                    ]
+                                  },
+                                  "left": {
+                                    "title": "SupportedErrors",
+                                    "oneOf": [
+                                      {
+                                        "$ref": "#/components/schemas/InvalidStateError"
+                                      },
+                                      {
+                                        "$ref": "#/components/schemas/OptimisticConcurrencyException"
+                                      },
+                                      {
+                                        "$ref": "#/components/schemas/NotFoundError"
+                                      },
+                                      {
+                                        "$ref": "#/components/schemas/NotLoggedInError"
+                                      },
+                                      {
+                                        "$ref": "#/components/schemas/UnauthorizedError"
+                                      },
+                                      {
+                                        "$ref": "#/components/schemas/ValidationError"
+                                      }
+                                    ],
+                                    "discriminator": {
+                                      "propertyName": "_tag"
+                                    }
+                                  }
+                                },
+                                "required": [
+                                  "_tag",
+                                  "left"
+                                ],
+                                "type": "object"
+                              },
+                              {
+                                "properties": {
+                                  "_tag": {
+                                    "enum": [
+                                      "Right"
+                                    ]
+                                  },
+                                  "right": {
+                                    "$ref": "#/components/schemas/BlogPost",
+                                    "nullable": true
+                                  }
+                                },
+                                "required": [
+                                  "_tag",
+                                  "right"
+                                ],
+                                "type": "object"
+                              }
+                            ],
+                            "discriminator": {
+                              "propertyName": "_tag"
+                            }
+                          },
+                          "result": {
+                            "$ref": "#/components/schemas/BlogPost"
+                          }
+                        },
+                        "type": "object"
+                      }
+                    },
+                    "required": [
+                      "response"
+                    ],
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "_tag",
+                  "right"
+                ],
+                "type": "object"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "_tag"
+            }
+          }
+        },
+        "type": "object"
+      },
+      "GraphQueryResponse": {
+        "title": "GraphQueryResponse",
+        "properties": {
+          "FindBlogPost": {
+            "oneOf": [
+              {
+                "properties": {
+                  "_tag": {
+                    "enum": [
+                      "Left"
+                    ]
+                  },
+                  "left": {
+                    "title": "SupportedErrors",
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/InvalidStateError"
+                      },
+                      {
+                        "$ref": "#/components/schemas/OptimisticConcurrencyException"
+                      },
+                      {
+                        "$ref": "#/components/schemas/NotFoundError"
+                      },
+                      {
+                        "$ref": "#/components/schemas/NotLoggedInError"
+                      },
+                      {
+                        "$ref": "#/components/schemas/UnauthorizedError"
+                      },
+                      {
+                        "$ref": "#/components/schemas/ValidationError"
+                      }
+                    ],
+                    "discriminator": {
+                      "propertyName": "_tag"
+                    }
+                  }
+                },
+                "required": [
+                  "_tag",
+                  "left"
+                ],
+                "type": "object"
+              },
+              {
+                "properties": {
+                  "_tag": {
+                    "enum": [
+                      "Right"
+                    ]
+                  },
+                  "right": {
+                    "$ref": "#/components/schemas/BlogPost",
+                    "nullable": true
+                  }
+                },
+                "required": [
+                  "_tag",
+                  "right"
+                ],
+                "type": "object"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "_tag"
+            }
+          }
+        },
         "type": "object"
       },
       "User": {
