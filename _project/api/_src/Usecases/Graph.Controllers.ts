@@ -60,7 +60,7 @@ const Query = matchWithEffect("Query")(
       Effect.gen(function*($) {
         const handle = request(req, ctx)
         const r: GraphQueryResponse = yield* $(
-          Effect.all({
+          Effect.allPar({
             // TODO: AllMe currently has a temporal requirement; it must be executed first. (therefore atm requested first..)
             // for two reasons: 1. create the user if it didnt exist yet.
             // 2. because if the user changes locale, its stored on the user object, and put in cache for the follow-up handlers.
@@ -98,7 +98,7 @@ function mutation<Key extends string>(
         : x.isLeft()
         ? Effect(x)
         : (q?.query
-          ? Effect.all({
+          ? Effect.allPar({
             query: Query.flatMap(_ => _(q.query!, ctx)),
             result: resultQuery ? resultQuery(x.right, ctx) : emptyResponse
           }).map(({ query, result }) => ({ ...query, result })) // TODO: Replace $ variables in the query parameters baed on mutation output!
@@ -114,7 +114,7 @@ const Mutation = matchWithEffect("Mutation")(
       Effect.gen(function*($) {
         const handle = mutation(req, ctx)
         const r: GraphMutationResponse = yield* $(
-          Effect.all({
+          Effect.allPar({
             CreatePost: handle(
               "CreatePost",
               blogPostControllers.CreatePost.h,
