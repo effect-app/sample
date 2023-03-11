@@ -9,7 +9,7 @@ const makeMutationInput_ = makeMutationInput(GraphQueryRequest.Api.props)
 
 // TODO: Add The follow-up Graph Query
 // - parse inputs, when string and starts with $, take from mutation output.
-@useClassNameForSchema
+@useClassFeaturesForSchema
 @allowAnonymous
 @allowRoles("user")
 export class GraphMutationRequest extends Post("/graph/mutate")<GraphMutationRequest>()(
@@ -28,7 +28,7 @@ const PostResult = props({
   result: optProp(BlogPost)
 })
 
-@useClassNameForSchema
+@useClassFeaturesForSchema
 export class GraphMutationResponse extends Model<GraphMutationResponse>()({
   // TODO: Support guaranteed optional sub-queries, like on Create/Update of PO
   // guarantee an optional return of PurchaseOrder

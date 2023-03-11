@@ -3,7 +3,7 @@ import { QueryErrors } from "../errors.js"
 import { BlogRsc } from "../index.js"
 import { makeInput } from "./utils.js"
 
-@useClassNameForSchema
+@useClassFeaturesForSchema
 @allowAnonymous
 @allowRoles("user")
 export class GraphQueryRequest extends Post("/graph/query")<GraphQueryRequest>()({
@@ -21,7 +21,7 @@ export class GraphQueryRequest extends Post("/graph/query")<GraphQueryRequest>()
   GetAllBlogPosts: optProp(makeInput(BlogRsc.GetPosts.GetPostsRequest))
 }) {}
 
-@useClassNameForSchema
+@useClassFeaturesForSchema
 export class GraphQueryResponse extends Model<GraphQueryResponse>()({
   // AllMe: optProp(either(QueryErrors, Me.All.GetMeResponse)),
   // AllMeEventlog: optProp(either(QueryErrors, Me.Eventlog.AllMeEventlogResponse)),
