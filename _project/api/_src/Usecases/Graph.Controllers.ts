@@ -2,7 +2,6 @@
  * @experimental
  */
 
-import { BasicRequestEnv } from "@effect-app-boilerplate/messages/RequestLayers"
 import { GraphRsc } from "@effect-app-boilerplate/resources"
 import type { GraphMutationResponse } from "@effect-app-boilerplate/resources/Graph/Mutation"
 import type { GraphQueryRequest, GraphQueryResponse } from "@effect-app-boilerplate/resources/Graph/Query"
@@ -40,9 +39,7 @@ function request<Key extends string>(
         const ctx = yield* $(RequestContextContainer.get)
 
         const r = yield* $(
-          handler(q.input ?? {}, { ...context, context: ctx }).provideSomeContextEffect(
-            BasicRequestEnv
-          )
+          handler(q.input ?? {}, { ...context, context: ctx })
         )
         return r
       })["|>"](Effect.either)
