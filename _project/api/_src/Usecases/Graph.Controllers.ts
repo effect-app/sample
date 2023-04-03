@@ -9,7 +9,7 @@ import { dropUndefined } from "@effect-app/core/utils"
 import { makeRequestId, RequestContext } from "@effect-app/infra/RequestContext"
 import { RequestContextContainer } from "@effect-app/infra/services/RequestContextContainer"
 import type { CTX } from "api/lib/routing.js"
-import { BlogControllers } from "./Blog.Controllers.js"
+import BlogControllers from "./Blog.Controllers.js"
 
 // TODO: Apply roles&rights to individual actions.
 
@@ -26,7 +26,7 @@ function request<Key extends string>(
     const q = req[name]
     return q
       ? Effect.gen(function*($) {
-        yield* $(RequestContextContainer.accessWithEffect(_ =>
+        yield* $(RequestContextContainer.flatMap(_ =>
           _.update(ctx =>
             RequestContext.inherit(ctx, {
               id: makeRequestId(),
@@ -47,10 +47,10 @@ function request<Key extends string>(
   }
 }
 
-const { controllers, matchWithEffect } = matchFor(GraphRsc)
+const graph = matchFor(GraphRsc)
 
 // TODO: Auto generate from the clients
-const Query = matchWithEffect("Query")(
+const Query = graph.matchQuery.withEffect(
   Effect.gen(function*($) {
     const blogPostControllers = yield* $(BlogControllers)
     return (req, ctx) =>
@@ -104,7 +104,7 @@ function mutation<Key extends string>(
   }
 }
 
-const Mutation = matchWithEffect("Mutation")(
+const Mutation = graph.matchMutation.withEffect(
   Effect.gen(function*($) {
     const blogPostControllers = yield* $(BlogControllers)
     return (req, ctx) =>
@@ -168,7 +168,7 @@ const Mutation = matchWithEffect("Mutation")(
 //   }
 // }
 
-export const GraphControllers = controllers({ Query, Mutation })
+export default graph.controllers({ Query, Mutation })
 
 // export const GraphControllers = Effect.struct({
 //   GraphQuery: match(GraphQuery, defaultErrorHandler, handleRequestEnv),
