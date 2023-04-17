@@ -2,7 +2,6 @@ import { BlogPost } from "@effect-app-boilerplate/models/Blog"
 import { BlogRsc } from "@effect-app-boilerplate/resources"
 import { BogusEvent } from "@effect-app-boilerplate/resources/Events"
 import { PositiveInt } from "@effect-app/prelude/schema"
-import { NotFoundError } from "api/errors.js"
 import { BlogPostRepo, Events, Operations } from "api/services.js"
 
 const blog = matchFor(BlogRsc)
@@ -31,11 +30,9 @@ const PublishPost = blog.matchPublishPost(
   { BlogPostRepo, Events, Operations },
   (req, { blogPostRepo, events, operations }) =>
     Do(($) => {
-      $(
-        blogPostRepo
-          .find(req.id)
-          .flatMap((_) => _.encaseInEffect(() => new NotFoundError("BlogPost", req.id)))
-      )
+      const post = $(blogPostRepo.get(req.id))
+
+      console.log("publishing post", post)
 
       const targets = [
         "google",
@@ -63,7 +60,7 @@ const PublishPost = blog.matchPublishPost(
                     )
                     .delay(Duration.seconds(4))
                 )
-                .map(() => "the answer to the universe is 41"),
+                .map(() => "the answer to the universe is 42"),
           // while operation is running...
           (_opId) =>
             Effect

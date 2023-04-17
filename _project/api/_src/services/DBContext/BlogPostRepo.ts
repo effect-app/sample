@@ -1,24 +1,39 @@
 import { BlogPost, BlogPostId } from "@effect-app-boilerplate/models/Blog"
+import { RepositoryDefaultImpl } from "@effect-app/infra/services/RepositoryBase"
 
-export interface BlogPostRepo {
-  all: Effect<never, never, readonly BlogPost[]>
-  find: (id: BlogPostId) => Effect<never, never, Option<BlogPost>>
-  save: (post: BlogPost) => Effect<never, never, void>
+export interface BlogPostPersistenceModel extends BlogPost.Encoded {
+  _etag: string | undefined
 }
-export const BlogPostRepo = Tag<BlogPostRepo>()
 
-export const BlogPostRepoLive = Layer(BlogPostRepo, () => {
-  const items: BlogPost[] = [
-    new BlogPost({
-      id: BlogPostId("post-test123"),
-      title: ReasonableString("Test post"),
-      body: LongString("imma test body")
-    })
-  ]
+export type BlogPostSeed = "sample" | ""
 
-  return {
-    all: Effect([...items]),
-    find: (id) => Effect(items.findFirst((_) => _.id === id)),
-    save: (post) => Effect(items.push(post))
-  }
-})
+/**
+ * @tsplus type BlogPostRepo
+ * @tsplus companion BlogPostRepo.Ops
+ */
+export class BlogPostRepo extends RepositoryDefaultImpl<BlogPostRepo>()<BlogPostPersistenceModel>()(
+  "BlogPost",
+  BlogPost,
+  (pm) => pm,
+  (e, _etag) => ({ ...e, _etag })
+) {}
+
+/**
+ * @tsplus static BlogPostRepo.Ops Live
+ */
+export function LiveBlogPostRepo(seed: BlogPostSeed) {
+  const makeInitial = Effect.sync(() => {
+    const items = seed === "sample"
+      ? [
+        new BlogPost({
+          id: BlogPostId("post-test123"),
+          title: ReasonableString("Test post"),
+          body: LongString("imma test body")
+        })
+      ] as const
+      : []
+    return items
+  })
+  return BlogPostRepo
+    .toLayer((_: Iterable<never>) => Effect.unit, makeInitial)
+}
