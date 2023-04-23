@@ -64,8 +64,8 @@ const PublishPost = blog.matchPublishPost(
           // while operation is running...
           (_opId) =>
             Effect
-              .suspend(() => events.publish(new BogusEvent({})))
-              .schedule(Schedule.spaced(DUR.seconds(1)))
+              .suspend(() => events.publish(new BogusEvent()))
+              .schedule(Schedule.spaced(Duration.seconds(1)))
         )
       )
 
