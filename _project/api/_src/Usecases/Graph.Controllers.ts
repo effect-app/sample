@@ -6,8 +6,9 @@ import { GraphRsc } from "@effect-app-boilerplate/resources"
 import type { GraphMutationResponse } from "@effect-app-boilerplate/resources/Graph/Mutation"
 import type { GraphQueryRequest, GraphQueryResponse } from "@effect-app-boilerplate/resources/Graph/Query"
 import { dropUndefined } from "@effect-app/core/utils"
-import { makeRequestId, RequestContext } from "@effect-app/infra/RequestContext"
+import { RequestContext } from "@effect-app/infra/RequestContext"
 import { RequestContextContainer } from "@effect-app/infra/services/RequestContextContainer"
+import { RequestId } from "@effect-app/prelude/ids"
 import type { CTX } from "api/lib/routing.js"
 import BlogControllers from "./Blog.Controllers.js"
 
@@ -25,24 +26,26 @@ function request<Key extends string>(
   ) => {
     const q = req[name]
     return q
-      ? Effect.gen(function*($) {
-        yield* $(RequestContextContainer.flatMap(_ =>
-          _.update(ctx =>
-            RequestContext.inherit(ctx, {
-              id: makeRequestId(),
-              locale: ctx.locale,
-              name: ReasonableString(name) // TODO: Use name from handler.Request
-            })
+      ? Effect
+        .gen(function*($) {
+          yield* $(RequestContextContainer.flatMap((_) =>
+            _.update((ctx) =>
+              RequestContext.inherit(ctx, {
+                id: RequestId.make(),
+                locale: ctx.locale,
+                name: ReasonableString(name) // TODO: Use name from handler.Request
+              })
+            )
+          ))
+
+          const ctx = yield* $(RequestContextContainer.get)
+
+          const r = yield* $(
+            handler(q.input ?? {}, { ...context, context: ctx })
           )
-        ))
-
-        const ctx = yield* $(RequestContextContainer.get)
-
-        const r = yield* $(
-          handler(q.input ?? {}, { ...context, context: ctx })
-        )
-        return r
-      })["|>"](Effect.either)
+          return r
+        })
+        ["|>"](Effect.either)
       : NoResponse
   }
 }
@@ -89,17 +92,20 @@ function mutation<Key extends string>(
     resultQuery?: (inp: A, ctx: CTX) => Effect<R2, E2, A2>
   ) => {
     const q = req[name]
-    return f(name, handler).flatMap(x =>
+    return f(name, handler).flatMap((x) =>
       !x
         ? Effect(x)
         : x.isLeft()
-        ? Effect(x)
+        ? Effect(Either.left(x.left))
         : (q?.query
-          ? Effect.allPar({
-            query: Query.flatMap(_ => _(q.query!, ctx)),
-            result: resultQuery ? resultQuery(x.right, ctx) : emptyResponse
-          }).map(({ query, result }) => ({ ...query, result })) // TODO: Replace $ variables in the query parameters baed on mutation output!
-          : emptyResponse).map(query => Either(query ? { query, response: x.right } : { response: x.right }))
+          ? Effect
+            .allPar({
+              query: Query.flatMap((_) => _(q.query!, ctx)),
+              result: resultQuery ? resultQuery(x.right, ctx) : emptyResponse
+            })
+            .map(({ query, result }) => ({ ...query, result })) // TODO: Replace $ variables in the query parameters baed on mutation output!
+          : emptyResponse)
+          .map((query) => Either(query ? { query, response: x.right } : { response: x.right }))
     )
   }
 }
@@ -116,8 +122,10 @@ const Mutation = graph.matchMutation.withEffect(
               "CreatePost",
               blogPostControllers.CreatePost.h,
               (id, ctx) =>
-                blogPostControllers.FindPost.h({ id }, ctx)
-                  .flatMap(x => (!x ? Effect.die("Post went away?") : Effect(x)))
+                blogPostControllers
+                  .FindPost
+                  .h({ id }, ctx)
+                  .flatMap((x) => (!x ? Effect.die("Post went away?") : Effect(x)))
             )
             // UpdatePurchaseOrder: handle("UpdatePurchaseOrder", UpdatePurchaseOrder.h, () =>
             //   FindPurchaseOrder.h(req.UpdatePurchaseOrder!.input).flatMap(x =>

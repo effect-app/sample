@@ -1,6 +1,6 @@
 import { either } from "@effect-app/prelude/schema"
+import * as BlogRsc from "../Blog.js"
 import { QueryErrors } from "../errors.js"
-import { BlogRsc } from "../index.js"
 import { makeInput } from "./utils.js"
 
 @useClassFeaturesForSchema
@@ -17,8 +17,8 @@ export class GraphQueryRequest extends Post("/graph/query")<GraphQueryRequest>()
   // ),
   // AllMeTasks: optProp(makeInput(Me.Tasks.AllMeTasksRequest, true)),
 
-  FindBlogPost: optProp(makeInput(BlogRsc.FindPost.FindPostRequest)),
-  GetAllBlogPosts: optProp(makeInput(BlogRsc.GetPosts.GetPostsRequest))
+  FindBlogPost: makeInput(BlogRsc.FindPost.FindPostRequest).optional,
+  GetAllBlogPosts: makeInput(BlogRsc.GetPosts.GetPostsRequest).optional
 }) {}
 
 @useClassFeaturesForSchema
@@ -33,7 +33,5 @@ export class GraphQueryResponse extends Model<GraphQueryResponse>()({
   // ),
   // AllMeTasks: optProp(either(QueryErrors, Me.Tasks.AllMeTasksResponse)),
 
-  FindBlogPost: optProp(
-    either(QueryErrors, BlogRsc.FindPost.FindPostResponse)
-  )
+  FindBlogPost: either(QueryErrors, BlogRsc.FindPost.FindPostResponse).optional
 }) {}

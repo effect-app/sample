@@ -14,9 +14,8 @@ const makeMutationInput_ = makeMutationInput(GraphQueryRequest.Api.props)
 @allowRoles("user")
 export class GraphMutationRequest extends Post("/graph/mutate")<GraphMutationRequest>()(
   {
-    CreatePost: optProp(
-      makeMutationInput_(CreatePost.CreatePostRequest)
-    )
+    CreatePost: makeMutationInput_(CreatePost.CreatePostRequest)
+      .optional
     // UpdatePurchaseOrder: optProp(
     //   makeMutationInput_(PurchaseOrders.Update.UpdatePurchaseOrderRequest)
     // )
@@ -25,7 +24,7 @@ export class GraphMutationRequest extends Post("/graph/mutate")<GraphMutationReq
 
 const PostResult = props({
   ...GraphQueryResponse.Api.props,
-  result: optProp(BlogPost)
+  result: BlogPost.optional
 })
 
 @useClassFeaturesForSchema
@@ -33,21 +32,20 @@ export class GraphMutationResponse extends Model<GraphMutationResponse>()({
   // TODO: Support guaranteed optional sub-queries, like on Create/Update of PO
   // guarantee an optional return of PurchaseOrder
   // first must enable PO cache for guarantee.
-  CreatePost: optProp(
-    either(
-      MutationErrors,
-      props({
-        response: prop(CreatePost.CreatePostResponse),
-        query: optProp(PostResult)
-      })
-    )
+  CreatePost: either(
+    MutationErrors,
+    props({
+      response: CreatePost.CreatePostResponse,
+      query: PostResult.optional
+    })
   )
+    .optional
   // UpdatePurchaseOrder: optProp(
   //   either(
   //     MutationErrors,
   //     props({
-  //       response: optProp(Void),
-  //       query: optProp(POResult)
+  //       response: Void.optional,
+  //       query: POResult.optional
   //     })
   //   )
   // )
