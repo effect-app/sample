@@ -1,12 +1,26 @@
 <script setup lang="ts">
-import { BlogRsc } from "@effect-app-boilerplate/resources"
+import { BlogRsc, GraphRsc } from "@effect-app-boilerplate/resources"
 
 const blogClient = clientFor(BlogRsc)
+const graphClient = clientFor(GraphRsc)
 
-const [, createPost_] = useMutation(blogClient.createPost)
-const [, latestPosts, reloadPosts] = useSafeQuery(blogClient.getPosts)
+const [, mutate] = useMutation(graphClient.mutation)
+const [, latestPosts, reloadPosts, { mutate: mutatePosts }] = useSafeQuery(
+  blogClient.getPosts
+)
 
-const createPost = flow(createPost_, _ => _.then(_ => reloadPosts()))
+const createPost = (input: BlogRsc.CreatePost.CreatePostRequest) =>
+  pipe(mutate({ CreatePost: { input, query: { result: true } } }), _ =>
+    _.then(_ => {
+      const r = _["|>"](Either.flatMap(_ => _.body.CreatePost!))["|>"](
+        Either.map(_ => _.query!.result!)
+      )
+      if (r._tag === "Right") {
+        const items = latestPosts.value!.items
+        mutatePosts(() => Promise.resolve({ items: [...items, r.right] }))
+      }
+    })
+  )
 </script>
 
 <template>
