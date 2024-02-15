@@ -17,8 +17,6 @@
     "clean": "rm -rf ./.nuxt ./node_modules/.cache"
   },
   "dependencies": {
-    "@effect-app-boilerplate/models": "*",
-    "@effect-app-boilerplate/resources": "*",
     "@effect-app/core": "^0.140.0",
     "@effect-app/fluent-extensions": "^0.134.0",
     "@effect-app/schema": "^0.192.0",
@@ -56,6 +54,7 @@
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
+    "@effect-app-boilerplate/api": "*",
     "@mdi/js": "^7.4.47",
     "@types/cookie": "^0.6.0",
     "@types/http-proxy": "^1.17.14",
