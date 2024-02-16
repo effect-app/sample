@@ -3,6 +3,7 @@ import { runMain } from "./lib/basicRuntime.js"
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { api, devApi } from "@effect-app-boilerplate/api/api"
+import * as DevTools from "@effect/experimental/DevTools"
 import { faker } from "@faker-js/faker"
 import { Layer } from "effect-app"
 import { setFaker } from "effect-app/faker"
@@ -17,6 +18,7 @@ const program = devApi
   .pipe(
     Layer.provide(api),
     Layer.provide(logConfig.pipe(Layer.scopedDiscard)),
+    Layer.provide(DevTools.layer()),
     Layer.provide(TracingLive)
   )
 
