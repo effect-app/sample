@@ -2,6 +2,7 @@ import "@effect-app/fluent-extensions"
 import { runMain } from "./lib/basicRuntime.js"
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import * as DevTools from "@effect/experimental/DevTools"
 import { faker } from "@faker-js/faker"
 import { api, devApi } from "api/api.js"
 import { Layer } from "effect-app"
@@ -17,6 +18,7 @@ const program = devApi
   .pipe(
     Layer.provide(api),
     Layer.provide(logConfig.pipe(Layer.scopedDiscard)),
+    Layer.provide(DevTools.layer()),
     Layer.provide(TracingLive)
   )
 
