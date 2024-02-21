@@ -9,16 +9,16 @@
     "baseUrl": "./",
     "rootDir": "./src",
     // keep in here, cause madge can't detect it from extended tsconfig
-    "moduleResolution": "Node16",
+    "moduleResolution": "Bundler",
     "paths": {
       "core/*": [
         "./src/core/*"
       ],
-      "resources.js": [
-        "./src/resources.js"
+      "resources": [
+        "./src/resources"
       ],
-      "models.js": [
-        "./src/models.js"
+      "models": [
+        "./src/models"
       ],
       "resources/*": [
         "./src/resources/*"
