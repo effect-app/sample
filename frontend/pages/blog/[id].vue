@@ -2,7 +2,6 @@
 import { BlogRsc, OperationsRsc } from "resources"
 import type { ClientEvents } from "resources"
 import { BlogPostId } from "models/Blog"
-import { Effect } from "effect-app"
 
 const { id } = useRouteParams({ id: BlogPostId })
 
@@ -29,7 +28,7 @@ const [publishing, publish] = useAndHandleMutation(
     ...blogClient.PublishPost,
     handler: OperationsRsc.refreshAndWaitForOperation(
       blogClient.PublishPost.handler,
-      Effect.promise(() => reloadPost()),
+      reloadPost(),
       op => {
         progress.value = `${op.progress?.completed}/${op.progress?.total}`
       },
