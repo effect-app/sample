@@ -14,14 +14,6 @@ export const meta = { moduleName: "Operations" } as const
 // Extensions
 const opsClient = clientFor({ FindOperation, meta })
 
-export function refreshAndWaitAForOperationP<R, E>(
-  act: Effect<OperationId, E, R>,
-  refresh: () => Promise<void>,
-  cb?: (op: Operation) => void
-) {
-  return refreshAndWaitAForOperation(act, Effect.promise(refresh), cb)
-}
-
 export function refreshAndWaitAForOperation<R2, E2, A2, R, E>(
   act: Effect<OperationId, E, R>,
   refresh: Effect<A2, E2, R2>,
@@ -34,13 +26,6 @@ export function refreshAndWaitAForOperation<R2, E2, A2, R, E>(
     ),
     refresh
   )
-}
-
-export function refreshAndWaitForOperationP<Req, R, E>(
-  act: (req: Req) => Effect<OperationId, E, R>,
-  refresh: () => Promise<void>
-) {
-  return refreshAndWaitForOperation(act, Effect.promise(refresh))
 }
 
 export function refreshAndWaitForOperation<Req, R2, E2, A2, R, E>(
