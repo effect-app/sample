@@ -1,11 +1,12 @@
 import { matchFor } from "api/lib/routing.js"
-import { Q, UserRepo } from "api/services.js"
+import { Q } from "api/services.js"
 import { Array } from "effect"
 import { Effect, Order } from "effect-app"
-import { UsersRsc } from "resources.js"
-import type { UserView } from "resources/views.js"
+import { UsersResources } from "resources.js"
+import { UserRepo } from "./UserRepo.js"
+import type { UserView } from "./UserView.js"
 
-export default matchFor(UsersRsc)([
+export default matchFor(UsersResources)([
   UserRepo.Default
 ], ({ IndexUsers }) =>
   Effect.gen(function*() {
