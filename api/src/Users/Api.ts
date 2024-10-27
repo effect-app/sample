@@ -12,6 +12,6 @@ export class IndexUsers extends S.Req<IndexUsers>()("IndexUsers", {
   })
 }) {}
 
-// codegen:start {preset: meta, sourcePrefix: src/User/}
-export const meta = { moduleName: "Users.resources" } as const
+//// codegen:start {preset: meta, sourcePrefix: src/User/}
+export const meta = { moduleName: "Users" } as const
 // codegen:end

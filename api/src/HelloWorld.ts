@@ -1,12 +1,12 @@
 import { getRequestContext } from "@effect-app/infra/api/setupRequest"
 import { generate } from "@effect-app/infra/test"
 import { matchFor } from "api/lib/routing.js"
-import { UserRepo } from "api/User/UserRepo.js"
+import { UserRepo } from "api/Users/UserRepo.js"
 import { Effect, S } from "effect-app"
-import { HelloWorldResources } from "resources.js"
+import { helloWorldApi } from "resources.js"
 import { User } from "./Domain/User.js"
 
-export default matchFor(HelloWorldResources)([
+export default matchFor(helloWorldApi)([
   UserRepo.Default
 ], ({ GetHelloWorld }) =>
   Effect.gen(function*() {

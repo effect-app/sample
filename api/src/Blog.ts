@@ -1,16 +1,16 @@
 import { OperationsDefault } from "api/lib/layers.js"
 import { matchFor } from "api/lib/routing.js"
 import { Events, Operations } from "api/services.js"
-import { UserRepo } from "api/User/UserRepo.js"
+import { UserRepo } from "api/Users/UserRepo.js"
 import { Duration, Effect, Schedule } from "effect"
 import { Option } from "effect-app"
 import { NonEmptyString2k, NonNegativeInt } from "effect-app/Schema"
-import { BlogResources } from "resources.js"
+import { blogApi } from "resources.js"
 import { BlogPostRepo } from "./Blog/BlogPostRepo.js"
 import { BlogPost } from "./Domain/Blog.js"
 import { BogusEvent } from "./Domain/Events.js"
 
-export default matchFor(BlogResources)([
+export default matchFor(blogApi)([
   BlogPostRepo.Default,
   UserRepo.Default,
   OperationsDefault,
