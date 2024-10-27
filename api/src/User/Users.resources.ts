@@ -1,5 +1,5 @@
+import { UserId } from "api/Domain/User.js"
 import { S } from "api/lib.js"
-import { UserId } from "./User.js"
 import { UserView } from "./UserView.js"
 
 export class IndexUsers extends S.Req<IndexUsers>()("IndexUsers", {

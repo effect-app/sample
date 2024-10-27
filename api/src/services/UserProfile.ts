@@ -1,5 +1,5 @@
 import { parseJwt } from "@effect-app/infra/api/routing/schema/jwt"
-import { Role } from "api/User/User.js"
+import { Role } from "api/Domain/User.js"
 import { Context, S } from "effect-app"
 import { UserProfileId } from "effect-app/ids"
 

@@ -1,5 +1,5 @@
 import { NotLoggedInError, UnauthorizedError } from "@effect-app/infra/errors"
-import type { Role } from "api/User/User.js"
+import type { Role } from "api/Domain/User.js"
 import type { RPCContextMap } from "effect-app/client"
 import { makeRpcClient } from "effect-app/client"
 import { makeClientFor } from "effect-app/client/clientFor"
