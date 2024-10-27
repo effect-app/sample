@@ -1,7 +1,7 @@
 import { storeId } from "@effect-app/infra/Store/Memory"
+import type { ClientEvents } from "api/Domain/Events.js"
 import { Effect, FiberRef, PubSub, Stream } from "effect-app"
 import type { NonEmptyReadonlyArray } from "effect/Array"
-import type { ClientEvents } from "resources.js"
 
 export class Events extends Effect.Service<Events>()("Events", {
   accessors: true,

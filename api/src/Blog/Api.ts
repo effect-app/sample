@@ -26,6 +26,6 @@ export class PublishPost extends S.Req<PublishPost>()("PublishPost", {
   id: BlogPostId
 }, { allowRoles: ["user"], success: OperationId, failure: S.Union(NotFoundError) }) {}
 
-// codegen:start {preset: meta, sourcePrefix: src/Blog/}
-export const meta = { moduleName: "Blog.resources" } as const
+//// codegen:start {preset: meta, sourcePrefix: src/Blog/}
+export const meta = { moduleName: "Blog" } as const
 // codegen:end

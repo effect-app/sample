@@ -5,7 +5,7 @@ import { Array, Option, pipe, S } from "effect-app"
 import { ApiConfig, NotFoundError } from "effect-app/client"
 import { HttpClient } from "effect-app/http"
 import { type Schema } from "effect-app/Schema"
-import * as UsersRsc from "./Users.resources.js"
+import { IndexUsers } from "./Api.js"
 import { UserView } from "./UserView.js"
 
 interface GetUserViewById extends Request.Request<UserView, NotFoundError<"User">> {
@@ -14,7 +14,7 @@ interface GetUserViewById extends Request.Request<UserView, NotFoundError<"User"
 }
 const GetUserViewById = Request.tagged<GetUserViewById>("GetUserViewById")
 
-const userClient = clientFor(UsersRsc)
+const userClient = clientFor({ IndexUsers })
 
 const getUserViewByIdResolver = RequestResolver
   .makeBatched((requests: GetUserViewById[]) =>

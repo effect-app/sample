@@ -1,11 +1,11 @@
 import type {} from "@effect/platform/HttpClient"
 
-export { ClientEvents } from "./Domain/Events.js"
+// codegen:start {preset: barrel, include: './[A-Z]*/Api.ts', import: star}
+import * as blogApi from "./Blog/Api.js"
+import * as helloWorldApi from "./HelloWorld/Api.js"
+import * as meApi from "./Me/Api.js"
+import * as operationsApi from "./Operations/Api.js"
+import * as usersApi from "./Users/Api.js"
 
-// codegen:start {preset: barrel, include: ./**/*.resources.ts, exclude: [./resources/index.ts, ./resources/lib.ts, ./resources/integrationEvents.ts, ./resources/Messages.ts, ./resources/views.ts, ./resources/Events.ts], export: { as: 'PascalCase' }}
-export * as BlogResources from "./Blog/Blog.resources.js"
-export * as HelloWorldResources from "./HelloWorld/HelloWorld.resources.js"
-export * as OperationsResources from "./Operations/Operations.resources.js"
-export * as MeResources from "./User/Me.resources.js"
-export * as UsersResources from "./User/Users.resources.js"
+export { blogApi, helloWorldApi, meApi, operationsApi, usersApi }
 // codegen:end

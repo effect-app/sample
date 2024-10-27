@@ -7,8 +7,8 @@ export class FindOperation extends S.Req<FindOperation>()("FindOperation", {
   id: OperationId
 }, { allowAnonymous: true, allowRoles: ["user"], success: S.NullOr(Operation) }) {}
 
-// codegen:start {preset: meta, sourcePrefix: src/Operations/}
-export const meta = { moduleName: "Operations.resources" } as const
+//// codegen:start {preset: meta, sourcePrefix: src/Operations/}
+export const meta = { moduleName: "Operations" } as const
 // codegen:end
 
 // Extensions
