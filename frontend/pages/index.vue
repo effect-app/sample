@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { HelloWorldRsc } from "resources"
+import { HelloWorldApi } from "resources"
 import { buildFormFromSchema } from "@effect-app/vue/form"
 import { S } from "effect-app"
 
@@ -27,8 +27,8 @@ const makeReq = () => ({
 
 const req = ref(makeReq())
 
-const helloWorldClient = clientFor(HelloWorldRsc)
-const [result] = useSafeQuery(helloWorldClient.GetHelloWorld, req)
+const helloWorldApi = clientFor(HelloWorldApi)
+const [result] = useSafeQuery(helloWorldApi.GetHelloWorld, req)
 
 // onMounted(() => {
 //   setInterval(() => {

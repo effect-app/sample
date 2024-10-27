@@ -1,11 +1,11 @@
-import { clientFor } from "api/lib.js"
+import { UserId } from "Domain/User.js"
 import { Effect, Exit, Request, RequestResolver } from "effect"
 import { Array, Option, pipe, S } from "effect-app"
 import { ApiConfig, NotFoundError } from "effect-app/client"
 import { HttpClient } from "effect-app/http"
 import { type Schema } from "effect-app/Schema"
-import { UserId } from "./User.js"
-import * as UsersRsc from "./Users.resources.js"
+import { clientFor } from "lib/resources.js"
+import { Index } from "./Api.js"
 import { UserView } from "./UserView.js"
 
 interface GetUserViewById extends Request.Request<UserView, NotFoundError<"User">> {
@@ -14,12 +14,12 @@ interface GetUserViewById extends Request.Request<UserView, NotFoundError<"User"
 }
 const GetUserViewById = Request.tagged<GetUserViewById>("GetUserViewById")
 
-const userClient = clientFor(UsersRsc)
+const usersApi = clientFor({ Index })
 
 const getUserViewByIdResolver = RequestResolver
   .makeBatched((requests: GetUserViewById[]) =>
-    userClient
-      .IndexUsers
+    usersApi
+      .Index
       .handler({ filterByIds: pipe(requests.map((_) => _.id), Array.toNonEmptyArray, Option.getOrUndefined)! })
       .pipe(
         Effect.andThen(({ users }) =>

@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { BlogRsc } from "resources"
+import { BlogApi } from "resources"
 import { S } from "effect-app"
 
-const blogClient = clientFor(BlogRsc)
+const blogApi = clientFor(BlogApi)
 
-const [, createPost] = useSafeMutation(blogClient.CreatePost)
-const [r] = useSafeQuery(blogClient.GetPosts)
+const [, createPost] = useSafeMutation(blogApi.CreatePost)
+const [r] = useSafeQuery(blogApi.Index)
 </script>
 
 <template>

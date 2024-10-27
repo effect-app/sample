@@ -1,21 +1,21 @@
-import { BogusEvent } from "api/Events.js"
 import { OperationsDefault } from "api/lib/layers.js"
 import { matchFor } from "api/lib/routing.js"
 import { Events, Operations } from "api/services.js"
-import { UserRepo } from "api/User/UserRepo.js"
 import { Duration, Effect, Schedule } from "effect"
 import { Option } from "effect-app"
 import { NonEmptyString2k, NonNegativeInt } from "effect-app/Schema"
-import { BlogResources } from "resources.js"
-import { BlogPost } from "./Blog.js"
-import { BlogPostRepo } from "./BlogPostRepo.js"
+import { BlogApi } from "resources.js"
+import { UserRepo } from "./Accounts/UserRepo.js"
+import { BlogPostRepo } from "./Blog/BlogPostRepo.js"
+import { BlogPost } from "./Domain/Blog.js"
+import { BogusEvent } from "./Domain/Events.js"
 
-export default matchFor(BlogResources)([
+export default matchFor(BlogApi)([
   BlogPostRepo.Default,
   UserRepo.Default,
   OperationsDefault,
   Events.Default
-], ({ CreatePost, FindPost, GetPosts, PublishPost }) =>
+], ({ CreatePost, FindPost, Index, PublishPost }) =>
   Effect.gen(function*() {
     const blogPostRepo = yield* BlogPostRepo
     const userRepo = yield* UserRepo
@@ -29,7 +29,7 @@ export default matchFor(BlogResources)([
           .pipe(Effect.andThen(Option.getOrNull))
       ),
 
-      GetPosts: GetPosts(
+      Index: Index(
         blogPostRepo
           .all
           .pipe(Effect.andThen((items) => ({ items })))

@@ -1,5 +1,5 @@
-import { UserFromId } from "api/User/User.js"
 import { S } from "effect-app"
+import { UserFromId } from "./User.js"
 
 export const BlogPostId = S.prefixedStringId<BlogPostId>()("post", "BlogPostId")
 export interface BlogPostIdBrand {

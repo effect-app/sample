@@ -1,18 +1,18 @@
 import { matchFor } from "api/lib/routing.js"
-import { Q } from "api/services.js"
-import { Array } from "effect"
-import { Effect, Order } from "effect-app"
-import { UsersResources } from "resources.js"
-import { UserRepo } from "./UserRepo.js"
-import type { UserView } from "./UserView.js"
+import { Array, Effect, Order } from "effect-app"
+import { AccountsApi } from "resources.js"
+import { UserRepo } from "./Accounts/UserRepo.js"
+import type { UserView } from "./Accounts/UserView.js"
+import { Q } from "./services.js"
 
-export default matchFor(UsersResources)([
+export default matchFor(AccountsApi)([
   UserRepo.Default
-], ({ IndexUsers }) =>
+], ({ GetMe, Index }) =>
   Effect.gen(function*() {
     const userRepo = yield* UserRepo
     return {
-      IndexUsers: IndexUsers((req) =>
+      GetMe: GetMe(userRepo.getCurrentUser),
+      Index: Index((req) =>
         userRepo
           .query(Q.where("id", "in", req.filterByIds))
           .pipe(Effect.andThen((users) => ({

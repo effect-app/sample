@@ -1,4 +1,5 @@
 {
+  "workbench.editor.labelFormat": "short",
   "explorer.sortOrderLexicographicOptions": "upper",
   "typescript.preferences.includePackageJsonAutoImports": "on",
   "typescript.preferences.autoImportFileExcludePatterns": [
