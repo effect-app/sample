@@ -1,14 +1,16 @@
+import { BogusEvent } from "api/Events.js"
+import { OperationsDefault } from "api/lib/layers.js"
 import { matchFor } from "api/lib/routing.js"
-import { BlogPostRepo, Events, Operations, UserRepo } from "api/services.js"
+import { Events, Operations } from "api/services.js"
+import { UserRepo } from "api/User/UserRepo.js"
 import { Duration, Effect, Schedule } from "effect"
 import { Option } from "effect-app"
 import { NonEmptyString2k, NonNegativeInt } from "effect-app/Schema"
-import { BlogPost } from "models/Blog.js"
-import { BlogRsc } from "resources.js"
-import { BogusEvent } from "resources/Events.js"
-import { OperationsDefault } from "./lib/layers.js"
+import { BlogResources } from "resources.js"
+import { BlogPost } from "./Blog.js"
+import { BlogPostRepo } from "./BlogPostRepo.js"
 
-export default matchFor(BlogRsc)([
+export default matchFor(BlogResources)([
   BlogPostRepo.Default,
   UserRepo.Default,
   OperationsDefault,
