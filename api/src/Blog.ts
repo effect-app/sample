@@ -15,7 +15,7 @@ export default matchFor(blogApi)([
   UserRepo.Default,
   OperationsDefault,
   Events.Default
-], ({ CreatePost, FindPost, GetPosts, PublishPost }) =>
+], ({ CreatePost, FindPost, Index, PublishPost }) =>
   Effect.gen(function*() {
     const blogPostRepo = yield* BlogPostRepo
     const userRepo = yield* UserRepo
@@ -29,7 +29,7 @@ export default matchFor(blogApi)([
           .pipe(Effect.andThen(Option.getOrNull))
       ),
 
-      GetPosts: GetPosts(
+      Index: Index(
         blogPostRepo
           .all
           .pipe(Effect.andThen((items) => ({ items })))

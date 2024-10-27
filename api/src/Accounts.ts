@@ -7,12 +7,12 @@ import { Q } from "./services.js"
 
 export default matchFor(accountsApi)([
   UserRepo.Default
-], ({ GetMe, IndexUsers }) =>
+], ({ GetMe, Index }) =>
   Effect.gen(function*() {
     const userRepo = yield* UserRepo
     return {
       GetMe: GetMe(userRepo.getCurrentUser),
-      IndexUsers: IndexUsers((req) =>
+      Index: Index((req) =>
         userRepo
           .query(Q.where("id", "in", req.filterByIds))
           .pipe(Effect.andThen((users) => ({

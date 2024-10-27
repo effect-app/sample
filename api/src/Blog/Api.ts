@@ -14,7 +14,7 @@ export class FindPost extends S.Req<FindPost>()("FindPost", {
   id: BlogPostId
 }, { allowAnonymous: true, allowRoles: ["user"], success: S.NullOr(BlogPostView) }) {}
 
-export class GetPosts extends S.Req<GetPosts>()("GetPosts", {}, {
+export class Index extends S.Req<Index>()("Index", {}, {
   allowAnonymous: true,
   allowRoles: ["user"],
   success: S.Struct({
