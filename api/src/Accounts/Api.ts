@@ -1,6 +1,9 @@
-import { UserId } from "api/Domain/User.js"
+import { User, UserId } from "api/Domain/User.js"
 import { S } from "api/lib.js"
+import { NotFoundError } from "effect-app/client"
 import { UserView } from "./UserView.js"
+
+export class GetMe extends S.Req<GetMe>()("GetMe", {}, { success: User, failure: NotFoundError }) {}
 
 export class IndexUsers extends S.Req<IndexUsers>()("IndexUsers", {
   filterByIds: S.NonEmptyArray(UserId)
@@ -13,5 +16,5 @@ export class IndexUsers extends S.Req<IndexUsers>()("IndexUsers", {
 }) {}
 
 //// codegen:start {preset: meta, sourcePrefix: src/User/}
-export const meta = { moduleName: "Users" } as const
+export const meta = { moduleName: "Me" } as const
 // codegen:end
