@@ -1,9 +1,9 @@
-// codegen:start {preset: barrel, include: ./**/*.controllers.ts, import: default}
-import blogControllers from "./Blog.controllers.js"
-import helloWorldControllers from "./HelloWorld.controllers.js"
-import meControllers from "./Me.controllers.js"
-import operationsControllers from "./Operations.controllers.js"
-import userUsersControllers from "./User/Users.controllers.js"
+// codegen:start {preset: barrel, include: './[A-Z]*.ts', import: default}
+import blog from "./Blog.js"
+import helloWorld from "./HelloWorld.js"
+import me from "./Me.js"
+import operations from "./Operations.js"
+import users from "./Users.js"
 
-export { blogControllers, helloWorldControllers, meControllers, operationsControllers, userUsersControllers }
+export { blog, helloWorld, me, operations, users }
 // codegen:end

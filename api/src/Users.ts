@@ -3,8 +3,8 @@ import { Q } from "api/services.js"
 import { Array } from "effect"
 import { Effect, Order } from "effect-app"
 import { UsersResources } from "resources.js"
-import { UserRepo } from "./UserRepo.js"
-import type { UserView } from "./UserView.js"
+import { UserRepo } from "./User/UserRepo.js"
+import type { UserView } from "./User/UserView.js"
 
 export default matchFor(UsersResources)([
   UserRepo.Default
