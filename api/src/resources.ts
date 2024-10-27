@@ -1,6 +1,6 @@
 import type {} from "@effect/platform/HttpClient"
 
-export { ClientEvents } from "./Events.js"
+export { ClientEvents } from "./Domain/Events.js"
 
 // codegen:start {preset: barrel, include: ./**/*.resources.ts, exclude: [./resources/index.ts, ./resources/lib.ts, ./resources/integrationEvents.ts, ./resources/Messages.ts, ./resources/views.ts, ./resources/Events.ts], export: { as: 'PascalCase' }}
 export * as BlogResources from "./Blog/Blog.resources.js"

@@ -1,4 +1,3 @@
-import { BogusEvent } from "api/Events.js"
 import { OperationsDefault } from "api/lib/layers.js"
 import { matchFor } from "api/lib/routing.js"
 import { Events, Operations } from "api/services.js"
@@ -9,6 +8,7 @@ import { NonEmptyString2k, NonNegativeInt } from "effect-app/Schema"
 import { BlogResources } from "resources.js"
 import { BlogPostRepo } from "./Blog/BlogPostRepo.js"
 import { BlogPost } from "./Domain/Blog.js"
+import { BogusEvent } from "./Domain/Events.js"
 
 export default matchFor(BlogResources)([
   BlogPostRepo.Default,
