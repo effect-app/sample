@@ -1,20 +1,17 @@
 {
   "compilerOptions": {
     "paths": {
-      "core/*": [
-        "./src/core/*"
+      "lib/resources.js": [
+        "./src/lib/resources.js"
       ],
       "resources.js": [
         "./src/resources.js"
       ],
-      "models.js": [
-        "./src/models.js"
+      "Domain.js": [
+        "./src/Domain.js"
       ],
-      "resources/*": [
-        "./src/resources/*"
-      ],
-      "models/*": [
-        "./src/models/*"
+      "Domain/*": [
+        "./src/Domain/*"
       ],
       "api/*": [
         "./src/*"

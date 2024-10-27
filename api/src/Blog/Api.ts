@@ -1,5 +1,5 @@
-import { BlogPost, BlogPostId } from "api/Domain/Blog.js"
-import { S } from "api/lib.js"
+import { BlogPost, BlogPostId } from "Domain/Blog.js"
+import { S } from "lib/resources.js"
 import { InvalidStateError, NotFoundError, OptimisticConcurrencyException } from "effect-app/client"
 import { OperationId } from "effect-app/Operations"
 import { BlogPostView } from "./PostView.js"

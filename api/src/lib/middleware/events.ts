@@ -1,5 +1,5 @@
 import { makeSSE } from "@effect-app/infra/api/middlewares"
-import { ClientEvents } from "api/Domain/Events.js"
+import { ClientEvents } from "Domain/Events.js"
 import { Events } from "api/services.js"
 import { Effect } from "effect-app"
 

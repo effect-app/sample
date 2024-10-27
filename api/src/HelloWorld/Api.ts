@@ -1,6 +1,6 @@
 import { RequestContext } from "@effect-app/infra/RequestContext"
 import { UserView } from "api/Accounts/UserView.js"
-import { S } from "api/lib.js"
+import { S } from "lib/resources.js"
 
 class Response extends S.Class<Response>()({
   now: S.Date.withDefault,

@@ -1,10 +1,10 @@
-import { UserId } from "api/Domain/User.js"
-import { clientFor } from "api/lib.js"
+import { UserId } from "Domain/User.js"
 import { Effect, Exit, Request, RequestResolver } from "effect"
 import { Array, Option, pipe, S } from "effect-app"
 import { ApiConfig, NotFoundError } from "effect-app/client"
 import { HttpClient } from "effect-app/http"
 import { type Schema } from "effect-app/Schema"
+import { clientFor } from "lib/resources.js"
 import { Index } from "./Api.js"
 import { UserView } from "./UserView.js"
 

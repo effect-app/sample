@@ -1,4 +1,4 @@
-import { clientFor, S } from "api/lib.js"
+import { clientFor, S } from "lib/resources.js"
 import { Duration, Effect } from "effect-app"
 import { NotFoundError } from "effect-app/client"
 import { Operation, OperationFailure, OperationId } from "effect-app/Operations"

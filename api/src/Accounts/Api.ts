@@ -1,6 +1,6 @@
-import { User, UserId } from "api/Domain/User.js"
-import { S } from "api/lib.js"
+import { User, UserId } from "Domain/User.js"
 import { NotFoundError } from "effect-app/client"
+import { S } from "lib/resources.js"
 import { UserView } from "./UserView.js"
 
 export class GetMe extends S.Req<GetMe>()("GetMe", {}, { success: User, failure: NotFoundError }) {}
