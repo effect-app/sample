@@ -5,7 +5,7 @@ import { UserView } from "./UserView.js"
 
 export class GetMe extends S.Req<GetMe>()("GetMe", {}, { success: User, failure: NotFoundError }) {}
 
-export class IndexUsers extends S.Req<IndexUsers>()("IndexUsers", {
+export class Index extends S.Req<Index>()("Index", {
   filterByIds: S.NonEmptyArray(UserId)
 }, {
   allowAnonymous: true,
