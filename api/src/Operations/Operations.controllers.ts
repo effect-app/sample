@@ -1,8 +1,8 @@
+import { OperationsDefault } from "api/lib.js"
 import { matchFor } from "api/lib/routing.js"
 import { Operations } from "api/services.js"
 import { Effect } from "effect-app"
 import { OperationsResources } from "resources.js"
-import { OperationsDefault } from "./lib/layers.js"
 
 export default matchFor(OperationsResources)([
   OperationsDefault
