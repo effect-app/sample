@@ -4,13 +4,13 @@ import { Events, Operations } from "api/services.js"
 import { Duration, Effect, Schedule } from "effect"
 import { Option } from "effect-app"
 import { NonEmptyString2k, NonNegativeInt } from "effect-app/Schema"
-import { blogApi } from "resources.js"
+import { BlogApi } from "resources.js"
 import { UserRepo } from "./Accounts/UserRepo.js"
 import { BlogPostRepo } from "./Blog/BlogPostRepo.js"
 import { BlogPost } from "./Domain/Blog.js"
 import { BogusEvent } from "./Domain/Events.js"
 
-export default matchFor(blogApi)([
+export default matchFor(BlogApi)([
   BlogPostRepo.Default,
   UserRepo.Default,
   OperationsDefault,

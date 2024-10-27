@@ -14,11 +14,11 @@ interface GetUserViewById extends Request.Request<UserView, NotFoundError<"User"
 }
 const GetUserViewById = Request.tagged<GetUserViewById>("GetUserViewById")
 
-const userClient = clientFor({ Index })
+const usersApi = clientFor({ Index })
 
 const getUserViewByIdResolver = RequestResolver
   .makeBatched((requests: GetUserViewById[]) =>
-    userClient
+    usersApi
       .Index
       .handler({ filterByIds: pipe(requests.map((_) => _.id), Array.toNonEmptyArray, Option.getOrUndefined)! })
       .pipe(

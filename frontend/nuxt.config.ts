@@ -22,7 +22,7 @@ export default defineNuxtConfig({
 
   alias: {
     resources: fileURLToPath(new URL("../api/src/resources", import.meta.url)),
-    models: fileURLToPath(new URL("../api/src/models", import.meta.url)),
+    Domain: fileURLToPath(new URL("../api/src/Domain", import.meta.url)),
     ...(localLibs
       ? {
           "effect-app": fileURLToPath(

@@ -12,7 +12,7 @@ export const meta = { moduleName: "Operations" } as const
 // codegen:end
 
 // Extensions
-const opsClient = clientFor({ FindOperation, meta })
+const operationsApi = clientFor({ FindOperation, meta })
 
 export function refreshAndWaitAForOperation<R2, E2, A2>(
   refresh: Effect<A2, E2, R2>,
@@ -72,13 +72,13 @@ const isFailure = S.is(OperationFailure)
 function _waitForOperation(id: OperationId, cb?: (op: Operation) => void) {
   return Effect
     .gen(function*() {
-      let r = yield* opsClient.FindOperation.handler({ id })
+      let r = yield* operationsApi.FindOperation.handler({ id })
       while (r) {
         if (cb) cb(r)
         const result = r.result
         if (result) return isFailure(result) ? yield* Effect.fail(result) : yield* Effect.succeed(result)
         yield* Effect.sleep(Duration.seconds(2))
-        r = yield* opsClient.FindOperation.handler({ id })
+        r = yield* operationsApi.FindOperation.handler({ id })
       }
       return yield* new NotFoundError({ type: "Operation", id })
     })
