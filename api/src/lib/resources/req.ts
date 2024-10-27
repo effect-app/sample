@@ -1,9 +1,9 @@
 import { NotLoggedInError, UnauthorizedError } from "@effect-app/infra/errors"
-import type { Role } from "api/Domain/User.js"
+import type { Role } from "Domain/User.js"
+import { Duration, Layer, Request } from "effect-app"
 import type { RPCContextMap } from "effect-app/client"
 import { makeRpcClient } from "effect-app/client"
 import { makeClientFor } from "effect-app/client/clientFor"
-import { RequestCacheLayers } from "./routing.js"
 
 type CTXMap = {
   // we put `never`, because we can't access this service here in the client, and we also don't need to
@@ -24,5 +24,13 @@ export const { TaggedRequest: Req } = makeRpcClient<RequestConfig, CTXMap>({
   allowAnonymous: NotLoggedInError,
   requireRoles: UnauthorizedError
 })
+
+export const RequestCacheLayers = Layer.mergeAll(
+  Layer.setRequestCache(
+    Request.makeCache({ capacity: 500, timeToLive: Duration.hours(8) })
+  ),
+  Layer.setRequestCaching(true),
+  Layer.setRequestBatching(true)
+)
 
 export const clientFor = makeClientFor(RequestCacheLayers)

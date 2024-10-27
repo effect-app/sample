@@ -6,8 +6,8 @@ import { NotLoggedInError, UnauthorizedError } from "@effect-app/infra/errors"
 import type { RequestContext } from "@effect-app/infra/RequestContext"
 import { Rpc } from "@effect/rpc"
 import { BaseConfig } from "api/config.js"
-import type { S } from "effect-app"
-import { Config, Context, Duration, Effect, Exit, FiberRef, Layer, Option, Request, Schedule } from "effect-app"
+import type { Request, S } from "effect-app"
+import { Config, Context, Effect, Exit, FiberRef, Layer, Option, Schedule } from "effect-app"
 import type { GetEffectContext, RPCContextMap } from "effect-app/client"
 import { HttpHeaders, HttpServerRequest } from "effect-app/http"
 import type * as EffectRequest from "effect/Request"
@@ -17,6 +17,7 @@ import {
   UserProfile
 } from "../services/UserProfile.js"
 import { basicRuntime } from "./basicRuntime.js"
+import { RequestCacheLayers } from "./resources/req.js"
 
 const optimisticConcurrencySchedule = Schedule.once
   && Schedule.recurWhile<any>((a) => a?._tag === "OptimisticConcurrencyException")
@@ -30,14 +31,6 @@ export type CTXMap = {
   // TODO: not boolean but `string[]`
   requireRoles: RPCContextMap.Custom<"", never, typeof UnauthorizedError, Array<string>>
 }
-
-export const RequestCacheLayers = Layer.mergeAll(
-  Layer.setRequestCache(
-    Request.makeCache({ capacity: 500, timeToLive: Duration.hours(8) })
-  ),
-  Layer.setRequestCaching(true),
-  Layer.setRequestBatching(true)
-)
 
 export const Auth0Config = Config.all({
   audience: Config.string("audience").pipe(Config.nested("auth0"), Config.withDefault("http://localhost:3610")),
