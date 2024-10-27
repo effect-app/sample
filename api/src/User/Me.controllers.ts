@@ -1,9 +1,9 @@
 import { matchFor } from "api/lib/routing.js"
-import { UserRepo } from "api/services.js"
 import { Effect } from "effect-app"
-import { MeRsc } from "resources.js"
+import { MeResources } from "resources.js"
+import { UserRepo } from "./UserRepo.js"
 
-export default matchFor(MeRsc)([
+export default matchFor(MeResources)([
   UserRepo.Default
 ], ({ GetMe }) =>
   Effect.gen(function*() {

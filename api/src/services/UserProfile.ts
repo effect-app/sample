@@ -1,7 +1,7 @@
 import { parseJwt } from "@effect-app/infra/api/routing/schema/jwt"
+import { Role } from "api/User/User.js"
 import { Context, S } from "effect-app"
 import { UserProfileId } from "effect-app/ids"
-import { Role } from "models/User.js"
 
 export class UserProfile extends Context.assignTag<UserProfile>()(
   S.Class<UserProfile>()({
