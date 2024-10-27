@@ -1,7 +1,7 @@
 import { matchFor } from "api/lib/routing.js"
 import { Effect } from "effect-app"
 import { MeResources } from "resources.js"
-import { UserRepo } from "./UserRepo.js"
+import { UserRepo } from "./User/UserRepo.js"
 
 export default matchFor(MeResources)([
   UserRepo.Default

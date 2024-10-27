@@ -1,15 +1,9 @@
 // codegen:start {preset: barrel, include: ./**/*.controllers.ts, import: default}
-import blogBlogControllers from "./Blog/Blog.controllers.js"
-import helloWorldHelloWorldControllers from "./HelloWorld/HelloWorld.controllers.js"
-import operationsOperationsControllers from "./Operations/Operations.controllers.js"
-import userMeControllers from "./User/Me.controllers.js"
+import blogControllers from "./Blog.controllers.js"
+import helloWorldControllers from "./HelloWorld.controllers.js"
+import meControllers from "./Me.controllers.js"
+import operationsControllers from "./Operations.controllers.js"
 import userUsersControllers from "./User/Users.controllers.js"
 
-export {
-  blogBlogControllers,
-  helloWorldHelloWorldControllers,
-  operationsOperationsControllers,
-  userMeControllers,
-  userUsersControllers
-}
+export { blogControllers, helloWorldControllers, meControllers, operationsControllers, userUsersControllers }
 // codegen:end

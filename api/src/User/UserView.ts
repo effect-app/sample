@@ -1,5 +1,5 @@
+import { User } from "api/Domain/User.js"
 import { S } from "api/lib.js"
-import { User } from "./User.js"
 
 export class UserView extends S.ExtendedClass<UserView, UserView.Encoded>()({
   ...User.pick("id", "role"),

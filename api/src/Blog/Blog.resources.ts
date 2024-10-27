@@ -1,7 +1,7 @@
+import { BlogPost, BlogPostId } from "api/Domain/Blog.js"
 import { S } from "api/lib.js"
 import { InvalidStateError, NotFoundError, OptimisticConcurrencyException } from "effect-app/client"
 import { OperationId } from "effect-app/Operations"
-import { BlogPost, BlogPostId } from "./Blog.js"
 import { BlogPostView } from "./PostView.js"
 
 export class CreatePost extends S.Req<CreatePost>()("CreatePost", BlogPost.pick("title", "body"), {

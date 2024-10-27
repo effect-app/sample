@@ -7,8 +7,8 @@ import { Duration, Effect, Schedule } from "effect"
 import { Option } from "effect-app"
 import { NonEmptyString2k, NonNegativeInt } from "effect-app/Schema"
 import { BlogResources } from "resources.js"
-import { BlogPost } from "./Blog.js"
-import { BlogPostRepo } from "./BlogPostRepo.js"
+import { BlogPostRepo } from "./Blog/BlogPostRepo.js"
+import { BlogPost } from "./Domain/Blog.js"
 
 export default matchFor(BlogResources)([
   BlogPostRepo.Default,
