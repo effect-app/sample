@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { BlogsApi, OperationsApi } from "resources"
-import type { ClientEvents } from "resources"
-import { BlogPostId } from "models/Blog"
+import { BlogPostId } from "Domain/Blog"
+import type { ClientEvents } from "Domain/Events"
+import { BlogApi, OperationsApi } from "resources"
 
 const { id } = useRouteParams({ id: BlogPostId })
 
-const blogsApi = clientFor(BlogsApi)
-const [r, , reloadPost] = useSafeQuery(blogsApi.FindPost, {
+const blogApi = clientFor(BlogApi)
+const [r, , reloadPost] = useSafeQuery(blogApi.FindPost, {
   id,
 })
 

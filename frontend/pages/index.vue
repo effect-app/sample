@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { helloWorldApi } from "resources"
+import { HelloWorldApi } from "resources"
 import { buildFormFromSchema } from "@effect-app/vue/form"
 import { S } from "effect-app"
 

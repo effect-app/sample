@@ -22,6 +22,13 @@ export default defineNuxtConfig({
 
   alias: {
     resources: fileURLToPath(new URL("../api/src/resources", import.meta.url)),
+    "lib/resources.js": fileURLToPath(
+      new URL("../api/src/lib/resources.js", import.meta.url),
+    ),
+
+    "lib/resources": fileURLToPath(
+      new URL("../api/src/lib/resources", import.meta.url),
+    ),
     Domain: fileURLToPath(new URL("../api/src/Domain", import.meta.url)),
     ...(localLibs
       ? {
