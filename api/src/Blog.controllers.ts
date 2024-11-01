@@ -8,32 +8,34 @@ import { BlogRsc } from "resources.js"
 import { BogusEvent } from "resources/Events.js"
 import { OperationsDefault } from "./lib/layers.js"
 
-export default matchFor(BlogRsc)([
-  BlogPostRepo.Default,
-  UserRepo.Default,
-  OperationsDefault,
-  Events.Default
-], ({ CreatePost, FindPost, GetPosts, PublishPost }) =>
-  Effect.gen(function*() {
+export default class BlogRouter extends Effect.Service<BlogRouter>()("BlogRouter", {
+  dependencies: [
+    BlogPostRepo.Default,
+    UserRepo.Default,
+    OperationsDefault,
+    Events.Default
+  ],
+  effect: Effect.gen(function*() {
+    const r = matchFor(BlogRsc)
     const blogPostRepo = yield* BlogPostRepo
     const userRepo = yield* UserRepo
     const events = yield* Events
     const operations = yield* Operations
 
     return {
-      FindPost: FindPost((req) =>
+      FindPost: r.FindPost((req) =>
         blogPostRepo
           .find(req.id)
           .pipe(Effect.andThen(Option.getOrNull))
       ),
 
-      GetPosts: GetPosts(
+      GetPosts: r.GetPosts(
         blogPostRepo
           .all
           .pipe(Effect.andThen((items) => ({ items })))
       ),
 
-      CreatePost: CreatePost((req) =>
+      CreatePost: r.CreatePost((req) =>
         userRepo
           .getCurrentUser
           .pipe(
@@ -42,7 +44,7 @@ export default matchFor(BlogRsc)([
           )
       ),
 
-      PublishPost: PublishPost((req) =>
+      PublishPost: r.PublishPost((req) =>
         Effect.gen(function*() {
           const post = yield* blogPostRepo.get(req.id)
 
@@ -90,4 +92,5 @@ export default matchFor(BlogRsc)([
         })
       )
     }
-  }))
+  })
+}) {}
