@@ -1,3 +1,6 @@
+import type { RouteMatcher } from "@effect-app/infra/api/routing"
+import type { HttpServerRequest } from "@effect/platform/HttpServerRequest"
+import type { CTXMap } from "api/lib/routing.js"
 import { matchFor } from "api/lib/routing.js"
 import { BlogPostRepo, Events, Operations, UserRepo } from "api/services.js"
 import { Duration, Effect, Schedule } from "effect"
@@ -8,6 +11,9 @@ import { BlogRsc } from "resources.js"
 import { BogusEvent } from "resources/Events.js"
 import { OperationsDefault } from "./lib/layers.js"
 
+const _ = matchFor(BlogRsc)
+const r: RouteMatcher<CTXMap, typeof BlogRsc, HttpServerRequest> = _ as any
+
 export default class BlogRouter extends Effect.Service<BlogRouter>()("BlogRouter", {
   dependencies: [
     BlogPostRepo.Default,
@@ -16,35 +22,31 @@ export default class BlogRouter extends Effect.Service<BlogRouter>()("BlogRouter
     Events.Default
   ],
   effect: Effect.gen(function*() {
-    const r = matchFor(BlogRsc)
     const blogPostRepo = yield* BlogPostRepo
     const userRepo = yield* UserRepo
     const events = yield* Events
     const operations = yield* Operations
 
-    return {
-      FindPost: r.FindPost((req) =>
+    return r
+      .FindPost((req) =>
         blogPostRepo
           .find(req.id)
           .pipe(Effect.andThen(Option.getOrNull))
-      ),
-
-      GetPosts: r.GetPosts(
+      )
+      .GetPosts(
         blogPostRepo
           .all
-          .pipe(Effect.andThen((items) => ({ items })))
-      ),
-
-      CreatePost: r.CreatePost((req) =>
+          .pipe(Effect.andThen((items) => new r.GetPosts.success({ items })))
+      )
+      .CreatePost((req) =>
         userRepo
           .getCurrentUser
           .pipe(
             Effect.andThen((author) => (new BlogPost({ ...req, author }, true))),
             Effect.tap(blogPostRepo.save)
           )
-      ),
-
-      PublishPost: r.PublishPost((req) =>
+      )
+      .PublishPost((req) =>
         Effect.gen(function*() {
           const post = yield* blogPostRepo.get(req.id)
 
@@ -91,6 +93,5 @@ export default class BlogRouter extends Effect.Service<BlogRouter>()("BlogRouter
           return op.id
         })
       )
-    }
   })
 }) {}
