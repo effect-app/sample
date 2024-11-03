@@ -1,12 +1,12 @@
+import { clientFor } from "api/lib.js"
 import { Effect, Exit, Request, RequestResolver } from "effect"
 import { Array, Option, pipe, S } from "effect-app"
 import { ApiConfig, NotFoundError } from "effect-app/client"
 import { HttpClient } from "effect-app/http"
 import { type Schema } from "effect-app/Schema"
-import { UserId } from "models/User.js"
-import { clientFor } from "resources/lib.js"
-import * as UsersRsc from "../Users.js"
-import { UserView } from "../views/UserView.js"
+import { UserId } from "./User.js"
+import * as UsersRsc from "./Users.resources.js"
+import { UserView } from "./UserView.js"
 
 interface GetUserViewById extends Request.Request<UserView, NotFoundError<"User">> {
   readonly _tag: "GetUserViewById"

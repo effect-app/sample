@@ -1,10 +1,10 @@
+import { OperationsDefault } from "api/lib.js"
 import { matchFor } from "api/lib/routing.js"
 import { Operations } from "api/services.js"
 import { Effect } from "effect-app"
-import { OperationsRsc } from "resources.js"
-import { OperationsDefault } from "./lib/layers.js"
+import { OperationsResources } from "resources.js"
 
-export default matchFor(OperationsRsc)([
+export default matchFor(OperationsResources)([
   OperationsDefault
 ], ({ FindOperation }) =>
   Effect.gen(function*() {
