@@ -21,30 +21,26 @@ export default matchFor(BlogRsc)({
     const events = yield* Events
     const operations = yield* Operations
 
-    const { CreatePost, FindPost, GetPosts, PublishPost } = matchFor(BlogRsc)
-    return {
-      FindPost: FindPost((req) =>
+    return matchFor(BlogRsc)
+      .FindPost((req) =>
         blogPostRepo
           .find(req.id)
           .pipe(Effect.andThen(Option.getOrNull))
-      ),
-
-      GetPosts: GetPosts(
+      )
+      .GetPosts(
         blogPostRepo
           .all
           .pipe(Effect.andThen((items) => ({ items })))
-      ),
-
-      CreatePost: CreatePost((req) =>
+      )
+      .CreatePost((req) =>
         userRepo
           .getCurrentUser
           .pipe(
             Effect.andThen((author) => (new BlogPost({ ...req, author }, true))),
             Effect.tap(blogPostRepo.save)
           )
-      ),
-
-      PublishPost: PublishPost((req) =>
+      )
+      .PublishPost((req) =>
         Effect.gen(function*() {
           const post = yield* blogPostRepo.get(req.id)
 
@@ -91,6 +87,5 @@ export default matchFor(BlogRsc)({
           return op.id
         })
       )
-    }
   })
 })
