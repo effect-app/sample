@@ -1,7 +1,6 @@
 // TODO: Write a marker to package.json instead?
 const enforceSingleVersion = [
     "effect",
-    "@effect/schema",
     "@effect-app/infra",
     "effect-app",
     "@effect-app/react",
