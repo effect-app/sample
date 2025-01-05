@@ -2,7 +2,7 @@ import { UserId } from "#models/User"
 import { clientFor } from "#resources/lib"
 import { Effect, Exit, Request, RequestResolver } from "effect"
 import { Array, Option, pipe, S } from "effect-app"
-import { ApiClient, NotFoundError } from "effect-app/client"
+import { ApiClientFactory, NotFoundError } from "effect-app/client"
 import { type Schema } from "effect-app/Schema"
 import * as UsersRsc from "../Users.js"
 import { UserView } from "../views/UserView.js"
@@ -33,10 +33,10 @@ const getUserViewByIdResolver = RequestResolver
       Effect.orDie
     )
   )
-  .pipe(RequestResolver.batchN(25), RequestResolver.contextFromServices(ApiClient))
+  .pipe(RequestResolver.batchN(25), RequestResolver.contextFromServices(ApiClientFactory))
 
 // TODO: How to globally cache - right now we had to move the RequestCache from the runtime to clientFor
-export const UserViewFromId: Schema<UserView, string, ApiClient> = S.transformOrFail(
+export const UserViewFromId: Schema<UserView, string, ApiClientFactory> = S.transformOrFail(
   UserId,
   S.typeSchema(UserView),
   {
