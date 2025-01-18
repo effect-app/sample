@@ -6,7 +6,7 @@ import { BlogPostId } from "./models.js"
 import { BlogPostView } from "./PostView.js"
 import { BlogPostRepo } from "./Repo.js"
 
-export class Request extends S.Req<Request>()("Blog.FindPost", {
+export class FindPost extends S.Req<FindPost>()("Blog.FindPost", {
   id: BlogPostId
 }, {
   allowAnonymous: true,
@@ -14,7 +14,7 @@ export class Request extends S.Req<Request>()("Blog.FindPost", {
   success: S.NullOr(BlogPostView)
 }) {}
 
-export default handlerFor(Request)({
+export default handlerFor(FindPost)({
   dependencies: [
     BlogPostRepo.Default
   ],

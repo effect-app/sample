@@ -1,8 +1,8 @@
 import { handlerFor } from "#api/lib/handler"
 import { OperationsDefault } from "#api/lib/layers"
+import { Events, Operations } from "#api/services"
 import { BogusEvent } from "#resources/Events"
 import { S } from "#resources/lib"
-import { Events, Operations } from "#api/services"
 import { Duration, Effect, Schedule } from "effect-app"
 import { NotFoundError } from "effect-app/client"
 import { OperationId } from "effect-app/Operations"
@@ -10,11 +10,11 @@ import { NonEmptyString2k, NonNegativeInt } from "effect-app/Schema"
 import { BlogPostId } from "./models.js"
 import { BlogPostRepo } from "./Repo.js"
 
-export class Request extends S.Req<Request>()("Blog.PublishPost", {
+export class PublishPost extends S.Req<PublishPost>()("Blog.PublishPost", {
   id: BlogPostId
 }, { allowRoles: ["user"], success: OperationId, failure: S.Union(NotFoundError) }) {}
 
-export default handlerFor(Request)({
+export default handlerFor(PublishPost)({
   dependencies: [
     BlogPostRepo.Default,
     OperationsDefault,

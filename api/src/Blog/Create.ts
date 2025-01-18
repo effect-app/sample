@@ -8,13 +8,13 @@ import { InvalidStateError, NotFoundError, OptimisticConcurrencyException } from
 import { BlogPost, BlogPostId } from "./models.js"
 import { BlogPostRepo } from "./Repo.js"
 
-export class Request extends S.Req<Request>()("Blog.CreatePost", BlogPost.pick("title", "body"), {
+export class CreatePost extends S.Req<CreatePost>()("Blog.Create", BlogPost.pick("title", "body"), {
   allowRoles: ["user"],
   success: S.Struct({ id: BlogPostId }),
   failure: S.Union(NotFoundError, InvalidStateError, OptimisticConcurrencyException)
 }) {}
 
-export default handlerFor(Request)({
+export default handlerFor(CreatePost)({
   dependencies: [
     BlogPostRepo.Default,
     UserRepo.Default,

@@ -4,7 +4,7 @@ import { Effect } from "effect-app"
 import { BlogPostView } from "./PostView.js"
 import { BlogPostRepo } from "./Repo.js"
 
-export class Request extends S.Req<Request>()("Blog.List", {}, {
+export class ListPosts extends S.Req<ListPosts>()("Blog.List", {}, {
   allowAnonymous: true,
   allowRoles: ["user"],
   success: S.Struct({
@@ -12,7 +12,7 @@ export class Request extends S.Req<Request>()("Blog.List", {}, {
   })
 }) {}
 
-export default handlerFor(Request)({
+export default handlerFor(ListPosts)({
   dependencies: [
     BlogPostRepo.Default
   ],
