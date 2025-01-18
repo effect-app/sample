@@ -2,7 +2,7 @@ import type { Effect, Layer, S } from "effect-app"
 import type { TaggedRequestClassAny } from "effect-app/client"
 
 // TODO
-export declare const handlerFor: <Req extends TaggedRequestClassAny>(
+export const handlerFor: <Req extends TaggedRequestClassAny>(
   r: Req
 ) => {
   // TODO: constrain L to be strict; only layers that are used in effect, or the other way around
@@ -18,4 +18,4 @@ export declare const handlerFor: <Req extends TaggedRequestClassAny>(
       effect: Effect<Effect<S.Schema.Type<Req["success"]>, E2, R2>, E, R>
     }
   ): typeof hndlr
-} // TODO: as Layer?
+} = (_) => (i) => i // TODO: as Layer?
