@@ -8,8 +8,8 @@ import { Array, Effect, Exit, Layer, Option, pipe, Request, RequestResolver, S }
 import { fakerArb } from "effect-app/faker"
 import { Email } from "effect-app/Schema"
 import fc from "fast-check"
-import type { UserId } from "./User.js"
-import { User } from "./User.js"
+import type { UserId } from "./models.js"
+import { User } from "./models.js"
 
 export type UserSeed = "sample" | ""
 

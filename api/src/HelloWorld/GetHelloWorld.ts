@@ -5,7 +5,7 @@ import { getRequestContext } from "@effect-app/infra/api/setupRequest"
 import { RequestContext } from "@effect-app/infra/RequestContext"
 import { generate } from "@effect-app/infra/test"
 import { Effect } from "effect-app"
-import { User } from "../Accounts/User.js"
+import { User } from "../Accounts/models.js"
 import { UserRepo } from "../Accounts/UserRepo.js"
 
 class Response extends S.Class<Response>()({

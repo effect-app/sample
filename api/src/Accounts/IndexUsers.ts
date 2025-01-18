@@ -2,7 +2,7 @@ import { handlerFor } from "#api/lib/handler"
 import { Q } from "#api/services"
 import { S } from "#resources/lib"
 import { Array, Effect, Order } from "effect-app"
-import { UserId } from "./User.js"
+import { UserId } from "./models.js"
 import { UserRepo } from "./UserRepo.js"
 import { UserView } from "./UserView.js"
 

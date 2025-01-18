@@ -1,4 +1,4 @@
-import { UserFromIdResolver } from "#Accounts/User"
+import { UserFromIdResolver } from "#Accounts/models"
 import { RepoDefault } from "#api/lib/layers"
 import { Model } from "@effect-app/infra"
 import { Effect } from "effect"

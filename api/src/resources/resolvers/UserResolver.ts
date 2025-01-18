@@ -1,4 +1,4 @@
-import { UserId } from "#Accounts/User"
+import { UserId } from "#Accounts/models"
 import { UserView } from "#Accounts/UserView"
 import { clientFor } from "#resources/lib"
 import { Effect, Exit, Request, RequestResolver } from "effect"

@@ -1,4 +1,4 @@
-import { UserFromId } from "#Accounts/User"
+import { UserFromId } from "#Accounts/models"
 import { S } from "effect-app"
 
 export const BlogPostId = S.prefixedStringId<BlogPostId>()("post", "BlogPostId")
