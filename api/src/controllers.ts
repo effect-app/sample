@@ -1,7 +1,5 @@
-// codegen:start {preset: barrel, include: ./*.controllers.ts, import: default}
-import accountsControllers from "./Accounts.controllers.js"
-import helloWorldControllers from "./HelloWorld.controllers.js"
-import operationsControllers from "./Operations.controllers.js"
+// TODO
 
-export { accountsControllers, helloWorldControllers, operationsControllers }
+// codegen:start {preset: barrel, include: ./*.controllers.ts, import: default}
+export {}
 // codegen:end

@@ -1,5 +1,5 @@
 import { handlerFor } from "#api/lib/handler"
-import { S } from "#api/resources/lib"
+import { S } from "#resources/lib"
 import { Effect } from "effect"
 import { Option } from "effect-app"
 import { BlogPostId } from "./models.js"

@@ -1,4 +1,4 @@
-import { UserViewFromId } from "#api/resources/resolvers/UserResolver"
+import { UserViewFromId } from "#resources/resolvers/UserResolver"
 import { S } from "#resources/lib"
 import { BlogPost } from "./models.js"
 

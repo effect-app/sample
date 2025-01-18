@@ -1,12 +1,12 @@
 import { Duration, Effect } from "effect-app"
 import { NotFoundError } from "effect-app/client"
-import { Operation, OperationFailure, OperationId } from "effect-app/Operations"
+import type { Operation, OperationId } from "effect-app/Operations"
+import { OperationFailure } from "effect-app/Operations"
+import { FindOperation } from "../Operations/FindOperation.js"
 import { clientFor } from "./lib.js"
 import * as S from "./lib/schema.js"
 
-export class FindOperation extends S.Req<FindOperation>()("FindOperation", {
-  id: OperationId
-}, { allowAnonymous: true, allowRoles: ["user"], success: S.NullOr(Operation) }) {}
+export { FindOperation } from "../Operations/FindOperation.js"
 
 // codegen:start {preset: meta, sourcePrefix: src/resources/}
 export const meta = { moduleName: "Operations" } as const
