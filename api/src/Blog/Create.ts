@@ -1,7 +1,5 @@
 import { UserRepo } from "#Accounts/UserRepo"
 import { handlerFor } from "#api/lib/handler"
-import { OperationsDefault } from "#api/lib/layers"
-import { Events } from "#api/services"
 import { S } from "#resources/lib"
 import { Effect } from "effect-app"
 import { InvalidStateError, NotFoundError, OptimisticConcurrencyException } from "effect-app/client"
@@ -17,9 +15,7 @@ export class CreatePost extends S.Req<CreatePost>()("Blog.Create", BlogPost.pick
 export default handlerFor(CreatePost)({
   dependencies: [
     BlogPostRepo.Default,
-    UserRepo.Default,
-    OperationsDefault,
-    Events.Default
+    UserRepo.Default
   ],
   effect: Effect.gen(function*() {
     const blogPostRepo = yield* BlogPostRepo
