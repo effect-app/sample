@@ -1,4 +1,4 @@
-import { User } from "#models/User"
+import { User } from "#Accounts/User"
 import { NotFoundError } from "effect-app/client"
 import { S } from "./lib.js"
 

@@ -1,10 +1,10 @@
 import { handlerFor } from "#api/lib/handler"
 import { S } from "#api/resources/lib"
-import { BlogPostView } from "#api/resources/views"
-import { BlogPostRepo } from "#api/services"
-import { BlogPostId } from "#models/Blog"
 import { Effect } from "effect"
 import { Option } from "effect-app"
+import { BlogPostId } from "./models.js"
+import { BlogPostView } from "./PostView.js"
+import { BlogPostRepo } from "./Repo.js"
 
 export class Request extends S.Req<Request>()("Blog.FindPost", {
   id: BlogPostId

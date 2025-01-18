@@ -1,7 +1,7 @@
 import { matchFor, Router } from "#api/lib/routing"
-import { UserRepo } from "#api/services"
 import { AccountsRsc } from "#resources"
 import { Effect } from "effect-app"
+import { UserRepo } from "./Accounts/UserRepo.js"
 
 export default Router(AccountsRsc)({
   dependencies: [UserRepo.Default],

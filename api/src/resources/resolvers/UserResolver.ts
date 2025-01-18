@@ -1,11 +1,11 @@
-import { UserId } from "#models/User"
+import { UserId } from "#Accounts/User"
+import { UserView } from "#Accounts/UserView"
 import { clientFor } from "#resources/lib"
 import { Effect, Exit, Request, RequestResolver } from "effect"
 import { Array, Option, pipe, S } from "effect-app"
 import { ApiClientFactory, NotFoundError } from "effect-app/client"
 import { type Schema } from "effect-app/Schema"
 import * as UsersRsc from "../Users.js"
-import { UserView } from "../views/UserView.js"
 
 interface GetUserViewById extends Request.Request<UserView, NotFoundError<"User">> {
   readonly _tag: "GetUserViewById"

@@ -1,10 +1,12 @@
+import { UserRepo } from "#Accounts/UserRepo"
 import { handlerFor } from "#api/lib/handler"
 import { OperationsDefault } from "#api/lib/layers"
 import { S } from "#api/resources/lib"
-import { BlogPostRepo, Events, UserRepo } from "#api/services"
-import { BlogPost, BlogPostId } from "#models/Blog"
+import { Events } from "#api/services"
 import { Effect } from "effect-app"
 import { InvalidStateError, NotFoundError, OptimisticConcurrencyException } from "effect-app/client"
+import { BlogPost, BlogPostId } from "./models.js"
+import { BlogPostRepo } from "./Repo.js"
 
 export class Request extends S.Req<Request>()("Blog.CreatePost", BlogPost.pick("title", "body"), {
   allowRoles: ["user"],

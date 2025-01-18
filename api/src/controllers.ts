@@ -2,7 +2,6 @@
 import accountsControllers from "./Accounts.controllers.js"
 import helloWorldControllers from "./HelloWorld.controllers.js"
 import operationsControllers from "./Operations.controllers.js"
-import usersControllers from "./Users.controllers.js"
 
-export { accountsControllers, helloWorldControllers, operationsControllers, usersControllers }
+export { accountsControllers, helloWorldControllers, operationsControllers }
 // codegen:end

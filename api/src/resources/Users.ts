@@ -1,6 +1,6 @@
-import { UserId } from "#models/User"
+import { UserId } from "#Accounts/User"
+import { UserView } from "#Accounts/UserView"
 import { S } from "./lib.js"
-import { UserView } from "./views/UserView.js"
 
 export class IndexUsers extends S.Req<IndexUsers>()("IndexUsers", {
   filterByIds: S.NonEmptyArray(UserId)

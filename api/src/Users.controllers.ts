@@ -1,9 +1,10 @@
 import { matchFor, Router } from "#api/lib/routing"
-import { Q, UserRepo } from "#api/services"
+import { Q } from "#api/services"
 import { UsersRsc } from "#resources"
-import type { UserView } from "#resources/views"
 import { Array } from "effect"
 import { Effect, Order } from "effect-app"
+import { UserRepo } from "./Accounts/UserRepo.js"
+import type { UserView } from "./Accounts/UserView.js"
 
 export default Router(UsersRsc)({
   dependencies: [UserRepo.Default],

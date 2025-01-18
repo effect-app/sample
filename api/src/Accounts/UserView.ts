@@ -1,5 +1,5 @@
-import { User } from "#models/User"
 import { S } from "#resources/lib"
+import { User } from "./User.js"
 
 export class UserView extends S.ExtendedClass<UserView, UserView.Encoded>()({
   ...User.pick("id", "role"),
