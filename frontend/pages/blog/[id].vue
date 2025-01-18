@@ -8,7 +8,7 @@ const { id } = useRouteParams({ id: BlogPostId })
 const blogClient = clientFor(BlogRsc)
 const opsClient = useOperationsClient()
 
-const [r, , reloadPost] = useSafeQuery(blogClient.FindPost, {
+const [r, , reloadPost] = useSafeQuery(blogClient.Find, {
   id,
 })
 
@@ -28,7 +28,7 @@ const progress = ref("")
 
 const [publishing, publish] = useAndHandleMutation(
   mapHandler(
-    blogClient.PublishPost,
+    blogClient.Publish,
     opsClient.refreshAndWaitForOperation(reloadPost(), op => {
       progress.value = `${op.progress?.completed}/${op.progress?.total}`
     }),

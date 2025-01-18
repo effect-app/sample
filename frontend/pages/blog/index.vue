@@ -4,8 +4,8 @@ import { S } from "effect-app"
 
 const blogClient = clientFor(BlogRsc)
 
-const [, createPost] = useSafeMutation(blogClient.CreatePost)
-const [r] = useSafeQuery(blogClient.GetPosts)
+const [, createPost] = useSafeMutation(blogClient.Create)
+const [r] = useSafeQuery(blogClient.List)
 </script>
 
 <template>
