@@ -13,11 +13,7 @@ import { Context, Effect, Exit, Layer, Option } from "effect-app"
 import type { GetEffectContext, RPCContextMap } from "effect-app/client"
 import type { HttpHeaders, HttpServerRequest } from "effect-app/http"
 import type * as EffectRequest from "effect/Request"
-import {
-  makeUserProfileFromAuthorizationHeader,
-  makeUserProfileFromUserHeader,
-  UserProfile
-} from "../services/UserProfile.js"
+import { makeUserProfileFromAuthorizationHeader, makeUserProfileFromUserHeader, UserProfile } from "../UserProfile.js"
 import { basicRuntime } from "./basicRuntime.js"
 
 export interface CTX {
