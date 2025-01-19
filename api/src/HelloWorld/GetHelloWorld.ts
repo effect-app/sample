@@ -5,7 +5,7 @@ import { generate } from "@effect-app/infra/test"
 import { Effect } from "effect-app"
 import { User } from "../Accounts/models.js"
 import { UserRepo } from "../Accounts/UserRepo.js"
-import { GetHelloWorld } from "./GetHelloWorld.resource.js"
+import { GetHelloWorld } from "./GetHelloWorld.request.js"
 
 export default handlerFor(GetHelloWorld)({
   dependencies: [UserRepo.Default],

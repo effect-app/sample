@@ -4,7 +4,7 @@ import { Events, Operations } from "#api/services"
 import { BogusEvent } from "#resources/Events"
 import { Duration, Effect, Schedule } from "effect-app"
 import { NonEmptyString2k, NonNegativeInt } from "effect-app/Schema"
-import { PublishPost } from "./PublishPost.resource.js"
+import { PublishPost } from "./PublishPost.request.js"
 import { BlogPostRepo } from "./Repo.js"
 
 export default handlerFor(PublishPost)({

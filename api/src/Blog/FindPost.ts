@@ -1,7 +1,7 @@
 import { handlerFor } from "#api/lib/handler"
 import { Effect } from "effect"
 import { Option } from "effect-app"
-import { FindPost } from "./FindPost.resource.js"
+import { FindPost } from "./FindPost.request.js"
 import { BlogPostRepo } from "./Repo.js"
 
 export default handlerFor(FindPost)({

@@ -2,7 +2,7 @@ import { handlerFor } from "#api/lib/handler"
 import { OperationsDefault } from "#api/lib/layers"
 import { Operations } from "#api/services"
 import { Effect } from "effect-app"
-import { FindOperation } from "./FindOperation.resource.js"
+import { FindOperation } from "./FindOperation.request.js"
 
 export default handlerFor(FindOperation)({
   dependencies: [OperationsDefault],

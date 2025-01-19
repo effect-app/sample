@@ -1,7 +1,7 @@
 import { handlerFor } from "#api/lib/handler"
 import { Q } from "#api/services"
 import { Array, Effect, Order } from "effect-app"
-import { IndexUsers } from "./IndexUsers.resource.js"
+import { IndexUsers } from "./IndexUsers.request.js"
 import { UserRepo } from "./UserRepo.js"
 import type { UserView } from "./views.js"
 

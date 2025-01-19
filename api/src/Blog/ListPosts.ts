@@ -1,6 +1,6 @@
 import { handlerFor } from "#api/lib/handler"
 import { Effect } from "effect-app"
-import { ListPosts } from "./ListPosts.resource.js"
+import { ListPosts } from "./ListPosts.request.js"
 import { BlogPostRepo } from "./Repo.js"
 
 export default handlerFor(ListPosts)({

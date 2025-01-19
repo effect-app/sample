@@ -1,7 +1,7 @@
 import { UserRepo } from "#Accounts/UserRepo"
 import { handlerFor } from "#api/lib/handler"
 import { Effect } from "effect-app"
-import { CreatePost } from "./CreatePost.resource.js"
+import { CreatePost } from "./CreatePost.request.js"
 import { BlogPost } from "./models.js"
 import { BlogPostRepo } from "./Repo.js"
 

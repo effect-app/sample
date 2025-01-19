@@ -1,6 +1,6 @@
 import { handlerFor } from "#api/lib/handler"
 import { Effect } from "effect-app"
-import { GetMe } from "./GetMe.resource.js"
+import { GetMe } from "./GetMe.request.js"
 import { UserRepo } from "./UserRepo.js"
 
 export default handlerFor(GetMe)({
