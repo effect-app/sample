@@ -1,8 +1,8 @@
 //// codegen:start {preset: barrel, include: ../Blog/*.ts, export: { as: 'PascalCase' }}
-export { CreatePost } from "../Blog/CreatePost.js"
-export { FindPost } from "../Blog/FindPost.js"
-export { ListPosts } from "../Blog/ListPosts.js"
-export { PublishPost } from "../Blog/PublishPost.js"
+export { CreatePost } from "../Blog/CreatePost.request.js"
+export { FindPost } from "../Blog/FindPost.request.js"
+export { ListPosts } from "../Blog/ListPosts.request.js"
+export { PublishPost } from "../Blog/PublishPost.request.js"
 //// codegen:end
 
 // codegen:start {preset: meta, sourcePrefix: src/resources/}

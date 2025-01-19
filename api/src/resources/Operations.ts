@@ -2,11 +2,11 @@ import { Duration, Effect } from "effect-app"
 import { NotFoundError } from "effect-app/client"
 import type { Operation, OperationId } from "effect-app/Operations"
 import { OperationFailure } from "effect-app/Operations"
-import { FindOperation } from "../Operations/FindOperation.js"
+import { FindOperation } from "../Operations/FindOperation.request.js"
 import { clientFor } from "./lib.js"
 import * as S from "./lib/schema.js"
 
-export { FindOperation } from "../Operations/FindOperation.js"
+export { FindOperation } from "../Operations/FindOperation.request.js"
 
 // codegen:start {preset: meta, sourcePrefix: src/resources/}
 export const meta = { moduleName: "Operations" } as const

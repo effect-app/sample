@@ -1,20 +1,9 @@
 import { handlerFor } from "#api/lib/handler"
 import { Q } from "#api/services"
-import { S } from "#resources/lib"
 import { Array, Effect, Order } from "effect-app"
-import { UserId } from "./models.js"
+import { IndexUsers } from "./IndexUsers.request.js"
 import { UserRepo } from "./UserRepo.js"
-import { UserView } from "./views.js"
-
-export class IndexUsers extends S.Req<IndexUsers>()("Accounts.IndexUsers", {
-  filterByIds: S.NonEmptyArray(UserId)
-}, {
-  allowAnonymous: true,
-  allowRoles: ["user"],
-  success: S.Struct({
-    users: S.Array(UserView)
-  })
-}) {}
+import type { UserView } from "./views.js"
 
 export default handlerFor(IndexUsers)({
   dependencies: [UserRepo.Default],
