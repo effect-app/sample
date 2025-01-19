@@ -3,8 +3,8 @@ import { S } from "#resources/lib"
 import { Effect } from "effect"
 import { Option } from "effect-app"
 import { BlogPostId } from "./models.js"
-import { BlogPostView } from "./PostView.js"
 import { BlogPostRepo } from "./Repo.js"
+import { BlogPostView } from "./views.js"
 
 export class FindPost extends S.Req<FindPost>()("Blog.FindPost", {
   id: BlogPostId

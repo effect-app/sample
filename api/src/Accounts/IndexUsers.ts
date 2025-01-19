@@ -4,7 +4,7 @@ import { S } from "#resources/lib"
 import { Array, Effect, Order } from "effect-app"
 import { UserId } from "./models.js"
 import { UserRepo } from "./UserRepo.js"
-import { UserView } from "./UserView.js"
+import { UserView } from "./views.js"
 
 export class IndexUsers extends S.Req<IndexUsers>()("Accounts.IndexUsers", {
   filterByIds: S.NonEmptyArray(UserId)
