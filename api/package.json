@@ -55,16 +55,6 @@
     }
   },
   "imports": {
-    "#api/*": {
-      "import": {
-        "types": "./dist/*.d.ts",
-        "default": "./dist/*.js"
-      },
-      "require": {
-        "types": "./dist/*.d.ts",
-        "default": "./_cjs/*.cjs"
-      }
-    },
     "#core/*": {
       "import": {
         "types": "./dist/core/*.d.ts",
@@ -73,16 +63,6 @@
       "require": {
         "types": "./dist/core/*.d.ts",
         "default": "./_cjs/core/*.cjs"
-      }
-    },
-    "#models": {
-      "import": {
-        "types": "./dist/models.d.ts",
-        "default": "./dist/models.js"
-      },
-      "require": {
-        "types": "./dist/models.d.ts",
-        "default": "./_cjs/models.cjs"
       }
     },
     "#resources": {
@@ -95,14 +75,14 @@
         "default": "./_cjs/resources.cjs"
       }
     },
-    "#models/*": {
+    "#Domain/*": {
       "import": {
-        "types": "./dist/models/*.d.ts",
-        "default": "./dist/models/*.js"
+        "types": "./dist/Domain/*.d.ts",
+        "default": "./dist/Domain/*.js"
       },
       "require": {
-        "types": "./dist/models/*.d.ts",
-        "default": "./_cjs/models/*.cjs"
+        "types": "./dist/Domain/*.d.ts",
+        "default": "./_cjs/Domain/*.cjs"
       }
     },
     "#resources/*": {
@@ -113,6 +93,16 @@
       "require": {
         "types": "./dist/resources/*.d.ts",
         "default": "./_cjs/resources/*.cjs"
+      }
+    },
+    "#api/*": {
+      "import": {
+        "types": "./dist/*.d.ts",
+        "default": "./dist/*.js"
+      },
+      "require": {
+        "types": "./dist/*.d.ts",
+        "default": "./_cjs/*.cjs"
       }
     }
   },

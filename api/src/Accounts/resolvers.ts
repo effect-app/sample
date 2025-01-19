@@ -1,9 +1,9 @@
+import { UserId } from "#Domain/User"
 import { clientFor } from "#resources/lib"
 import { Effect, Exit, Request, RequestResolver } from "effect"
 import { Array, Option, pipe, S } from "effect-app"
 import { ApiClientFactory, NotFoundError } from "effect-app/client"
 import { type Schema } from "effect-app/Schema"
-import { UserId } from "./models.js"
 import { AccountsRsc, UserView } from "./resources.js"
 
 interface GetUserViewById extends Request.Request<UserView, NotFoundError<"User">> {
