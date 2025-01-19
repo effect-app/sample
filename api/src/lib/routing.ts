@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { AppLogger } from "#api/chore/logger"
 import { BaseConfig } from "#api/config"
+import { AppLogger } from "#api/lib/logger"
 import { RequestCacheLayers } from "#api/resources/lib"
 import { makeMiddleware, makeRouter, RpcHeadersFromHttpHeaders } from "@effect-app/infra/api/routing"
 import { NotLoggedInError, UnauthorizedError } from "@effect-app/infra/errors"
