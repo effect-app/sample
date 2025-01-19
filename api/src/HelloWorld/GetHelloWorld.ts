@@ -1,24 +1,11 @@
-import { UserView } from "#Accounts/views"
 import { handlerFor } from "#api/lib/handler"
 import { S } from "#resources/lib"
 import { getRequestContext } from "@effect-app/infra/api/setupRequest"
-import { RequestContext } from "@effect-app/infra/RequestContext"
 import { generate } from "@effect-app/infra/test"
 import { Effect } from "effect-app"
 import { User } from "../Accounts/models.js"
 import { UserRepo } from "../Accounts/UserRepo.js"
-
-class Response extends S.Class<Response>()({
-  now: S.Date.withDefault,
-  echo: S.String,
-  context: RequestContext,
-  currentUser: S.NullOr(UserView),
-  randomUser: UserView
-}) {}
-
-export class GetHelloWorld extends S.Req<GetHelloWorld>()("HelloWorld.GetHelloWorld", {
-  echo: S.String
-}, { allowAnonymous: true, allowRoles: ["user"], success: Response }) {}
+import { GetHelloWorld } from "./GetHelloWorld.resource.js"
 
 export default handlerFor(GetHelloWorld)({
   dependencies: [UserRepo.Default],

@@ -1,16 +1,9 @@
 import { UserRepo } from "#Accounts/UserRepo"
 import { handlerFor } from "#api/lib/handler"
-import { S } from "#resources/lib"
 import { Effect } from "effect-app"
-import { InvalidStateError, NotFoundError, OptimisticConcurrencyException } from "effect-app/client"
-import { BlogPost, BlogPostId } from "./models.js"
+import { CreatePost } from "./CreatePost.resource.js"
+import { BlogPost } from "./models.js"
 import { BlogPostRepo } from "./Repo.js"
-
-export class CreatePost extends S.Req<CreatePost>()("Blog.Create", BlogPost.pick("title", "body"), {
-  allowRoles: ["user"],
-  success: S.Struct({ id: BlogPostId }),
-  failure: S.Union(NotFoundError, InvalidStateError, OptimisticConcurrencyException)
-}) {}
 
 export default handlerFor(CreatePost)({
   dependencies: [
