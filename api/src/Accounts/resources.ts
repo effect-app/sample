@@ -1,6 +1,6 @@
+import { User, UserId } from "#Domain/User"
 import { S } from "#resources/lib"
 import { NotFoundError } from "effect-app/client"
-import { User, UserId } from "./models.js"
 
 export class UserView extends S.ExtendedClass<UserView, UserView.Encoded>()({
   ...User.pick("id", "role"),

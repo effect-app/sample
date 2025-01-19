@@ -1,8 +1,8 @@
 import { UserViewFromId } from "#api/Accounts/resolvers"
+import { BlogPost, BlogPostId } from "#Domain/Blog"
 import { S } from "#resources/lib"
 import { InvalidStateError, NotFoundError, OptimisticConcurrencyException } from "effect-app/client"
 import { OperationId } from "effect-app/Operations"
-import { BlogPost, BlogPostId } from "./models.js"
 
 export class BlogPostView extends S.ExtendedClass<BlogPostView, BlogPostView.Encoded>()({
   ...BlogPost.omit("author"),

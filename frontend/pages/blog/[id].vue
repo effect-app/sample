@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { BlogPostId } from "#Blog/models"
 import { BlogRsc } from "#Blog/resources"
+import { BlogPostId } from "#Domain/Blog"
 import type { ClientEvents } from "#resources/Events"
 
 const { id } = useRouteParams({ id: BlogPostId })

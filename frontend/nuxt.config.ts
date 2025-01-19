@@ -25,13 +25,13 @@ export default defineNuxtConfig({
 
   alias: {
     ...[
+      "Domain",
       // TODO: auto gen
       "Accounts",
       "Blog",
       "Operations",
       "HelloWorld",
       "resources",
-      "models",
     ].reduce(
       (prev, cur) => {
         prev[`#${cur}`] = fileURLToPath(

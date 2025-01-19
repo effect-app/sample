@@ -20,14 +20,8 @@
       "#resources": [
         "./src/resources.js"
       ],
-      "#models": [
-        "./src/models.js"
-      ],
-      "#resources/*": [
-        "./src/resources/*.js"
-      ],
-      "#models/*": [
-        "./src/models/*.js"
+      "#Domain/*": [
+        "./src/Domain/*.js"
       ],
       "#api/*": [
         "./src/*.js"

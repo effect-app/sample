@@ -1,6 +1,6 @@
-import { User } from "#api/Accounts/models"
 import { UserRepo } from "#api/Accounts/UserRepo"
 import { matchFor, Router } from "#api/lib/routing"
+import { User } from "#Domain/User"
 import { getRequestContext } from "@effect-app/infra/api/setupRequest"
 import { generate } from "@effect-app/infra/test"
 import { Effect, S } from "effect-app"
