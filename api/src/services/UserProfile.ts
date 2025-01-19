@@ -1,4 +1,4 @@
-import { Role } from "#models/User"
+import { Role } from "#Accounts/models"
 import { parseJwt } from "@effect-app/infra/api/routing/schema/jwt"
 import { Context, S } from "effect-app"
 import { UserProfileId } from "effect-app/ids"

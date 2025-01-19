@@ -1,7 +1,6 @@
 import { RepoConfig } from "#api/config"
 import { RepoDefault } from "#api/lib/layers"
-import type { UserId } from "#models/User"
-import { User } from "#models/User"
+import { Q, UserProfile } from "#api/services"
 import { Model } from "@effect-app/infra"
 import { NotFoundError, NotLoggedInError } from "@effect-app/infra/errors"
 import { generate } from "@effect-app/infra/test"
@@ -9,8 +8,8 @@ import { Array, Effect, Exit, Layer, Option, pipe, Request, RequestResolver, S }
 import { fakerArb } from "effect-app/faker"
 import { Email } from "effect-app/Schema"
 import fc from "fast-check"
-import { Q } from "../lib.js"
-import { UserProfile } from "../UserProfile.js"
+import type { UserId } from "./models.js"
+import { User } from "./models.js"
 
 export type UserSeed = "sample" | ""
 

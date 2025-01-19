@@ -24,10 +24,15 @@ export default defineNuxtConfig({
   },
 
   alias: {
-    "#resources": fileURLToPath(
-      new URL("../api/src/resources", import.meta.url),
+    ...["Accounts", "Blog", "resources", "models"].reduce(
+      (prev, cur) => {
+        prev[`#${cur}`] = fileURLToPath(
+          new URL("../api/src/" + cur, import.meta.url),
+        )
+        return prev
+      },
+      {} as Record<string, string>,
     ),
-    "#models": fileURLToPath(new URL("../api/src/models", import.meta.url)),
     ...(localLibs
       ? {
           "effect-app": fileURLToPath(

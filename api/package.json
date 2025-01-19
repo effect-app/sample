@@ -114,6 +114,26 @@
         "types": "./dist/resources/*.d.ts",
         "default": "./_cjs/resources/*.cjs"
       }
+    },
+    "#Accounts/*": {
+      "import": {
+        "types": "./dist/Accounts/*.d.ts",
+        "default": "./dist/Accounts/*.js"
+      },
+      "require": {
+        "types": "./dist/Accounts/*.d.ts",
+        "default": "./_cjs/Accounts/*.cjs"
+      }
+    },
+    "#Blog/*": {
+      "import": {
+        "types": "./dist/Blog/*.d.ts",
+        "default": "./dist/Blog/*.js"
+      },
+      "require": {
+        "types": "./dist/Blog/*.d.ts",
+        "default": "./_cjs/Blog/*.cjs"
+      }
     }
   },
   "dependencies": {

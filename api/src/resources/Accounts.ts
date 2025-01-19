@@ -1,8 +1,6 @@
-import { User } from "#models/User"
-import { NotFoundError } from "effect-app/client"
-import { S } from "./lib.js"
-
-export class GetMe extends S.Req<GetMe>()("GetMe", {}, { success: User, failure: NotFoundError }) {}
+//// codegen:start {preset: barrel, include: ../Blog/*.ts, export: { as: 'PascalCase' }}
+export { GetMe } from "../Accounts/GetMe.js"
+//// codegen:end
 
 // codegen:start {preset: meta, sourcePrefix: src/resources/}
 export const meta = { moduleName: "Accounts" } as const
