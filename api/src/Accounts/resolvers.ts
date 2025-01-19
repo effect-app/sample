@@ -5,7 +5,7 @@ import { Effect, Exit, Request, RequestResolver } from "effect"
 import { Array, Option, pipe, S } from "effect-app"
 import { ApiClientFactory, NotFoundError } from "effect-app/client"
 import { type Schema } from "effect-app/Schema"
-import { IndexUsers } from "./IndexUsers.js"
+import { IndexUsers } from "./IndexUsers.request.js"
 
 interface GetUserViewById extends Request.Request<UserView, NotFoundError<"User">> {
   readonly _tag: "GetUserViewById"
