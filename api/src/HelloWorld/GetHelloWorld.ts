@@ -1,4 +1,4 @@
-import { UserView } from "#Accounts/UserView"
+import { UserView } from "#Accounts/views"
 import { handlerFor } from "#api/lib/handler"
 import { S } from "#resources/lib"
 import { getRequestContext } from "@effect-app/infra/api/setupRequest"
