@@ -1,8 +1,13 @@
+import { UserViewFromId } from "#api/Accounts/resolvers"
 import { S } from "#resources/lib"
 import { InvalidStateError, NotFoundError, OptimisticConcurrencyException } from "effect-app/client"
 import { OperationId } from "effect-app/Operations"
 import { BlogPost, BlogPostId } from "./models.js"
-import { BlogPostView } from "./PostView.js"
+
+export class BlogPostView extends S.ExtendedClass<BlogPostView, BlogPostView.Encoded>()({
+  ...BlogPost.omit("author"),
+  author: S.propertySignature(UserViewFromId).pipe(S.fromKey("authorId"))
+}) {}
 
 export class CreatePost extends S.Req<CreatePost>()("CreatePost", BlogPost.pick("title", "body"), {
   allowRoles: ["user"],
@@ -28,6 +33,16 @@ export class PublishPost extends S.Req<PublishPost>()("PublishPost", {
 
 // codegen:start {preset: meta, sourcePrefix: src/}
 export const meta = { moduleName: "Blog" } as const
+// codegen:end
+
+// codegen:start {preset: model}
+//
+/* eslint-disable */
+export namespace BlogPostView {
+  export interface Encoded extends S.Struct.Encoded<typeof BlogPostView["fields"]> {}
+}
+/* eslint-enable */
+//
 // codegen:end
 
 export * as BlogRsc from "./resources.js"

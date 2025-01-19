@@ -4,8 +4,7 @@ import { Array, Option, pipe, S } from "effect-app"
 import { ApiClientFactory, NotFoundError } from "effect-app/client"
 import { type Schema } from "effect-app/Schema"
 import { UserId } from "./models.js"
-import { AccountsRsc } from "./resources.js"
-import { UserView } from "./UserView.js"
+import { AccountsRsc, UserView } from "./resources.js"
 
 interface GetUserViewById extends Request.Request<UserView, NotFoundError<"User">> {
   readonly _tag: "GetUserViewById"
