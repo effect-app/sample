@@ -1,5 +1,5 @@
-import { UserViewFromId } from "#resources/resolvers/UserResolver"
 import { S } from "#resources/lib"
+import { UserViewFromId } from "#resources/resolvers/UserResolver"
 import { BlogPost } from "./models.js"
 
 export class BlogPostView extends S.ExtendedClass<BlogPostView, BlogPostView.Encoded>()({
