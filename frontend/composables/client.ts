@@ -9,7 +9,7 @@ import { OperationsClient } from "#resources/Operations"
 
 export { useToast } from "vue-toastification"
 
-export { Result, type MutationResult, makeContext } from "@effect-app/vue"
+export { Result, makeContext } from "@effect-app/vue"
 export {
   pauseWhileProcessing,
   useIntervalPauseWhileProcessing,
