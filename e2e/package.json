@@ -32,7 +32,7 @@
     "babel-loader": "^9.2.1",
     "date-fns": "^4.1.0",
     "eslint-config-prettier": "^10.0.1",
-    "eslint-import-resolver-typescript": "^3.8.2",
+    "eslint-import-resolver-typescript": "^3.8.3",
     "eslint-import-resolver-webpack": "^0.13.10",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.2.3",
@@ -51,7 +51,7 @@
   "dependencies": {
     "@effect-app-boilerplate/api": "workspace:*",
     "@effect/platform-node": "0.73.2",
-    "effect-app": "^2.27.0",
+    "effect-app": "^2.28.0",
     "@effect/platform": "^0.77.2",
     "effect": "^3.13.2",
     "cross-fetch": "^4.1.0",
