@@ -73,7 +73,10 @@ const middleware = makeMiddleware({
             //       issuer: authConfig.issuer + "/",
             //       jwksUri: `${authConfig.issuer}/.well-known/jwks.json`
             //     }),
-            //     (err) => Effect.fail(new JWTError({ error: err }))
+            // (err) =>
+            //   Effect.logError(err).pipe(
+            //     Effect.andThen(Effect.fail(new NotLoggedInError({ message: err.message })))
+            //   )
             //   )
             // }
 
