@@ -17,12 +17,12 @@
     "clean": "rm -rf ./.nuxt ./node_modules/.cache"
   },
   "dependencies": {
-    "@effect-app/vue": "^2.30.0",
-    "@effect/platform": "^0.77.3",
-    "@effect/platform-browser": "^0.56.3",
-    "@effect/rpc": "^0.52.3",
-    "@effect/rpc-http": "^0.50.3",
-    "@effect/opentelemetry": "^0.44.3",
+    "@effect-app/vue": "^2.30.5",
+    "@effect/platform": "^0.77.4",
+    "@effect/platform-browser": "^0.56.4",
+    "@effect/rpc": "^0.52.4",
+    "@effect/rpc-http": "^0.50.4",
+    "@effect/opentelemetry": "^0.44.4",
     "@formatjs/intl": "3.1.4",
     "@hebilicious/vue-query-nuxt": "^0.3.0",
     "@opentelemetry/context-zone": "^1.30.1",
@@ -36,14 +36,14 @@
     "@sentry/tracing": "^7.114.0",
     "@sentry/vite-plugin": "^2.16.1",
     "@sentry/vue": "^7.114.0",
-    "@tanstack/vue-query": "^5.66.9",
-    "@tanstack/vue-query-devtools": "^5.66.9",
+    "@tanstack/vue-query": "^5.66.11",
+    "@tanstack/vue-query-devtools": "^5.66.11",
     "@vueuse/core": "^12.7.0",
     "@vueuse/nuxt": "^12.7.0",
     "cookie": "^1.0.2",
     "date-fns": "^4.1.0",
-    "effect": "^3.13.3",
-    "effect-app": "^2.30.0",
+    "effect": "^3.13.4",
+    "effect-app": "^2.32.1",
     "highcharts": "^12.1.2",
     "http-proxy-node16": "^1.0.6",
     "mitt": "^3.0.1",
@@ -65,7 +65,7 @@
     "h3": "^1.15.1",
     "nuxt": "~3.15.4",
     "sass": "^1.85.1",
-    "typescript": "~5.7.3",
-    "vue-tsc": "^2.2.4"
+    "typescript": "~5.8.2",
+    "vue-tsc": "2.2.4"
   }
 }
