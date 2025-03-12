@@ -79,7 +79,15 @@ export class UserRepo extends Effect.Service<UserRepo>()("UserRepo", {
                   .pipe(Option.getOrElse(() => Exit.fail(new NotFoundError({ type: "User", id: r.id }))))
               ), { discard: true })
           ))
-      )
+      ).pipe(
+        Effect.orDie,
+        Effect.catchAllCause((cause) =>
+          Effect.forEach(
+            requests,
+            (request) => Request.failCause(request, cause),
+            { discard: true }
+          )
+        ))
     )
     .pipe(
       RequestResolver.batchN(25),

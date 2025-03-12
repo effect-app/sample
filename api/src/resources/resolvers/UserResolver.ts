@@ -30,7 +30,14 @@ const getUserViewByIdResolver = RequestResolver
               .pipe(Option.getOrElse(() => Exit.fail(new NotFoundError({ type: "User", id: r.id }))))
           ), { discard: true })
       ),
-      Effect.orDie
+      Effect.orDie,
+      Effect.catchAllCause((cause) =>
+        Effect.forEach(
+          requests,
+          (request) => Request.failCause(request, cause),
+          { discard: true }
+        )
+      )
     )
   )
   .pipe(RequestResolver.batchN(25), RequestResolver.contextFromServices(ApiClientFactory))
