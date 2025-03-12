@@ -3,6 +3,7 @@
   "extends": [
     "@tsconfig/strictest/tsconfig.json",
     "./.nuxt/tsconfig.json",
+    "../tsconfig.plugins.json"
   ],
   "compilerOptions": {
     "lib": [

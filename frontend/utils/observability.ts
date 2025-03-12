@@ -10,7 +10,7 @@ import {
 } from "@sentry/opentelemetry-node"
 import type { App } from "vue"
 import otelApi from "@opentelemetry/api"
-import { isErrorReported } from "effect-app/client/errors"
+import { isErrorSilenced } from "effect-app/client/errors"
 import { Layer, Effect } from "effect-app"
 
 // import {
@@ -79,9 +79,7 @@ export const setupSentry = (app: App<Element>, isRemote: boolean) => {
         // skip handled errors
         hint.originalException &&
         typeof hint.originalException === "object" &&
-        (isErrorReported(hint.originalException) ||
-          ("name" in hint.originalException &&
-            hint.originalException["name"] === "HandledError"))
+        isErrorSilenced(hint.originalException)
       ) {
         console.warn("Sentry: skipped HandledError", hint.originalException)
         return null

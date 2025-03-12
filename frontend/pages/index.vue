@@ -3,21 +3,21 @@ import { HelloWorldRsc } from "#resources"
 import { buildFormFromSchema } from "@effect-app/vue/form"
 import { S } from "effect-app"
 
-const schema = S.Struct({
+class Input extends S.Class<Input>()({
   title: S.NonEmptyString255,
   name: S.NonEmptyString2k,
   age: S.NonNegativeInt,
   email: S.Email,
-})
+}) {}
 
-const state = ref<S.Schema.Encoded<typeof schema>>({
+const state = ref<typeof Input.Encoded>({
   title: "",
   name: "",
   age: 0,
   email: "",
 })
 
-const form = buildFormFromSchema(schema, state, v =>
+const form = buildFormFromSchema(Input, state, v =>
   Promise.resolve(confirm("submitting: " + JSON.stringify(v))),
 )
 
@@ -61,15 +61,15 @@ onMounted(() => {
           :field="field"
         /> -->
         <TextField
+          v-model="state[name]"
           :label="name"
           :placeholder="name"
-          v-model="state[name]"
           :field="field"
         />
       </template>
     </v-form>
 
-    <QueryResult :result="result" v-slot="{ latest, refreshing }">
+    <QueryResult v-slot="{ latest, refreshing }" :result="result">
       <Delayed v-if="refreshing"><v-progress-circular /></Delayed>
       <div>
         <pre v-html="JSON.stringify(latest, undefined, 2)" />

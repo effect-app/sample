@@ -8,16 +8,11 @@ import { makeMiddleware, makeRouter, RpcHeadersFromHttpHeaders } from "@effect-a
 import { NotLoggedInError, UnauthorizedError } from "@effect-app/infra/errors"
 import type { RequestContext } from "@effect-app/infra/RequestContext"
 import { Rpc } from "@effect/rpc"
-import type { Request, S } from "effect-app"
-import { Context, Effect, Exit, Layer, Option } from "effect-app"
+import { Context, Effect, Exit, Layer, Option, type Request, type S } from "effect-app"
 import type { GetEffectContext, RPCContextMap } from "effect-app/client"
 import type { HttpHeaders, HttpServerRequest } from "effect-app/http"
 import type * as EffectRequest from "effect/Request"
-import {
-  makeUserProfileFromAuthorizationHeader,
-  makeUserProfileFromUserHeader,
-  UserProfile
-} from "../services/UserProfile.js"
+import { makeUserProfileFromAuthorizationHeader, makeUserProfileFromUserHeader, UserProfile } from "../services/UserProfile.js"
 import { basicRuntime } from "./basicRuntime.js"
 
 export interface CTX {
@@ -78,7 +73,10 @@ const middleware = makeMiddleware({
             //       issuer: authConfig.issuer + "/",
             //       jwksUri: `${authConfig.issuer}/.well-known/jwks.json`
             //     }),
-            //     (err) => Effect.fail(new JWTError({ error: err }))
+            // (err) =>
+            //   Effect.logError(err).pipe(
+            //     Effect.andThen(Effect.fail(new NotLoggedInError({ message: err.message })))
+            //   )
             //   )
             // }
 
@@ -97,7 +95,7 @@ const middleware = makeMiddleware({
               // TODO
               if (
                 !userProfile.value
-                || !(config.requireRoles as any).every((role: any) => userProfile.value!.roles.includes(role))
+                || !config.requireRoles.every((role: any) => userProfile.value!.roles.includes(role))
               ) {
                 return yield* new UnauthorizedError()
               }
