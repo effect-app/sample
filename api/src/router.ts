@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import * as MW from "#api/lib/middleware"
-import { Console, Effect, Layer } from "effect-app"
+import { RpcSerialization } from "@effect/rpc"
+import { Console, Context, Effect, Layer } from "effect-app"
 import { HttpMiddleware, HttpRouter, HttpServer } from "effect-app/http"
 import { BaseConfig, MergedConfig } from "./config.js"
 import { Events } from "./services.js"
 
-class RootAppRouter extends HttpRouter.Tag("RootAppRouter")<RootAppRouter>() {}
-const AllRoutes = RootAppRouter
+const AllRoutes = HttpRouter
+  .Default
   .use((router) =>
     Effect.gen(function*() {
       const cfg = yield* BaseConfig
@@ -26,25 +27,26 @@ const logServer = Effect
   })
   .pipe(Layer.effectDiscard)
 
-export const makeHttpServer = <E, R, E3, R3>(
-  router: { layer: Layer<never, E, R>; Router: HttpRouter.HttpRouter.TagClass<any, any, E3, R3> }
+export class Test extends Context.Reference<Test>()("test123", { defaultValue: () => "no" }) {}
+
+export const makeHttpServer = <E, R>(
+  router: Layer<never, E, R>
 ) =>
   logServer.pipe(
-    Layer.provide(
-      RootAppRouter.unwrap((root) =>
-        router.Router.unwrap((app) =>
-          HttpRouter.concat(root, app).pipe(
-            MW.RequestContextMiddleware(),
-            MW.gzip,
-            MW.cors(),
-            // we trust proxy and handle the x-forwarded etc headers
-            HttpMiddleware.xForwardedHeaders,
-            HttpServer.serve(HttpMiddleware.logger)
-          )
-        )
+    Layer.provide(HttpRouter.Default.unwrap((root) =>
+      root.pipe(
+        Effect.provideService(Test, "yes"),
+        MW.RequestContextMiddleware(),
+        MW.gzip,
+        MW.cors(),
+        // we trust proxy and handle the x-forwarded etc headers
+        HttpMiddleware.xForwardedHeaders,
+        HttpServer.serve(HttpMiddleware.logger)
       )
-    ),
-    Layer.provide(router.layer),
-    Layer.provide(AllRoutes)
+    )),
+    Layer.provide(router),
+    Layer.provide(AllRoutes),
+    Layer.provide(RpcSerialization.layerJson),
+    Layer.provide(Layer.succeed(Test, "1"))
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   )

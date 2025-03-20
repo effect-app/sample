@@ -4,13 +4,12 @@
 import { BaseConfig } from "#api/config"
 import { AppLogger } from "#api/lib/logger"
 import { RequestCacheLayers } from "#api/resources/lib"
-import { makeMiddleware, makeRouter, RpcHeadersFromHttpHeaders } from "@effect-app/infra/api/routing"
+import { makeMiddleware, makeRouter } from "@effect-app/infra/api/routing"
 import { NotLoggedInError, UnauthorizedError } from "@effect-app/infra/errors"
 import type { RequestContext } from "@effect-app/infra/RequestContext"
-import { Rpc } from "@effect/rpc"
 import { Context, Effect, Exit, Layer, Option, type Request, type S } from "effect-app"
-import type { GetEffectContext, RPCContextMap } from "effect-app/client"
-import type { HttpHeaders, HttpServerRequest } from "effect-app/http"
+import type { GetEffectContext, RPCContextMap } from "effect-app/client/req"
+import { HttpHeaders, HttpServerRequest } from "effect-app/http"
 import type * as EffectRequest from "effect/Request"
 import { makeUserProfileFromAuthorizationHeader, makeUserProfileFromUserHeader, UserProfile } from "../services/UserProfile.js"
 import { basicRuntime } from "./basicRuntime.js"
@@ -33,7 +32,7 @@ export type CTXMap = {
 //   )
 // })
 
-const RequestLayers = Layer.mergeAll(RpcHeadersFromHttpHeaders, RequestCacheLayers)
+const RequestLayers = Layer.mergeAll(RequestCacheLayers)
 
 const middleware = makeMiddleware({
   contextMap: null as unknown as CTXMap,
@@ -52,15 +51,17 @@ const middleware = makeMiddleware({
 
     return <T extends { config?: { [K in keyof CTXMap]?: any } }, Req extends S.TaggedRequest.All, R>(
       schema: T & S.Schema<Req, any, never>,
-      handler: (request: Req) => Effect.Effect<EffectRequest.Request.Success<Req>, EffectRequest.Request.Error<Req>, R>,
+      handler: (
+        request: Req,
+        headers: any
+      ) => Effect.Effect<EffectRequest.Request.Success<Req>, EffectRequest.Request.Error<Req>, R>,
       moduleName?: string
     ) => {
-      const ContextLayer = <Req extends { _tag: string }>(req: Req) =>
+      const ContextLayer = <Req extends { _tag: string }>(req: Req, headers: any) =>
         Effect
           .gen(function*() {
             yield* Effect.annotateCurrentSpan("request.name", moduleName ? `${moduleName}.${req._tag}` : req._tag)
 
-            const headers = yield* Rpc.currentHeaders
             const config = "config" in schema ? schema.config : undefined
             let ctx = Context.empty()
 
@@ -104,15 +105,25 @@ const middleware = makeMiddleware({
             return ctx as Context.Context<GetEffectContext<CTXMap, T["config"]>>
           })
           .pipe(Layer.effectContext, Layer.provide(RequestLayers))
-      return (req: Req): Effect.Effect<
+      return (req: Req, headers: any): Effect.Effect<
         Request.Request.Success<Req>,
         Request.Request.Error<Req>,
         | HttpServerRequest.HttpServerRequest
         | Exclude<R, GetEffectContext<CTXMap, T["config"]>>
       > =>
-        handler(req).pipe(
-          Effect.provide(ContextLayer(req))
-        ) as any
+        Effect.gen(function*() {
+          // console.log(yield* Effect.context())
+          // console.log("$test", yield* Test)
+          // console.log("$test2", yield* FiberRef.get(Test2))
+          // TODO: somehow get the headers from Http and put them in the Rpc headers..
+          // perhaps do this elsewhere
+          const httpReq = yield* HttpServerRequest.HttpServerRequest
+          const abc = HttpHeaders.merge(httpReq.headers, headers)
+
+          return yield* handler(req, abc).pipe(
+            Effect.provide(ContextLayer(req, abc))
+          )
+        }) as any
     }
   })
 })
