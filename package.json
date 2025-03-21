@@ -9,7 +9,8 @@
       "typescript": "patches/typescript.patch",
       "@effect/platform": "patches/@effect__platform.patch",
       "effect": "patches/effect.patch",
-      "ts-plugin-sort-import-suggestions": "patches/ts-plugin-sort-import-suggestions.patch"
+      "ts-plugin-sort-import-suggestions": "patches/ts-plugin-sort-import-suggestions.patch",
+      "@tanstack/query-core": "patches/@tanstack__query-core.patch"
     }
   },
   "engines": {
@@ -73,11 +74,11 @@
   },
   "dependencies": {
     "date-fns": "^4.1.0",
-    "effect": "3.14.0",
-    "@effect/experimental": "0.44.0",
-    "@effect/opentelemetry": "0.45.0",
-    "@effect/platform": "0.80.0",
-    "@effect/platform-node": "0.76.0",
+    "effect": "3.14.1",
+    "@effect/experimental": "0.44.1",
+    "@effect/opentelemetry": "0.45.1",
+    "@effect/platform": "0.80.1",
+    "@effect/platform-node": "0.76.1",
     "@opentelemetry/api": "^1.9",
     "@opentelemetry/exporter-metrics-otlp-http": "^0.57.2",
     "@opentelemetry/exporter-trace-otlp-http": "^0.57.2",
@@ -96,14 +97,14 @@
     "vue": "^3.5.13"
   },
   "devDependencies": {
-    "@dprint/typescript": "^0.93.3",
+    "@dprint/typescript": "^0.94.0",
     "@effect-app/cli": "^1.17.0",
     "@effect-app/eslint-codegen-model": "^1.35.0",
     "@effect/language-service": "^0.4.0",
     "@phaphoso/eslint-plugin-dprint": "^0.5.2",
     "@tsconfig/strictest": "^2.0.5",
     "@types/lodash": "^4.17.16",
-    "@types/node": "~22.13.10",
+    "@types/node": "~22.13.11",
     "@typescript-eslint/eslint-plugin": "^8.27.0",
     "@typescript-eslint/parser": "^8.27.0",
     "@typescript-eslint/scope-manager": "^8.27.0",
