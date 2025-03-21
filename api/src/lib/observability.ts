@@ -179,7 +179,14 @@ const ConfigLive = Effect
     }
 
     props = {
-      instrumentations: [getNodeAutoInstrumentations()],
+      instrumentations: [
+        getNodeAutoInstrumentations({
+          "@opentelemetry/instrumentation-http": {
+            // effect http server already does this
+            disableIncomingRequestInstrumentation: true
+          }
+        })
+      ],
 
       resource,
 
