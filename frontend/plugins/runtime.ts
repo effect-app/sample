@@ -37,6 +37,9 @@ function makeRuntime(feVersion: string, disableTracing: boolean) {
       ),
     ),
     Layer.provide(FetchHttpClient.layer),
+    Layer.provide(
+      Layer.succeed(FetchHttpClient.RequestInit, { credentials: "include" }),
+    ),
   )
 
   const rt: {
