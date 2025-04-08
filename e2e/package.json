@@ -23,7 +23,7 @@
     "@types/node": "~22.14.0",
     "date-fns": "^4.1.0",
     "eslint-config-prettier": "^10.1.1",
-    "eslint-import-resolver-typescript": "^4.3.1",
+    "eslint-import-resolver-typescript": "^4.3.2",
     "eslint-import-resolver-webpack": "^0.13.10",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.2.6",
@@ -34,14 +34,14 @@
     "playwright-core": "^1.51.1",
     "playwright-watch": "^1.3.23",
     "prettier": "^3.5.3",
-    "typescript": "~5.8.2"
+    "typescript": "~5.8.3"
   },
   "dependencies": {
     "@effect-app-boilerplate/api": "workspace:*",
-    "@effect/platform-node": "0.76.9",
-    "effect-app": "^2.38.1",
-    "@effect/platform": "^0.80.5",
-    "effect": "^3.14.5",
+    "@effect/platform-node": "0.76.11",
+    "effect-app": "^2.38.4",
+    "@effect/platform": "^0.80.6",
+    "effect": "^3.14.6",
     "cross-fetch": "^4.1.0"
   }
 }
