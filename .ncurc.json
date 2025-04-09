@@ -7,7 +7,6 @@
     "redis",
     "@types/redis",
     "eslint-plugin-codegen",
-    "vue-toastification",
-    "@opentelemetry/*"
+    "vue-toastification"
   ]
 }
