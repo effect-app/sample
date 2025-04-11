@@ -99,6 +99,7 @@
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@ben_12/eslint-plugin-dprint": "^1.1.2",
     "@dprint/typescript": "^0.94.0",
     "@effect-app/cli": "^1.18.4",
     "@effect-app/eslint-codegen-model": "^1.36.2",

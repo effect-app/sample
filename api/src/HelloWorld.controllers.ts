@@ -14,28 +14,27 @@ export default Router(HelloWorldRsc)({
     const userRepo = yield* UserRepo
 
     return matchFor(HelloWorldRsc)({
-      GetHelloWorld: ({ echo }) =>
-        Effect.gen(function*() {
-          const context = yield* getRequestContext
-          const test = yield* Test
-          console.log({ test })
-          return yield* userRepo
-            .tryGetCurrentUser
-            .pipe(
-              Effect.catchTags({
-                "NotLoggedInError": () => Effect.succeed(null),
-                "NotFoundError": () => Effect.succeed(null)
-              }),
-              Effect.andThen((user) =>
-                new GetHelloWorld.success({
-                  context,
-                  echo,
-                  currentUser: user,
-                  randomUser: generate(S.A.make(User)).value
-                })
-              )
+      GetHelloWorld: Effect.fnUntraced(function*({ echo }) {
+        const context = yield* getRequestContext
+        const test = yield* Test
+        console.log({ test })
+        return yield* userRepo
+          .tryGetCurrentUser
+          .pipe(
+            Effect.catchTags({
+              "NotLoggedInError": () => Effect.succeed(null),
+              "NotFoundError": () => Effect.succeed(null)
+            }),
+            Effect.andThen((user) =>
+              new GetHelloWorld.success({
+                context,
+                echo,
+                currentUser: user,
+                randomUser: generate(S.A.make(User)).value
+              })
             )
-        })
+          )
+      })
     })
   })
 })
