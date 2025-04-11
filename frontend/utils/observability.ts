@@ -1,7 +1,6 @@
 import { layer } from "@effect/opentelemetry/WebSdk"
 import { OTLPTraceExporter } from "@opentelemetry/exporter-trace-otlp-http"
 import { BatchSpanProcessor } from "@opentelemetry/sdk-trace-web"
-import type * as Resources from "@opentelemetry/resources"
 import * as Sentry from "@sentry/vue"
 import { browserTracingIntegration } from "@sentry/browser"
 import {
@@ -9,7 +8,7 @@ import {
   SentryPropagator,
 } from "@sentry/opentelemetry-node"
 import type { App } from "vue"
-import otelApi from "@opentelemetry/api"
+import * as OtelApi from "@opentelemetry/api"
 import { isErrorSilenced } from "effect-app/client/errors"
 import { Layer, Effect } from "effect-app"
 
@@ -95,7 +94,7 @@ export const setupSentry = (app: App<Element>, isRemote: boolean) => {
 export const WebSdkLive = (resource: {
   readonly serviceName: string
   readonly serviceVersion: string
-  readonly attributes: Resources.ResourceAttributes
+  readonly attributes: OtelApi.Attributes
 }) =>
   layer(() => ({
     resource,
@@ -114,14 +113,14 @@ export const SentrySdkLive = (
   resource: {
     readonly serviceName: string
     readonly serviceVersion: string
-    readonly attributes: Resources.ResourceAttributes
+    readonly attributes: OtelApi.Attributes
   },
   _env: string,
 ) =>
   Layer.merge(
     Layer.effectDiscard(
       Effect.sync(() => {
-        otelApi.propagation.setGlobalPropagator(new SentryPropagator())
+        OtelApi.propagation.setGlobalPropagator(new SentryPropagator())
       }),
     ),
     layer(() => ({
