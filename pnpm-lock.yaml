@@ -14,13 +14,13 @@ overrides:
   '@opentelemetry/sdk-trace-base': ^2.0.0
   '@opentelemetry/sdk-trace-node': ^2.0.0
   '@opentelemetry/sdk-trace-web': ^2.0.0
-  '@opentelemetry/semantic-conventions': ^1.30.0
+  '@opentelemetry/semantic-conventions': ^1.32.0
   date-fns: ^4.1.0
-  effect: 3.14.7
-  '@effect/experimental': 0.44.7
-  '@effect/opentelemetry': 0.46.0
-  '@effect/platform': 0.80.7
-  '@effect/platform-node': 0.76.12
+  effect: 3.14.8
+  '@effect/experimental': 0.44.8
+  '@effect/opentelemetry': 0.46.1
+  '@effect/platform': 0.80.8
+  '@effect/platform-node': 0.76.16
   fast-check: ^4.1.1
   vue: ^3.5.13
 
@@ -52,17 +52,17 @@ importers:
   .:
     dependencies:
       '@effect/experimental':
-        specifier: 0.44.7
-        version: 0.44.7(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(ioredis@5.6.0)
+        specifier: 0.44.8
+        version: 0.44.8(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(ioredis@5.6.0)
       '@effect/opentelemetry':
-        specifier: 0.46.0
-        version: 0.46.0(@opentelemetry/api@1.9.0)(@opentelemetry/resources@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-logs@0.200.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-node@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-web@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.30.0)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+        specifier: 0.46.1
+        version: 0.46.1(@opentelemetry/api@1.9.0)(@opentelemetry/resources@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-logs@0.200.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-node@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-web@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.32.0)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
       '@effect/platform':
-        specifier: 0.80.7
-        version: 0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+        specifier: 0.80.8
+        version: 0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
       '@effect/platform-node':
-        specifier: 0.76.12
-        version: 0.76.12(b22f5f650ff0b23a7dd1c6e9c6d5ae09)
+        specifier: 0.76.16
+        version: 0.76.16(d12f57c57a0014cc83880bd6b84e8ca6)
       '@opentelemetry/api':
         specifier: ^1.9
         version: 1.9.0
@@ -91,8 +91,8 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/semantic-conventions':
-        specifier: ^1.30.0
-        version: 1.30.0
+        specifier: ^1.32.0
+        version: 1.32.0
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
@@ -100,8 +100,8 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0
       effect:
-        specifier: 3.14.7
-        version: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+        specifier: 3.14.8
+        version: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
       fast-check:
         specifier: ^4.1.1
         version: 4.1.1
@@ -113,10 +113,10 @@ importers:
         version: 8.0.0
       vite-node:
         specifier: ^3.1.1
-        version: 3.1.1(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
+        version: 3.1.1(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
       vite-tsconfig-paths:
         specifier: ^5.1.4
-        version: 5.1.4(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))
+        version: 5.1.4(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
@@ -131,8 +131,8 @@ importers:
         specifier: ^1.18.4
         version: 1.18.4
       '@effect-app/eslint-codegen-model':
-        specifier: ^1.36.2
-        version: 1.36.2(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(eslint@9.24.0(jiti@2.4.2))(fp-ts@2.16.9)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
+        specifier: ^1.36.3
+        version: 1.36.3(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(eslint@9.24.0(jiti@2.4.2))(fp-ts@2.16.9)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
       '@effect/language-service':
         specifier: ^0.6.0
         version: 0.6.0
@@ -146,8 +146,8 @@ importers:
         specifier: ^4.17.16
         version: 4.17.16
       '@types/node':
-        specifier: ~22.14.0
-        version: 22.14.0
+        specifier: ~22.14.1
+        version: 22.14.1
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.29.1
         version: 8.29.1(@typescript-eslint/parser@8.29.1(eslint@9.24.0(jiti@2.4.2))(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(eslint@9.24.0(jiti@2.4.2))(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
@@ -170,8 +170,8 @@ importers:
         specifier: ^0.49.1
         version: 0.49.1
       effect-app:
-        specifier: ^2.38.4
-        version: 2.38.4(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+        specifier: ^2.39.0
+        version: 2.39.0(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
       enhanced-resolve:
         specifier: ^5.18.1
         version: 5.18.1
@@ -212,8 +212,8 @@ importers:
         specifier: ^3.1.9
         version: 3.1.9
       npm-check-updates:
-        specifier: ^17.1.16
-        version: 17.1.16
+        specifier: ^17.1.18
+        version: 17.1.18
       prebuild-install:
         specifier: ^7.1.3
         version: 7.1.3
@@ -236,11 +236,11 @@ importers:
         specifier: ^19.1.2
         version: 19.1.2(@nuxt/kit@3.16.2(magicast@0.3.5))(@vueuse/core@13.1.0(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))))
       vite:
-        specifier: ^6.2.5
-        version: 6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
+        specifier: ^6.2.6
+        version: 6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
       vitest:
         specifier: ^3.1.1
-        version: 3.1.1(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
+        version: 3.1.1(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
 
   api:
     dependencies:
@@ -257,26 +257,26 @@ importers:
         specifier: ^12.27.0
         version: 12.27.0
       '@effect-app/infra':
-        specifier: 2.53.1
-        version: 2.53.1(2a1e79d4ee449e770aab07807393b72b)
+        specifier: 2.53.3
+        version: 2.53.3(067893428caf52716416eb7507e9b4aa)
       '@effect/opentelemetry':
-        specifier: 0.46.0
-        version: 0.46.0(@opentelemetry/api@1.9.0)(@opentelemetry/resources@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-logs@0.200.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-node@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-web@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.30.0)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+        specifier: 0.46.1
+        version: 0.46.1(@opentelemetry/api@1.9.0)(@opentelemetry/resources@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-logs@0.200.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-node@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-web@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.32.0)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
       '@effect/platform':
-        specifier: 0.80.7
-        version: 0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+        specifier: 0.80.8
+        version: 0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
       '@effect/platform-node':
-        specifier: 0.76.12
-        version: 0.76.12(b22f5f650ff0b23a7dd1c6e9c6d5ae09)
+        specifier: 0.76.16
+        version: 0.76.16(d12f57c57a0014cc83880bd6b84e8ca6)
       '@effect/rpc':
-        specifier: ^0.55.10
-        version: 0.55.10(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+        specifier: ^0.55.11
+        version: 0.55.11(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
       '@effect/rpc-http':
         specifier: ^0.52.4
-        version: 0.52.4(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+        version: 0.52.4(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
       '@effect/vitest':
-        specifier: ^0.20.7
-        version: 0.20.7(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(vitest@3.1.1(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))
+        specifier: ^0.20.8
+        version: 0.20.8(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(vitest@3.1.1(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))
       '@formatjs/cli':
         specifier: ^6.6.3
         version: 6.6.3(@vue/compiler-core@3.5.13)(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
@@ -303,7 +303,7 @@ importers:
         version: 9.12.0
       '@sentry/opentelemetry':
         specifier: ^9.12.0
-        version: 9.12.0(@opentelemetry/api@1.9.0)(@opentelemetry/context-async-hooks@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.30.0)
+        version: 9.12.0(@opentelemetry/api@1.9.0)(@opentelemetry/context-async-hooks@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.32.0)
       connect:
         specifier: ^3.7.0
         version: 3.7.0
@@ -317,14 +317,14 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0
       dotenv:
-        specifier: ^16.4.7
-        version: 16.4.7
+        specifier: ^16.5.0
+        version: 16.5.0
       effect:
-        specifier: 3.14.7
-        version: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+        specifier: 3.14.8
+        version: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
       effect-app:
-        specifier: ^2.38.4
-        version: 2.38.4(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+        specifier: ^2.39.0
+        version: 2.39.0(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
       express:
         specifier: ^5.1.0
         version: 5.1.0
@@ -405,33 +405,33 @@ importers:
         specifier: workspace:*
         version: link:../api
       '@effect/platform':
-        specifier: 0.80.7
-        version: 0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+        specifier: 0.80.8
+        version: 0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
       '@effect/platform-node':
-        specifier: 0.76.12
-        version: 0.76.12(b22f5f650ff0b23a7dd1c6e9c6d5ae09)
+        specifier: 0.76.16
+        version: 0.76.16(d12f57c57a0014cc83880bd6b84e8ca6)
       cross-fetch:
         specifier: ^4.1.0
         version: 4.1.0
       effect:
-        specifier: 3.14.7
-        version: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+        specifier: 3.14.8
+        version: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
       effect-app:
-        specifier: ^2.38.4
-        version: 2.38.4(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+        specifier: ^2.39.0
+        version: 2.39.0(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
     devDependencies:
       '@playwright/test':
         specifier: ~1.51.1
         version: 1.51.1
       '@types/node':
-        specifier: ~22.14.0
-        version: 22.14.0
+        specifier: ~22.14.1
+        version: 22.14.1
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
       eslint-config-prettier:
-        specifier: ^10.1.1
-        version: 10.1.1(eslint@9.24.0(jiti@2.4.2))
+        specifier: ^10.1.2
+        version: 10.1.2(eslint@9.24.0(jiti@2.4.2))
       eslint-import-resolver-typescript:
         specifier: ^4.3.2
         version: 4.3.2(eslint-plugin-import@2.31.0)(eslint@9.24.0(jiti@2.4.2))
@@ -443,7 +443,7 @@ importers:
         version: 2.31.0(@typescript-eslint/parser@8.29.1(eslint@9.24.0(jiti@2.4.2))(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(eslint-import-resolver-typescript@4.3.2)(eslint-import-resolver-webpack@0.13.10)(eslint@9.24.0(jiti@2.4.2))
       eslint-plugin-prettier:
         specifier: ^5.2.6
-        version: 5.2.6(@types/eslint@9.6.1)(eslint-config-prettier@10.1.1(eslint@9.24.0(jiti@2.4.2)))(eslint@9.24.0(jiti@2.4.2))(prettier@3.5.3)
+        version: 5.2.6(@types/eslint@9.6.1)(eslint-config-prettier@10.1.2(eslint@9.24.0(jiti@2.4.2)))(eslint@9.24.0(jiti@2.4.2))(prettier@3.5.3)
       eslint-plugin-simple-import-sort:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.24.0(jiti@2.4.2))
@@ -454,8 +454,8 @@ importers:
         specifier: ^4.1.4
         version: 4.1.4(@typescript-eslint/eslint-plugin@8.29.1(@typescript-eslint/parser@8.29.1(eslint@9.24.0(jiti@2.4.2))(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(eslint@9.24.0(jiti@2.4.2))(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(eslint@9.24.0(jiti@2.4.2))
       npm-check-updates:
-        specifier: ^17.1.16
-        version: 17.1.16
+        specifier: ^17.1.18
+        version: 17.1.18
       playwright-core:
         specifier: ^1.51.1
         version: 1.51.1
@@ -472,29 +472,29 @@ importers:
   frontend:
     dependencies:
       '@effect-app/vue':
-        specifier: ^2.39.8
-        version: 2.39.8(c08d7a18dae083cbb8e8e3e6c1f76af7)
+        specifier: ^2.40.0
+        version: 2.40.0(cc01598e71e510a06bf17d5134e1cf6e)
       '@effect/opentelemetry':
-        specifier: 0.46.0
-        version: 0.46.0(@opentelemetry/api@1.9.0)(@opentelemetry/resources@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-logs@0.200.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-node@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-web@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.30.0)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+        specifier: 0.46.1
+        version: 0.46.1(@opentelemetry/api@1.9.0)(@opentelemetry/resources@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-logs@0.200.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-node@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-web@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.32.0)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
       '@effect/platform':
-        specifier: 0.80.7
-        version: 0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+        specifier: 0.80.8
+        version: 0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
       '@effect/platform-browser':
-        specifier: ^0.59.7
-        version: 0.59.7(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+        specifier: ^0.59.8
+        version: 0.59.8(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
       '@effect/rpc':
-        specifier: ^0.55.10
-        version: 0.55.10(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+        specifier: ^0.55.11
+        version: 0.55.11(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
       '@effect/rpc-http':
         specifier: ^0.52.4
-        version: 0.52.4(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+        version: 0.52.4(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
       '@formatjs/intl':
         specifier: 3.1.6
         version: 3.1.6(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
       '@hebilicious/vue-query-nuxt':
         specifier: ^0.3.0
-        version: 0.3.0(patch_hash=3a47c9acff9a26d4adf642cf2f9e201793131837bcf0fba32e1d15545f8fcbc6)(@tanstack/vue-query@5.72.1(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))))(nuxt@3.16.2(@azure/cosmos@4.3.0)(@azure/storage-blob@12.27.0)(@parcel/watcher@2.5.1)(@types/node@22.14.0)(db0@0.3.1)(eslint@9.24.0(jiti@2.4.2))(ioredis@5.6.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.36.0)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(yaml@2.7.0))
+        version: 0.3.0(patch_hash=3a47c9acff9a26d4adf642cf2f9e201793131837bcf0fba32e1d15545f8fcbc6)(@tanstack/vue-query@5.73.0(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))))(nuxt@3.16.2(@azure/cosmos@4.3.0)(@azure/storage-blob@12.27.0)(@parcel/watcher@2.5.1)(@types/node@22.14.1)(db0@0.3.1)(eslint@9.24.0(jiti@2.4.2))(ioredis@5.6.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.36.0)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(yaml@2.7.0))
       '@opentelemetry/context-zone':
         specifier: ^2.0.0
         version: 2.0.0(@opentelemetry/api@1.9.0)
@@ -515,10 +515,10 @@ importers:
         version: 9.12.0
       '@sentry/opentelemetry':
         specifier: ^9.12.0
-        version: 9.12.0(@opentelemetry/api@1.9.0)(@opentelemetry/context-async-hooks@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.200.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.30.0)
+        version: 9.12.0(@opentelemetry/api@1.9.0)(@opentelemetry/context-async-hooks@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.200.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.32.0)
       '@sentry/opentelemetry-node':
         specifier: ^7.114.0
-        version: 7.114.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.30.0)
+        version: 7.114.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.32.0)
       '@sentry/tracing':
         specifier: ^7.120.3
         version: 7.120.3
@@ -529,17 +529,17 @@ importers:
         specifier: ^9.12.0
         version: 9.12.0(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       '@tanstack/vue-query':
-        specifier: ^5.72.1
-        version: 5.72.1(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
+        specifier: ^5.73.0
+        version: 5.73.0(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       '@tanstack/vue-query-devtools':
-        specifier: ^5.72.1
-        version: 5.72.1(@tanstack/vue-query@5.72.1(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
+        specifier: ^5.73.0
+        version: 5.73.0(@tanstack/vue-query@5.73.0(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       '@vueuse/core':
         specifier: ^13.1.0
         version: 13.1.0(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       '@vueuse/nuxt':
         specifier: ^13.1.0
-        version: 13.1.0(magicast@0.3.5)(nuxt@3.16.2(@azure/cosmos@4.3.0)(@azure/storage-blob@12.27.0)(@parcel/watcher@2.5.1)(@types/node@22.14.0)(db0@0.3.1)(eslint@9.24.0(jiti@2.4.2))(ioredis@5.6.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.36.0)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
+        version: 13.1.0(magicast@0.3.5)(nuxt@3.16.2(@azure/cosmos@4.3.0)(@azure/storage-blob@12.27.0)(@parcel/watcher@2.5.1)(@types/node@22.14.1)(db0@0.3.1)(eslint@9.24.0(jiti@2.4.2))(ioredis@5.6.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.36.0)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       cookie:
         specifier: ^1.0.2
         version: 1.0.2
@@ -547,11 +547,11 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0
       effect:
-        specifier: 3.14.7
-        version: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+        specifier: 3.14.8
+        version: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
       effect-app:
-        specifier: ^2.38.4
-        version: 2.38.4(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+        specifier: ^2.39.0
+        version: 2.39.0(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
       highcharts:
         specifier: ^12.2.0
         version: 12.2.0
@@ -606,7 +606,7 @@ importers:
         version: 1.15.1
       nuxt:
         specifier: ~3.16.2
-        version: 3.16.2(@azure/cosmos@4.3.0)(@azure/storage-blob@12.27.0)(@parcel/watcher@2.5.1)(@types/node@22.14.0)(db0@0.3.1)(eslint@9.24.0(jiti@2.4.2))(ioredis@5.6.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.36.0)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(yaml@2.7.0)
+        version: 3.16.2(@azure/cosmos@4.3.0)(@azure/storage-blob@12.27.0)(@parcel/watcher@2.5.1)(@types/node@22.14.1)(db0@0.3.1)(eslint@9.24.0(jiti@2.4.2))(ioredis@5.6.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.36.0)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(yaml@2.7.0)
       sass:
         specifier: ^1.86.3
         version: 1.86.3
@@ -910,64 +910,64 @@ packages:
     resolution: {integrity: sha512-zAvMtUAiMaLgJVp7AJf/WVIAQMukwlh+4hiDsRuWrc85Y9kdC+/9LPSaO0WgpzidvG+DdPost7+Q2rGD25MWew==}
     hasBin: true
 
-  '@effect-app/eslint-codegen-model@1.36.2':
-    resolution: {integrity: sha512-OwkmFVDaGZtlb2mZg204aCd+B3PxABs4nSnclWr+KQq0yvq60QVILCQvl53tnXiROsFBiluSAvvytxwp1n/2vQ==}
+  '@effect-app/eslint-codegen-model@1.36.3':
+    resolution: {integrity: sha512-pREtuVTKXByiEjpHIaoYntJUo1IWSVMv4hQQmuv3xThzLN6ryX+PWlfmiUoPZwhrPQKHlkEnMVnpTu7a0IaUQA==}
     peerDependencies:
-      effect: 3.14.7
+      effect: 3.14.8
 
-  '@effect-app/infra@2.53.1':
-    resolution: {integrity: sha512-x4GZ3hKl09VqJWsDr+59Nvma9seIllmlEPK+DWUcLlacFE0PAqyAvilKiHpTgzKsJ2bf/i2I/3eIMuT3D4bRsg==}
+  '@effect-app/infra@2.53.3':
+    resolution: {integrity: sha512-oCWhOQBlIl1w1U8BGiEuYktFyi9BSWFyOia93NS0ebrgoEWbK6ouCrZKpGQYuZAvs9QfJcYdlgKwVOJUTrMCxQ==}
     peerDependencies:
       '@azure/cosmos': ^4.3.0
       '@azure/service-bus': ^7.9.5
-      '@effect/experimental': 0.44.7
-      '@effect/platform': 0.80.7
-      '@effect/rpc': ^0.55.8
+      '@effect/experimental': 0.44.8
+      '@effect/platform': 0.80.8
+      '@effect/rpc': ^0.55.10
       '@effect/rpc-http': ^0.52.4
-      '@effect/sql': ^0.33.6
-      '@effect/vitest': ^0.20.6
+      '@effect/sql': ^0.33.7
+      '@effect/vitest': ^0.20.7
       '@sendgrid/helpers': ^8.0.0
-      '@sendgrid/mail': ^8.1.4
-      effect: 3.14.7
+      '@sendgrid/mail': ^8.1.5
+      effect: 3.14.8
       express: ^5.1.0
       redis: ^3.1.2
       redlock: ^4.2.0
 
-  '@effect-app/vue@2.39.8':
-    resolution: {integrity: sha512-BIq1Q50BJA4ers0ayXBfWsIvxxu4WPd44hR8djuvcT1GLMtDsV8+4MtlyiseagwjrbazUr6cCsP2KA2dW4RzCw==}
+  '@effect-app/vue@2.40.0':
+    resolution: {integrity: sha512-NvgLWJr2H5Uz3WtbjOhyHFzZEBGEiXPPoEUW5Kq5X/P2sTDDgdy0apqC6Do5xCAOHh57q4jaYGELGU1j6Utyhw==}
     peerDependencies:
-      '@effect-rx/rx': ^0.34.9
-      '@effect-rx/rx-vue': ^0.11.9
-      '@effect/platform': 0.80.7
-      '@effect/platform-browser': ^0.59.6
-      '@sentry/browser': ^9.11.0
-      effect: 3.14.7
+      '@effect-rx/rx': ^0.34.14
+      '@effect-rx/rx-vue': ^0.11.14
+      '@effect/platform': 0.80.8
+      '@effect/platform-browser': ^0.59.7
+      '@sentry/browser': ^9.12.0
+      effect: 3.14.8
       vue: ^3.5.13
 
   '@effect-rx/rx-vue@0.11.8':
     resolution: {integrity: sha512-gGKu6FPHvhXQ60YDTdNjXVZKhJy5j2w1DuelTwqHjC1/sNY+2ZTUCCHohs8RJDYf43h3ELofshTf6RNsUxm/8Q==}
     peerDependencies:
-      effect: 3.14.7
+      effect: 3.14.8
       vue: ^3.5.13
 
   '@effect-rx/rx@0.34.8':
     resolution: {integrity: sha512-kAT5WnjfvU+HK5A1gM4kZpvctnbIo1wR8Hf0fNkDO8kdNXjFl51pEjakisHYyevVhOyWKFlvJ3+wCpr/Hoj1JA==}
     peerDependencies:
-      effect: 3.14.7
+      effect: 3.14.8
 
   '@effect/cluster@0.29.0':
     resolution: {integrity: sha512-b3yvrPf2A/0F3zDf2lFR/rSqAvcJ6Pl7DpxZ761pewQJuFmIBzTVAMa2yseT1cHuM5l4H94SqtGmICTescENPw==}
     peerDependencies:
-      '@effect/platform': 0.80.7
+      '@effect/platform': 0.80.8
       '@effect/rpc': ^0.55.0
       '@effect/sql': ^0.33.0
-      effect: 3.14.7
+      effect: 3.14.8
 
-  '@effect/experimental@0.44.7':
-    resolution: {integrity: sha512-13NLtdSHaR3Hef/yU86n+9LC1ERHapYPyCY9EnIVnFucz2bcZzgJ1ZidtzPyuPns9XrrRBcn4ULvgmXsZjr9LQ==}
+  '@effect/experimental@0.44.8':
+    resolution: {integrity: sha512-tUEub9qnt97jqHRevkvu00BJn5kD3sMTab8CNv0GlAQsxjs+kcrj63TNbqhg0jw18/myX/GszDXFQLVv0Wb7GA==}
     peerDependencies:
-      '@effect/platform': 0.80.7
-      effect: 3.14.7
+      '@effect/platform': 0.80.8
+      effect: 3.14.8
       ioredis: ^5
       lmdb: ^3
     peerDependenciesMeta:
@@ -979,8 +979,8 @@ packages:
   '@effect/language-service@0.6.0':
     resolution: {integrity: sha512-qwoxzi3VogP5pYEu+GseK76FFUuktaiJCoFh13/Z2M6hoy45mSN1hvs1Y2JMNG9St7HHiarzQPxF14fGKwjTaQ==}
 
-  '@effect/opentelemetry@0.46.0':
-    resolution: {integrity: sha512-XPjja8HoyN/2lmQRQt1bPuKRRzoUlDvv0cTSYu0zttKOUFMyfFa0a6U2DFL5gFsx9W00/enfp1N4gx8Rc5cO4g==}
+  '@effect/opentelemetry@0.46.1':
+    resolution: {integrity: sha512-yekswfkLrYL8EwBrfZDxZbLxLFx+qENue77M1ja+jbOpwuRJAp6HuBjRmvoIsFZN5XxMfXtNT2YEbNz+QTHO9Q==}
     peerDependencies:
       '@opentelemetry/api': ^1.9
       '@opentelemetry/resources': ^2.0.0
@@ -989,8 +989,8 @@ packages:
       '@opentelemetry/sdk-trace-base': ^2.0.0
       '@opentelemetry/sdk-trace-node': ^2.0.0
       '@opentelemetry/sdk-trace-web': ^2.0.0
-      '@opentelemetry/semantic-conventions': ^1.30.0
-      effect: 3.14.7
+      '@opentelemetry/semantic-conventions': ^1.32.0
+      effect: 3.14.8
     peerDependenciesMeta:
       '@opentelemetry/sdk-logs':
         optional: true
@@ -1003,64 +1003,64 @@ packages:
       '@opentelemetry/sdk-trace-web':
         optional: true
 
-  '@effect/platform-browser@0.59.7':
-    resolution: {integrity: sha512-jegQjvmR1mTneqrcj02WA9e4QB4RpsLeKMYuqknkKu/VvL34rXufR6tCESn7Yvy7PXMdJVPXOtQDKRp6O9XkeA==}
+  '@effect/platform-browser@0.59.8':
+    resolution: {integrity: sha512-PRRSXoT3s/zrLNKKLujvhQ1vH6P88rXSCW0Jc8RNRXN/3DVSCE1WfvAZ8lYD05r6Crj5eTpDctJbUuGvIFuSOw==}
     peerDependencies:
-      '@effect/platform': 0.80.7
-      effect: 3.14.7
+      '@effect/platform': 0.80.8
+      effect: 3.14.8
 
-  '@effect/platform-node-shared@0.30.12':
-    resolution: {integrity: sha512-MuFkubh6PyTAnUvTmUZiX5XmelGDmKPgyA9dyAJFaGmh9+x3ZzzQjjXKRK3D8t2gHQdynNONODHqSx7RUHkODg==}
+  '@effect/platform-node-shared@0.30.16':
+    resolution: {integrity: sha512-SrE+IxHw7RkegCdH9siqKjkAvyip0HKGpEpWwPsES0qAeQ+ztzOTRAjkzVPhdYSaA4TTemcdtrxr/ciIT6VqOw==}
     peerDependencies:
-      '@effect/cluster': ^0.29.12
-      '@effect/platform': 0.80.7
-      '@effect/rpc': ^0.55.10
-      '@effect/sql': ^0.33.7
-      effect: 3.14.7
+      '@effect/cluster': ^0.29.16
+      '@effect/platform': 0.80.8
+      '@effect/rpc': ^0.55.11
+      '@effect/sql': ^0.33.8
+      effect: 3.14.8
 
-  '@effect/platform-node@0.76.12':
-    resolution: {integrity: sha512-w+n1ZAjMV17LNJrXNEudkTIF2Nx/KG7l8B6FrgLaCJkDN+SxyFvYcf7BLMbTnAo/JdJF7sKtBBDm8ni1u4gqFQ==}
+  '@effect/platform-node@0.76.16':
+    resolution: {integrity: sha512-/fjNaI96uiRUKSFhoWZSQkGPhv00nrVgrOEHmtHccMPR394OZrJ9MYqKoZmqRICbLJUqlz1lnPMkvthhWvkXCg==}
     peerDependencies:
-      '@effect/cluster': ^0.29.12
-      '@effect/platform': 0.80.7
-      '@effect/rpc': ^0.55.10
-      '@effect/sql': ^0.33.7
-      effect: 3.14.7
+      '@effect/cluster': ^0.29.16
+      '@effect/platform': 0.80.8
+      '@effect/rpc': ^0.55.11
+      '@effect/sql': ^0.33.8
+      effect: 3.14.8
 
-  '@effect/platform@0.80.7':
-    resolution: {integrity: sha512-hWgZJz4rWn6y/HgR91gtGUIXr0oqICDV5NlAdp6MjR20y805U1DeiI3ZkDkzgmEbIR/5ciz8nmPf+a08PVyLPg==}
+  '@effect/platform@0.80.8':
+    resolution: {integrity: sha512-iNHMioRWJSBGElFVhKiE23eO16N2tyDQBvYFKwqxg1/O+aGeOeo1EA7BI0YTyUcQ4pBvMI+1QiLJlskB+UV/6g==}
     peerDependencies:
-      effect: 3.14.7
+      effect: 3.14.8
 
   '@effect/rpc-http@0.52.4':
     resolution: {integrity: sha512-QpIaTlqo5zYO+ujFqMMv3g/9y4CByuez7taMFCL+2mihlDCKt9s+vIEbxQYzn1r0/ppDYfZ/d5vgEJBpddcgxg==}
     peerDependencies:
-      '@effect/platform': 0.80.7
-      effect: 3.14.7
+      '@effect/platform': 0.80.8
+      effect: 3.14.8
 
   '@effect/rpc@0.54.4':
     resolution: {integrity: sha512-iu3TGWCt4OMH8iKL1ATeROhAxrMF+HdF3NbR5lWls9yWJwBgVU+cps3ZzRbNQhFPWXDGqVuYgmYNY1GKbZgMaw==}
     peerDependencies:
-      '@effect/platform': 0.80.7
-      effect: 3.14.7
+      '@effect/platform': 0.80.8
+      effect: 3.14.8
 
-  '@effect/rpc@0.55.10':
-    resolution: {integrity: sha512-6C63ZsbEUUw6KAJ/Xo/FfR7CLqlWNkYJDw+sY3tifvtzFRw9eamq1QzdpkJFvZBKUHVOtRSiZvWcjEjGWf92ag==}
+  '@effect/rpc@0.55.11':
+    resolution: {integrity: sha512-ynVO22KAyQWXpUMr/gPGtIe1m95tvu4TuBIfID4nu23ZDjvubL30TChlxUq4NjYm0aMTKKpWyfrazm4egIaDrA==}
     peerDependencies:
-      '@effect/platform': 0.80.7
-      effect: 3.14.7
+      '@effect/platform': 0.80.8
+      effect: 3.14.8
 
   '@effect/sql@0.33.0':
     resolution: {integrity: sha512-1VrdyJC5z7rDIH0bm/qigTiIXl+GoP0Bew1oMLjDFpBMudPGPY/o2P89rpzd2ITo6UootyMd5fZlrog77R2uKQ==}
     peerDependencies:
-      '@effect/experimental': 0.44.7
-      '@effect/platform': 0.80.7
-      effect: 3.14.7
+      '@effect/experimental': 0.44.8
+      '@effect/platform': 0.80.8
+      effect: 3.14.8
 
-  '@effect/vitest@0.20.7':
-    resolution: {integrity: sha512-mu2HIObTJwnErJsCXuRb8K2VOMCWfIdEbV8OpJYHj57UkQLdIahKQsl+dwZ0VBTEWSVVOvm9R4cdy4l+fcc6Nw==}
+  '@effect/vitest@0.20.8':
+    resolution: {integrity: sha512-T5qORBRLpIdQXx7EnHis8ZJUV5XbsRVDJDnWRdA87AhACgNEkmd4XUNmfFWwRoaki8sXHjJosYb5kFzINypufw==}
     peerDependencies:
-      effect: 3.14.7
+      effect: 3.14.8
       vitest: ^3.0.0
 
   '@emnapi/core@1.4.0':
@@ -2316,8 +2316,8 @@ packages:
     peerDependencies:
       '@opentelemetry/api': ^1.9
 
-  '@opentelemetry/semantic-conventions@1.30.0':
-    resolution: {integrity: sha512-4VlGgo32k2EQ2wcCY3vEU28A0O13aOtHz3Xt2/2U5FAh9EfhD6t6DqL5Z6yAnRCntbTFDU4YfbpyzSlHNWycPw==}
+  '@opentelemetry/semantic-conventions@1.32.0':
+    resolution: {integrity: sha512-s0OpmpQFSfMrmedAn9Lhg4KWJELHCU6uU9dtIJ28N8UGhf9Y55im5X8fEzwhwDwiSqN+ZPSNrDJF7ivf/AuRPQ==}
     engines: {node: '>=14'}
 
   '@opentelemetry/sql-common@0.40.1':
@@ -2874,7 +2874,7 @@ packages:
       '@opentelemetry/api': ^1.9
       '@opentelemetry/core': 1.x
       '@opentelemetry/sdk-trace-base': ^2.0.0
-      '@opentelemetry/semantic-conventions': ^1.30.0
+      '@opentelemetry/semantic-conventions': ^1.32.0
 
   '@sentry/opentelemetry@9.12.0':
     resolution: {integrity: sha512-jQfI/UmgDDbcWY439r1Jz0Y4mqNn3a2JwruWfCHWzIqQMOgBzkzcp9lbZMx9iU+x1iZTTp9s80Dy5F9nG4KKMQ==}
@@ -2885,7 +2885,7 @@ packages:
       '@opentelemetry/core': ^1.30.1
       '@opentelemetry/instrumentation': ^0.57.1
       '@opentelemetry/sdk-trace-base': ^2.0.0
-      '@opentelemetry/semantic-conventions': ^1.30.0
+      '@opentelemetry/semantic-conventions': ^1.32.0
 
   '@sentry/tracing@7.120.3':
     resolution: {integrity: sha512-B7bqyYFgHuab1Pn7w5KXsZP/nfFo4VDBDdSXDSWYk5+TYJ3IDruO3eJFhOrircfsz4YwazWm9kbeZhkpsHDyHg==}
@@ -2939,20 +2939,20 @@ packages:
     resolution: {integrity: sha512-Wo1iKt2b9OT7d+YGhvEPD3DXvPv2etTusIMhMUoG7fbhmxcXCtIjJDEygy91Y2JFlwGyjqiBPRozme7UD8hoqg==}
     engines: {node: '>=12'}
 
-  '@tanstack/query-core@5.72.1':
-    resolution: {integrity: sha512-nOu0EEkZuJ0BZnYgeaEfo44+psq1jBO7/zp3KudixD4dvgOVerrhAhDEKsWx2N7MxB59mjO4r0ddP/VqWGPK+Q==}
+  '@tanstack/query-core@5.72.2':
+    resolution: {integrity: sha512-fxl9/0yk3mD/FwTmVEf1/H6N5B975H0luT+icKyX566w6uJG0x6o+Yl+I38wJRCaogiMkstByt+seXfDbWDAcA==}
 
-  '@tanstack/query-devtools@5.72.1':
-    resolution: {integrity: sha512-D0vEoQaiVq9ayCqvvxA9XkDq7TIesyPpvgP69arRtt5FQF6n/Hrta4SlkfXC4m9BCvFLlhLDcKGYa2eMQ4ZIIA==}
+  '@tanstack/query-devtools@5.72.2':
+    resolution: {integrity: sha512-mMKnGb+iOhVBcj6jaerCFRpg8pACStdG8hmUBHPtToeZzs4ctjBUL1FajqpVn2WaMxnq8Wya+P3Q5tPFNM9jQw==}
 
-  '@tanstack/vue-query-devtools@5.72.1':
-    resolution: {integrity: sha512-uVHRiULiBlrX+8stPJ6YtM/8br4oOkWCgPpTvSV6EIEMrDrW61johmJgd12wZOXlye3R/Uwo4jte4KEPpIgkAQ==}
+  '@tanstack/vue-query-devtools@5.73.0':
+    resolution: {integrity: sha512-MJPq1yUHiwW1wtfkfUQBrL4jMxTHwxTCaITSO1/HcflcRE9WKl6wQxh1rFTXuPvbHmCGI3EJ+Zq3XlDCXBBeKA==}
     peerDependencies:
-      '@tanstack/vue-query': ^5.72.1
+      '@tanstack/vue-query': ^5.73.0
       vue: ^3.5.13
 
-  '@tanstack/vue-query@5.72.1':
-    resolution: {integrity: sha512-/vLG34Ds2F3x+r6m5sAImPCCRrddQqElu74ne6Izc6Tt9JBjvkgLN53hT/bdWAJE+0IBi7kMRBKNpaCS2Ax2Bg==}
+  '@tanstack/vue-query@5.73.0':
+    resolution: {integrity: sha512-RB0+/jfrjKxJwjVwr5WiKiipCBLJfBym0AKZO7atjB/DmTwccd89SHKsf/a+qc5C9RQ6oNHpAEudz0ANf7oIsA==}
     peerDependencies:
       '@vue/composition-api': ^1.1.2
       vue: ^3.5.13
@@ -3081,8 +3081,8 @@ packages:
   '@types/node-fetch@2.6.12':
     resolution: {integrity: sha512-8nneRWKCg3rMtF69nLQJnOYUcbafYeFSjqkw3jCRLsqkWFlHaoQrr5mXmofFGOx3DKn7UfmBMyov8ySvLRVldA==}
 
-  '@types/node@22.14.0':
-    resolution: {integrity: sha512-Kmpl+z84ILoG+3T/zQFyAJsU6EPTmOCj8/2+83fSN6djd6I4o7uOuGIH6vq3PrjY5BGitSbFuMN18j3iknubbA==}
+  '@types/node@22.14.1':
+    resolution: {integrity: sha512-u0HuPQwe/dHrItgHHpmw3N2fYCR6x4ivMNbPHRkBVP4CvN+kiRrKHWk3i8tXiO/joPwXLMYvF9TTF0eqgHIuOw==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -3181,10 +3181,6 @@ packages:
     resolution: {integrity: sha512-8oI9GwPMQmBryaaxG1tOZdxXVeMDte6NyJA4i7/TWa4fBwgnAXYlIQP+uYOeqAaLJ2JRxlG9CAyL+C+YE9Xknw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@typescript-eslint/scope-manager@8.29.0':
-    resolution: {integrity: sha512-aO1PVsq7Gm+tcghabUpzEnVSFMCU4/nYIgC2GOatJcllvWfnhrgW0ZEbnTxm36QsikmCN1K/6ZgM7fok2I7xNw==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
   '@typescript-eslint/scope-manager@8.29.1':
     resolution: {integrity: sha512-2nggXGX5F3YrsGN08pw4XpMLO1Rgtnn4AzTegC2MDesv6q3QaTU5yU7IbS1tf1IwCR0Hv/1EFygLn9ms6LIpDA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -3207,22 +3203,12 @@ packages:
     resolution: {integrity: sha512-/6cp9yL72yUHAYq9g6DsAU+vVfvQmd1a8KyA81uvfDE21O2DwQ/qxlM4AR8TSdAu+kJLBDrEHKC5/W2/nxsY0A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@typescript-eslint/types@8.29.0':
-    resolution: {integrity: sha512-wcJL/+cOXV+RE3gjCyl/V2G877+2faqvlgtso/ZRbTCnZazh0gXhe+7gbAnfubzN2bNsBtZjDvlh7ero8uIbzg==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
   '@typescript-eslint/types@8.29.1':
     resolution: {integrity: sha512-VT7T1PuJF1hpYC3AGm2rCgJBjHL3nc+A/bhOp9sGMKfi5v0WufsX/sHCFBfNTx2F+zA6qBc/PD0/kLRLjdt8mQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@typescript-eslint/typescript-estree@8.27.0':
     resolution: {integrity: sha512-BnKq8cqPVoMw71O38a1tEb6iebEgGA80icSxW7g+kndx0o6ot6696HjG7NdgfuAVmVEtwXUr3L8R9ZuVjoQL6A==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      typescript: '>=4.8.4 <5.9.0'
-
-  '@typescript-eslint/typescript-estree@8.29.0':
-    resolution: {integrity: sha512-yOfen3jE9ISZR/hHpU/bmNvTtBW1NjRbkSFdZOksL1N+ybPEE7UVGMwqvS6CP022Rp00Sb0tdiIkhSCe6NI8ow==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       typescript: '>=4.8.4 <5.9.0'
@@ -3240,13 +3226,6 @@ packages:
       eslint: ^8.57.0 || ^9.0.0
       typescript: '>=4.8.4 <5.9.0'
 
-  '@typescript-eslint/utils@8.29.0':
-    resolution: {integrity: sha512-gX/A0Mz9Bskm8avSWFcK0gP7cZpbY4AIo6B0hWYFCaIsz750oaiWR4Jr2CI+PQhfW1CpcQr9OlfPS+kMFegjXA==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      eslint: ^8.57.0 || ^9.0.0
-      typescript: '>=4.8.4 <5.9.0'
-
   '@typescript-eslint/utils@8.29.1':
     resolution: {integrity: sha512-QAkFEbytSaB8wnmB+DflhUPz6CLbFWE2SnSCrRMEa+KnXIzDYbpsn++1HGvnfAsUY44doDXmvRkO5shlM/3UfA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -3256,10 +3235,6 @@ packages:
 
   '@typescript-eslint/visitor-keys@8.27.0':
     resolution: {integrity: sha512-WsXQwMkILJvffP6z4U3FYJPlbf/j07HIxmDjZpbNvBJkMfvwXj5ACRkkHwBDvLBbDbtX5TdU64/rcvKJ/vuInQ==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@typescript-eslint/visitor-keys@8.29.0':
-    resolution: {integrity: sha512-Sne/pVz8ryR03NFK21VpN88dZ2FdQXOlq3VIklbrTYEt8yXtRFr9tvUhqvCeKjqYk5FSim37sHbooT6vzBTZcg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@typescript-eslint/visitor-keys@8.29.1':
@@ -4399,8 +4374,8 @@ packages:
     resolution: {integrity: sha512-1gxPBJpI/pcjQhKgIU91II6Wkay+dLcN3M6rf2uwP8hRur3HtQXjVrdAK3sjC0piaEuxzMwjXChcETiJl47lAQ==}
     engines: {node: '>=18'}
 
-  dotenv@16.4.7:
-    resolution: {integrity: sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ==}
+  dotenv@16.5.0:
+    resolution: {integrity: sha512-m/C+AwOAr9/W1UOIZUo232ejMNnJAJtYQjUbHoNTBNTJSvqzzDh7vnrei3o3r3m9blf6ZoDkvcw0VmozNRFJxg==}
     engines: {node: '>=12'}
 
   dprint@0.49.1:
@@ -4420,14 +4395,14 @@ packages:
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
-  effect-app@2.38.4:
-    resolution: {integrity: sha512-rMRUVum24tAmrVoXoDQgWmq0f5UoUcW9/KPsx2exCz7qbvvRUiA54wFl95l6GJy/lkdJwYSGUCWqNlOvAJfJIQ==}
+  effect-app@2.39.0:
+    resolution: {integrity: sha512-/hNwzbQ+8OcNacdkLscwEXlzO/nO45RgBA04xhKuEs0kpuKK72jSOJGXLVp+j3veqO+dxdJrFZTyWpgql0D4IA==}
     peerDependencies:
-      '@effect/platform': 0.80.7
-      effect: 3.14.7
+      '@effect/platform': 0.80.8
+      effect: 3.14.8
 
-  effect@3.14.7:
-    resolution: {integrity: sha512-vAev6B05EYMhh1fpCKsiUdVKmT0ph3TjTTfPno384dLL39tI88OIV2QNkNby506NY1L/w1NIaxcaKGfEw3rPhw==}
+  effect@3.14.8:
+    resolution: {integrity: sha512-cHV6Mc2gb1e6l+CxhCeZm1JOzE4C9Mp7MhqHNFuAcSds2c2f23ZAb1ef4gBRHMIcdJ5sr3KGm+Xn+4z/UByE8w==}
 
   electron-to-chromium@1.5.122:
     resolution: {integrity: sha512-EML1wnwkY5MFh/xUnCvY8FrhUuKzdYhowuZExZOfwJo+Zu9OsNCI23Cgl5y7awy7HrUHSwB1Z8pZX5TI34lsUg==}
@@ -4545,8 +4520,8 @@ packages:
     engines: {node: '>=6.0'}
     hasBin: true
 
-  eslint-config-prettier@10.1.1:
-    resolution: {integrity: sha512-4EQQr6wXwS+ZJSzaR5ZCrYgLxqvUjdXctaEtBqHcbkW944B1NQyO4qpdHQbXBONfwxXdkAY81HH4+LUfrg+zPw==}
+  eslint-config-prettier@10.1.2:
+    resolution: {integrity: sha512-Epgp/EofAUeEpIdZkW60MHKvPyru1ruQJxPL+WIycnaPApuseK0Zpkrh/FwL9oIpQvIhJwV7ptOy0DWUjTlCiA==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
@@ -6116,8 +6091,8 @@ packages:
     resolution: {integrity: sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==}
     engines: {node: '>=0.10.0'}
 
-  npm-check-updates@17.1.16:
-    resolution: {integrity: sha512-9nohkfjLRzLfsLVGbO34eXBejvrOOTuw5tvNammH73KEFG5XlFoi3G2TgjTExHtnrKWCbZ+mTT+dbNeSjASIPw==}
+  npm-check-updates@17.1.18:
+    resolution: {integrity: sha512-bkUy2g4v1i+3FeUf5fXMLbxmV95eG4/sS7lYE32GrUeVgQRfQEk39gpskksFunyaxQgTIdrvYbnuNbO/pSUSqw==}
     engines: {node: ^18.18.0 || >=20.0.0, npm: '>=8.12.1'}
     hasBin: true
 
@@ -7943,8 +7918,8 @@ packages:
       vite:
         optional: true
 
-  vite@6.2.5:
-    resolution: {integrity: sha512-j023J/hCAa4pRIUH6J9HemwYfjB5llR2Ps0CWeikOtdR8+pAURAk0DoJC5/mm9kd+UgdnIy7d6HE4EAvlYhPhA==}
+  vite@6.2.6:
+    resolution: {integrity: sha512-9xpjNl3kR4rVDZgPNdTL0/c6ao4km69a/2ihNQbcANz8RuCOK3hQBmLSJf3bRKVQjVMda+YvizNE8AwvogcPbw==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -8684,12 +8659,12 @@ snapshots:
     dependencies:
       node-watch: 0.7.4
 
-  '@effect-app/eslint-codegen-model@1.36.2(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(eslint@9.24.0(jiti@2.4.2))(fp-ts@2.16.9)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))':
+  '@effect-app/eslint-codegen-model@1.36.3(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(eslint@9.24.0(jiti@2.4.2))(fp-ts@2.16.9)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))':
     dependencies:
       '@babel/generator': 7.27.0
       '@babel/parser': 7.27.0
-      '@typescript-eslint/utils': 8.29.0(eslint@9.24.0(jiti@2.4.2))(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
-      effect: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+      '@typescript-eslint/utils': 8.29.1(eslint@9.24.0(jiti@2.4.2))(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
+      effect: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
       eslint-plugin-codegen: 0.17.0(patch_hash=976e78798a0da613a33b2a0ab43a31863dc355721545f2235e0b4922f2f409d7)
       glob: 8.1.0
       io-ts: 2.2.22(fp-ts@2.16.9)
@@ -8702,23 +8677,23 @@ snapshots:
       - supports-color
       - typescript
 
-  '@effect-app/infra@2.53.1(2a1e79d4ee449e770aab07807393b72b)':
+  '@effect-app/infra@2.53.3(067893428caf52716416eb7507e9b4aa)':
     dependencies:
       '@azure/cosmos': 4.3.0
       '@azure/service-bus': 7.9.5
-      '@effect/experimental': 0.44.7(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(ioredis@5.6.0)
-      '@effect/platform': 0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      '@effect/rpc': 0.55.10(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      '@effect/rpc-http': 0.52.4(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      '@effect/sql': 0.33.0(@effect/experimental@0.44.7(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(ioredis@5.6.0))(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      '@effect/vitest': 0.20.7(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(vitest@3.1.1(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))
+      '@effect/experimental': 0.44.8(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(ioredis@5.6.0)
+      '@effect/platform': 0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      '@effect/rpc': 0.55.11(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      '@effect/rpc-http': 0.52.4(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      '@effect/sql': 0.33.0(@effect/experimental@0.44.8(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(ioredis@5.6.0))(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      '@effect/vitest': 0.20.8(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(vitest@3.1.1(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))
       '@faker-js/faker': 8.4.1
       '@sendgrid/helpers': 8.0.0
       '@sendgrid/mail': 8.1.5
       change-case: 5.4.4
       cross-fetch: 4.1.0
-      effect: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
-      effect-app: 2.38.4(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      effect: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+      effect-app: 2.39.0(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
       express: 5.1.0
       express-oauth2-jwt-bearer: 1.6.1
       fast-check: 4.1.1
@@ -8731,57 +8706,57 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@effect-app/vue@2.39.8(c08d7a18dae083cbb8e8e3e6c1f76af7)':
+  '@effect-app/vue@2.40.0(cc01598e71e510a06bf17d5134e1cf6e)':
     dependencies:
-      '@effect-rx/rx': 0.34.8(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      '@effect-rx/rx-vue': 0.11.8(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
-      '@effect/platform': 0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      '@effect/platform-browser': 0.59.7(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      '@effect-rx/rx': 0.34.8(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      '@effect-rx/rx-vue': 0.11.8(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
+      '@effect/platform': 0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      '@effect/platform-browser': 0.59.8(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
       '@formatjs/intl': 3.1.6(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
       '@sentry/browser': 9.12.0
-      '@tanstack/vue-query': 5.72.1(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
+      '@tanstack/vue-query': 5.73.0(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       '@vueuse/core': 13.1.0(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
-      effect: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
-      effect-app: 2.38.4(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      effect: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+      effect-app: 2.39.0(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
       query-string: 9.1.1
       vue: 3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
     transitivePeerDependencies:
       - '@vue/composition-api'
       - typescript
 
-  '@effect-rx/rx-vue@0.11.8(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
+  '@effect-rx/rx-vue@0.11.8(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
     dependencies:
-      '@effect-rx/rx': 0.34.8(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      effect: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+      '@effect-rx/rx': 0.34.8(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      effect: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
       vue: 3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
 
-  '@effect-rx/rx@0.34.8(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))':
+  '@effect-rx/rx@0.34.8(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))':
     dependencies:
-      effect: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+      effect: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
 
-  '@effect/cluster@0.29.0(5103cb2da2d74efdf7ead897fce1eea8)':
+  '@effect/cluster@0.29.0(0a5a8c995df8e85d959c6876ad9f0c12)':
     dependencies:
-      '@effect/platform': 0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      '@effect/rpc': 0.55.10(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      '@effect/sql': 0.33.0(@effect/experimental@0.44.7(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(ioredis@5.6.0))(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      effect: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+      '@effect/platform': 0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      '@effect/rpc': 0.55.11(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      '@effect/sql': 0.33.0(@effect/experimental@0.44.8(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(ioredis@5.6.0))(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      effect: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
 
-  '@effect/experimental@0.44.7(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(ioredis@5.6.0)':
+  '@effect/experimental@0.44.8(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(ioredis@5.6.0)':
     dependencies:
-      '@effect/platform': 0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      effect: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+      '@effect/platform': 0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      effect: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
       uuid: 11.1.0
     optionalDependencies:
       ioredis: 5.6.0
 
   '@effect/language-service@0.6.0': {}
 
-  '@effect/opentelemetry@0.46.0(@opentelemetry/api@1.9.0)(@opentelemetry/resources@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-logs@0.200.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-node@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-web@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.30.0)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))':
+  '@effect/opentelemetry@0.46.1(@opentelemetry/api@1.9.0)(@opentelemetry/resources@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-logs@0.200.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-node@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-web@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.32.0)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/resources': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
-      effect: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+      '@opentelemetry/semantic-conventions': 1.32.0
+      effect: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
     optionalDependencies:
       '@opentelemetry/sdk-logs': 0.200.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-metrics': 2.0.0(@opentelemetry/api@1.9.0)
@@ -8789,34 +8764,34 @@ snapshots:
       '@opentelemetry/sdk-trace-node': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-web': 2.0.0(@opentelemetry/api@1.9.0)
 
-  '@effect/platform-browser@0.59.7(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))':
+  '@effect/platform-browser@0.59.8(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))':
     dependencies:
-      '@effect/platform': 0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      effect: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+      '@effect/platform': 0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      effect: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
       multipasta: 0.2.5
 
-  '@effect/platform-node-shared@0.30.12(b22f5f650ff0b23a7dd1c6e9c6d5ae09)':
+  '@effect/platform-node-shared@0.30.16(d12f57c57a0014cc83880bd6b84e8ca6)':
     dependencies:
-      '@effect/cluster': 0.29.0(5103cb2da2d74efdf7ead897fce1eea8)
-      '@effect/platform': 0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      '@effect/rpc': 0.55.10(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      '@effect/sql': 0.33.0(@effect/experimental@0.44.7(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(ioredis@5.6.0))(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      '@effect/cluster': 0.29.0(0a5a8c995df8e85d959c6876ad9f0c12)
+      '@effect/platform': 0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      '@effect/rpc': 0.55.11(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      '@effect/sql': 0.33.0(@effect/experimental@0.44.8(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(ioredis@5.6.0))(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
       '@parcel/watcher': 2.5.1
-      effect: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+      effect: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
       multipasta: 0.2.5
       ws: 8.18.1
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
 
-  '@effect/platform-node@0.76.12(b22f5f650ff0b23a7dd1c6e9c6d5ae09)':
+  '@effect/platform-node@0.76.16(d12f57c57a0014cc83880bd6b84e8ca6)':
     dependencies:
-      '@effect/cluster': 0.29.0(5103cb2da2d74efdf7ead897fce1eea8)
-      '@effect/platform': 0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      '@effect/platform-node-shared': 0.30.12(b22f5f650ff0b23a7dd1c6e9c6d5ae09)
-      '@effect/rpc': 0.55.10(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      '@effect/sql': 0.33.0(@effect/experimental@0.44.7(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(ioredis@5.6.0))(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      effect: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+      '@effect/cluster': 0.29.0(0a5a8c995df8e85d959c6876ad9f0c12)
+      '@effect/platform': 0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      '@effect/platform-node-shared': 0.30.16(d12f57c57a0014cc83880bd6b84e8ca6)
+      '@effect/rpc': 0.55.11(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      '@effect/sql': 0.33.0(@effect/experimental@0.44.8(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(ioredis@5.6.0))(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      effect: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
       mime: 3.0.0
       undici: 7.5.0
       ws: 8.18.1
@@ -8824,41 +8799,41 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))':
+  '@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))':
     dependencies:
-      effect: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+      effect: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
       find-my-way-ts: 0.1.5
       msgpackr: 1.11.2
       multipasta: 0.2.5
 
-  '@effect/rpc-http@0.52.4(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))':
+  '@effect/rpc-http@0.52.4(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))':
     dependencies:
-      '@effect/platform': 0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      '@effect/rpc': 0.54.4(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      effect: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+      '@effect/platform': 0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      '@effect/rpc': 0.54.4(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      effect: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
 
-  '@effect/rpc@0.54.4(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))':
+  '@effect/rpc@0.54.4(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))':
     dependencies:
-      '@effect/platform': 0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      effect: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+      '@effect/platform': 0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      effect: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
 
-  '@effect/rpc@0.55.10(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))':
+  '@effect/rpc@0.55.11(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))':
     dependencies:
-      '@effect/platform': 0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      effect: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+      '@effect/platform': 0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      effect: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
 
-  '@effect/sql@0.33.0(@effect/experimental@0.44.7(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(ioredis@5.6.0))(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))':
+  '@effect/sql@0.33.0(@effect/experimental@0.44.8(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(ioredis@5.6.0))(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))':
     dependencies:
-      '@effect/experimental': 0.44.7(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(ioredis@5.6.0)
-      '@effect/platform': 0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      '@opentelemetry/semantic-conventions': 1.30.0
-      effect: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+      '@effect/experimental': 0.44.8(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(ioredis@5.6.0)
+      '@effect/platform': 0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      '@opentelemetry/semantic-conventions': 1.32.0
+      effect: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
       uuid: 11.1.0
 
-  '@effect/vitest@0.20.7(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(vitest@3.1.1(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))':
+  '@effect/vitest@0.20.8(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))(vitest@3.1.1(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))':
     dependencies:
-      effect: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
-      vitest: 3.1.1(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
+      effect: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+      vitest: 3.1.1(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
 
   '@emnapi/core@1.4.0':
     dependencies:
@@ -9121,7 +9096,7 @@ snapshots:
     dependencies:
       '@formatjs/icu-messageformat-parser': 2.11.2
       '@types/json-stable-stringify': 1.2.0
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
       chalk: 4.1.2
       json-stable-stringify: 1.2.1
       tslib: 2.8.1
@@ -9139,14 +9114,14 @@ snapshots:
       protobufjs: 7.4.0
       yargs: 17.7.2
 
-  '@hebilicious/vue-query-nuxt@0.3.0(patch_hash=3a47c9acff9a26d4adf642cf2f9e201793131837bcf0fba32e1d15545f8fcbc6)(@tanstack/vue-query@5.72.1(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))))(nuxt@3.16.2(@azure/cosmos@4.3.0)(@azure/storage-blob@12.27.0)(@parcel/watcher@2.5.1)(@types/node@22.14.0)(db0@0.3.1)(eslint@9.24.0(jiti@2.4.2))(ioredis@5.6.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.36.0)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(yaml@2.7.0))':
+  '@hebilicious/vue-query-nuxt@0.3.0(patch_hash=3a47c9acff9a26d4adf642cf2f9e201793131837bcf0fba32e1d15545f8fcbc6)(@tanstack/vue-query@5.73.0(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))))(nuxt@3.16.2(@azure/cosmos@4.3.0)(@azure/storage-blob@12.27.0)(@parcel/watcher@2.5.1)(@types/node@22.14.1)(db0@0.3.1)(eslint@9.24.0(jiti@2.4.2))(ioredis@5.6.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.36.0)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(yaml@2.7.0))':
     dependencies:
       '@nuxt/kit': 3.16.2(magicast@0.3.5)
-      '@tanstack/vue-query': 5.72.1(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
+      '@tanstack/vue-query': 5.73.0(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       defu: 6.1.4
       esbuild: 0.19.12
       magicast: 0.3.5
-      nuxt: 3.16.2(@azure/cosmos@4.3.0)(@azure/storage-blob@12.27.0)(@parcel/watcher@2.5.1)(@types/node@22.14.0)(db0@0.3.1)(eslint@9.24.0(jiti@2.4.2))(ioredis@5.6.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.36.0)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(yaml@2.7.0)
+      nuxt: 3.16.2(@azure/cosmos@4.3.0)(@azure/storage-blob@12.27.0)(@parcel/watcher@2.5.1)(@types/node@22.14.1)(db0@0.3.1)(eslint@9.24.0(jiti@2.4.2))(ioredis@5.6.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.36.0)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(yaml@2.7.0)
 
   '@humanfs/core@0.19.1': {}
 
@@ -9180,7 +9155,7 @@ snapshots:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
       '@types/yargs': 15.0.19
       chalk: 4.1.2
 
@@ -9313,12 +9288,12 @@ snapshots:
 
   '@nuxt/devalue@2.0.2': {}
 
-  '@nuxt/devtools-kit@2.3.2(magicast@0.3.5)(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))':
+  '@nuxt/devtools-kit@2.3.2(magicast@0.3.5)(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))':
     dependencies:
       '@nuxt/kit': 3.16.2(magicast@0.3.5)
       '@nuxt/schema': 3.16.2
       execa: 8.0.1
-      vite: 6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
+      vite: 6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
     transitivePeerDependencies:
       - magicast
 
@@ -9333,12 +9308,12 @@ snapshots:
       prompts: 2.4.2
       semver: 7.7.1
 
-  '@nuxt/devtools@2.3.2(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
+  '@nuxt/devtools@2.3.2(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
     dependencies:
-      '@nuxt/devtools-kit': 2.3.2(magicast@0.3.5)(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))
+      '@nuxt/devtools-kit': 2.3.2(magicast@0.3.5)(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))
       '@nuxt/devtools-wizard': 2.3.2
       '@nuxt/kit': 3.16.2(magicast@0.3.5)
-      '@vue/devtools-core': 7.7.2(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
+      '@vue/devtools-core': 7.7.2(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       '@vue/devtools-kit': 7.7.2
       birpc: 2.3.0
       consola: 3.4.2
@@ -9363,9 +9338,9 @@ snapshots:
       sirv: 3.0.1
       structured-clone-es: 1.0.0
       tinyglobby: 0.2.12
-      vite: 6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
-      vite-plugin-inspect: 11.0.0(@nuxt/kit@3.16.2(magicast@0.3.5))(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))
-      vite-plugin-vue-tracer: 0.1.3(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
+      vite: 6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
+      vite-plugin-inspect: 11.0.0(@nuxt/kit@3.16.2(magicast@0.3.5))(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))
+      vite-plugin-vue-tracer: 0.1.3(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       which: 5.0.0
       ws: 8.18.1
     transitivePeerDependencies:
@@ -9414,7 +9389,7 @@ snapshots:
       citty: 0.1.6
       consola: 3.4.2
       destr: 2.0.3
-      dotenv: 16.4.7
+      dotenv: 16.5.0
       git-url-parse: 16.0.1
       is-docker: 3.0.0
       ofetch: 1.4.1
@@ -9425,12 +9400,12 @@ snapshots:
     transitivePeerDependencies:
       - magicast
 
-  '@nuxt/vite-builder@3.16.2(@types/node@22.14.0)(eslint@9.24.0(jiti@2.4.2))(magicast@0.3.5)(optionator@0.9.4)(rollup@4.36.0)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(yaml@2.7.0)':
+  '@nuxt/vite-builder@3.16.2(@types/node@22.14.1)(eslint@9.24.0(jiti@2.4.2))(magicast@0.3.5)(optionator@0.9.4)(rollup@4.36.0)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(yaml@2.7.0)':
     dependencies:
       '@nuxt/kit': 3.16.2(magicast@0.3.5)
       '@rollup/plugin-replace': 6.0.2(rollup@4.36.0)
-      '@vitejs/plugin-vue': 5.2.3(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
-      '@vitejs/plugin-vue-jsx': 4.1.2(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
+      '@vitejs/plugin-vue': 5.2.3(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
+      '@vitejs/plugin-vue-jsx': 4.1.2(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       autoprefixer: 10.4.21(postcss@8.5.3)
       consola: 3.4.2
       cssnano: 7.0.6(postcss@8.5.3)
@@ -9456,9 +9431,9 @@ snapshots:
       ufo: 1.5.4
       unenv: 2.0.0-rc.15
       unplugin: 2.2.2
-      vite: 6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
-      vite-node: 3.1.1(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
-      vite-plugin-checker: 0.9.1(eslint@9.24.0(jiti@2.4.2))(optionator@0.9.4)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
+      vite: 6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
+      vite-node: 3.1.1(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
+      vite-plugin-checker: 0.9.1(eslint@9.24.0(jiti@2.4.2))(optionator@0.9.4)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       vue: 3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
       vue-bundle-renderer: 2.1.1
     transitivePeerDependencies:
@@ -9578,24 +9553,24 @@ snapshots:
   '@opentelemetry/core@0.24.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       semver: 7.7.1
 
   '@opentelemetry/core@0.25.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       semver: 7.7.1
 
   '@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
 
   '@opentelemetry/core@2.0.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
 
   '@opentelemetry/exporter-collector@0.25.0(@opentelemetry/api@1.9.0)':
     dependencies:
@@ -9709,14 +9684,14 @@ snapshots:
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-base': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
 
   '@opentelemetry/instrumentation-amqplib@0.46.1(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 1.30.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9725,7 +9700,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9733,7 +9708,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       '@types/aws-lambda': 8.10.147
     transitivePeerDependencies:
       - supports-color
@@ -9744,7 +9719,7 @@ snapshots:
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/propagation-utils': 0.31.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9761,7 +9736,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9770,7 +9745,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 1.30.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       '@types/connect': 3.4.38
     transitivePeerDependencies:
       - supports-color
@@ -9780,7 +9755,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       '@types/connect': 3.4.38
     transitivePeerDependencies:
       - supports-color
@@ -9789,7 +9764,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9819,7 +9794,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 1.30.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9828,7 +9803,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9837,7 +9812,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 1.30.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9846,7 +9821,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9898,7 +9873,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9907,7 +9882,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 1.30.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9916,7 +9891,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9925,7 +9900,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       forwarded-parse: 2.1.2
     transitivePeerDependencies:
       - supports-color
@@ -9935,7 +9910,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 1.30.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       forwarded-parse: 2.1.2
       semver: 7.7.1
     transitivePeerDependencies:
@@ -9946,7 +9921,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
       '@opentelemetry/redis-common': 0.36.2
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9955,7 +9930,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/redis-common': 0.37.0
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9963,7 +9938,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9971,7 +9946,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9979,7 +9954,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9987,7 +9962,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9996,7 +9971,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 1.30.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -10005,7 +9980,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -10027,7 +10002,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       '@types/memcached': 2.2.10
     transitivePeerDependencies:
       - supports-color
@@ -10036,7 +10011,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -10044,7 +10019,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -10053,7 +10028,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 1.30.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -10062,7 +10037,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -10070,7 +10045,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       '@opentelemetry/sql-common': 0.40.1(@opentelemetry/api@1.9.0)
     transitivePeerDependencies:
       - supports-color
@@ -10079,7 +10054,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       '@opentelemetry/sql-common': 0.41.0(@opentelemetry/api@1.9.0)
     transitivePeerDependencies:
       - supports-color
@@ -10088,7 +10063,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       '@types/mysql': 2.15.26
     transitivePeerDependencies:
       - supports-color
@@ -10097,7 +10072,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       '@types/mysql': 2.15.26
     transitivePeerDependencies:
       - supports-color
@@ -10106,7 +10081,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -10114,7 +10089,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -10123,7 +10098,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 1.30.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       '@opentelemetry/sql-common': 0.40.1(@opentelemetry/api@1.9.0)
       '@types/pg': 8.6.1
       '@types/pg-pool': 2.0.6
@@ -10135,7 +10110,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       '@opentelemetry/sql-common': 0.41.0(@opentelemetry/api@1.9.0)
       '@types/pg': 8.6.1
       '@types/pg-pool': 2.0.6
@@ -10156,7 +10131,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
       '@opentelemetry/redis-common': 0.36.2
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -10165,7 +10140,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/redis-common': 0.37.0
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -10174,7 +10149,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/redis-common': 0.37.0
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -10183,7 +10158,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -10191,7 +10166,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -10199,7 +10174,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -10207,7 +10182,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       '@types/tedious': 4.0.14
     transitivePeerDependencies:
       - supports-color
@@ -10216,7 +10191,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       '@types/tedious': 4.0.14
     transitivePeerDependencies:
       - supports-color
@@ -10316,35 +10291,35 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
 
   '@opentelemetry/resource-detector-aws@2.0.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
 
   '@opentelemetry/resource-detector-azure@0.7.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
 
   '@opentelemetry/resource-detector-container@0.7.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
 
   '@opentelemetry/resource-detector-gcp@0.34.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       gcp-metadata: 6.1.1
     transitivePeerDependencies:
       - encoding
@@ -10354,7 +10329,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
 
   '@opentelemetry/sdk-logs@0.200.0(@opentelemetry/api@1.9.0)':
     dependencies:
@@ -10401,7 +10376,7 @@ snapshots:
       '@opentelemetry/sdk-metrics': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-base': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-node': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
     transitivePeerDependencies:
       - supports-color
 
@@ -10410,7 +10385,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
 
   '@opentelemetry/sdk-trace-node@2.0.0(@opentelemetry/api@1.9.0)':
     dependencies:
@@ -10424,9 +10399,9 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-base': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
 
-  '@opentelemetry/semantic-conventions@1.30.0': {}
+  '@opentelemetry/semantic-conventions@1.32.0': {}
 
   '@opentelemetry/sql-common@0.40.1(@opentelemetry/api@1.9.0)':
     dependencies:
@@ -10443,14 +10418,14 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 0.24.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       lodash.merge: 4.6.2
 
   '@opentelemetry/web@0.24.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 0.24.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       '@opentelemetry/tracing': 0.24.0(@opentelemetry/api@1.9.0)
 
   '@oxc-parser/binding-darwin-arm64@0.56.5':
@@ -10827,7 +10802,7 @@ snapshots:
       '@babel/core': 7.26.10
       '@sentry/babel-plugin-component-annotate': 3.3.1
       '@sentry/cli': 2.42.2
-      dotenv: 16.4.7
+      dotenv: 16.5.0
       find-up: 5.0.0
       glob: 9.3.5
       magic-string: 0.30.8
@@ -10919,52 +10894,52 @@ snapshots:
       '@opentelemetry/instrumentation-undici': 0.10.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-base': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       '@prisma/instrumentation': 6.5.0(@opentelemetry/api@1.9.0)
       '@sentry/core': 9.12.0
-      '@sentry/opentelemetry': 9.12.0(@opentelemetry/api@1.9.0)(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.30.0)
+      '@sentry/opentelemetry': 9.12.0(@opentelemetry/api@1.9.0)(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.32.0)
       import-in-the-middle: 1.13.1
     transitivePeerDependencies:
       - supports-color
 
-  '@sentry/opentelemetry-node@7.114.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.30.0)':
+  '@sentry/opentelemetry-node@7.114.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.32.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-base': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       '@sentry/core': 7.114.0
       '@sentry/types': 7.114.0
       '@sentry/utils': 7.114.0
 
-  '@sentry/opentelemetry@9.12.0(@opentelemetry/api@1.9.0)(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.30.0)':
+  '@sentry/opentelemetry@9.12.0(@opentelemetry/api@1.9.0)(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.32.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/context-async-hooks': 1.30.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/core': 1.30.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-base': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       '@sentry/core': 9.12.0
 
-  '@sentry/opentelemetry@9.12.0(@opentelemetry/api@1.9.0)(@opentelemetry/context-async-hooks@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.30.0)':
+  '@sentry/opentelemetry@9.12.0(@opentelemetry/api@1.9.0)(@opentelemetry/context-async-hooks@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.32.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/context-async-hooks': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/core': 1.30.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.57.2(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-base': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       '@sentry/core': 9.12.0
 
-  '@sentry/opentelemetry@9.12.0(@opentelemetry/api@1.9.0)(@opentelemetry/context-async-hooks@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.200.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.30.0)':
+  '@sentry/opentelemetry@9.12.0(@opentelemetry/api@1.9.0)(@opentelemetry/context-async-hooks@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.200.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.0.0(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.32.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/context-async-hooks': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-base': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.30.0
+      '@opentelemetry/semantic-conventions': 1.32.0
       '@sentry/core': 9.12.0
 
   '@sentry/tracing@7.120.3':
@@ -11009,20 +10984,20 @@ snapshots:
     dependencies:
       remove-accents: 0.5.0
 
-  '@tanstack/query-core@5.72.1(patch_hash=326431dd65475dc7786fe66bec64b7ef591bfe6e0e357074739792d7f27c5fc0)': {}
+  '@tanstack/query-core@5.72.2(patch_hash=326431dd65475dc7786fe66bec64b7ef591bfe6e0e357074739792d7f27c5fc0)': {}
 
-  '@tanstack/query-devtools@5.72.1': {}
+  '@tanstack/query-devtools@5.72.2': {}
 
-  '@tanstack/vue-query-devtools@5.72.1(@tanstack/vue-query@5.72.1(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
+  '@tanstack/vue-query-devtools@5.73.0(@tanstack/vue-query@5.73.0(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
     dependencies:
-      '@tanstack/query-devtools': 5.72.1
-      '@tanstack/vue-query': 5.72.1(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
+      '@tanstack/query-devtools': 5.72.2
+      '@tanstack/vue-query': 5.73.0(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       vue: 3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
 
-  '@tanstack/vue-query@5.72.1(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
+  '@tanstack/vue-query@5.73.0(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
     dependencies:
       '@tanstack/match-sorter-utils': 8.19.4
-      '@tanstack/query-core': 5.72.1(patch_hash=326431dd65475dc7786fe66bec64b7ef591bfe6e0e357074739792d7f27c5fc0)
+      '@tanstack/query-core': 5.72.2(patch_hash=326431dd65475dc7786fe66bec64b7ef591bfe6e0e357074739792d7f27c5fc0)
       '@vue/devtools-api': 6.6.4
       vue: 3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
       vue-demi: 0.14.10(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
@@ -11056,15 +11031,15 @@ snapshots:
   '@types/body-parser@1.19.5':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
 
   '@types/bunyan@1.8.11':
     dependencies:
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
 
   '@types/cookie@1.0.0':
     dependencies:
@@ -11072,7 +11047,7 @@ snapshots:
 
   '@types/cors@2.8.17':
     dependencies:
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
 
   '@types/eslint-scope@3.7.7':
     dependencies:
@@ -11088,14 +11063,14 @@ snapshots:
 
   '@types/express-serve-static-core@4.19.6':
     dependencies:
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
       '@types/qs': 6.9.18
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
 
   '@types/express-serve-static-core@5.0.6':
     dependencies:
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
       '@types/qs': 6.9.18
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
@@ -11117,11 +11092,11 @@ snapshots:
 
   '@types/http-proxy@1.17.16':
     dependencies:
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
 
   '@types/is-buffer@2.0.2':
     dependencies:
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
 
   '@types/istanbul-lib-coverage@2.0.6': {}
 
@@ -11143,7 +11118,7 @@ snapshots:
 
   '@types/jsonwebtoken@8.5.9':
     dependencies:
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
 
   '@types/linkify-it@5.0.0': {}
 
@@ -11158,20 +11133,20 @@ snapshots:
 
   '@types/memcached@2.2.10':
     dependencies:
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
 
   '@types/mime@1.3.5': {}
 
   '@types/mysql@2.15.26':
     dependencies:
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
 
   '@types/node-fetch@2.6.12':
     dependencies:
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
       form-data: 4.0.2
 
-  '@types/node@22.14.0':
+  '@types/node@22.14.1':
     dependencies:
       undici-types: 6.21.0
 
@@ -11187,7 +11162,7 @@ snapshots:
 
   '@types/pg@8.6.1':
     dependencies:
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
       pg-protocol: 1.8.0
       pg-types: 2.2.0
 
@@ -11199,19 +11174,19 @@ snapshots:
 
   '@types/redis@2.8.32':
     dependencies:
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
 
   '@types/resolve@1.20.2': {}
 
   '@types/send@0.17.4':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
 
   '@types/serve-static@1.15.7':
     dependencies:
       '@types/http-errors': 2.0.4
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
       '@types/send': 0.17.4
 
   '@types/shimmer@1.2.0': {}
@@ -11227,7 +11202,7 @@ snapshots:
 
   '@types/tedious@4.0.14':
     dependencies:
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
 
   '@types/trusted-types@2.0.7':
     optional: true
@@ -11303,11 +11278,6 @@ snapshots:
       '@typescript-eslint/types': 8.27.0
       '@typescript-eslint/visitor-keys': 8.27.0
 
-  '@typescript-eslint/scope-manager@8.29.0':
-    dependencies:
-      '@typescript-eslint/types': 8.29.0
-      '@typescript-eslint/visitor-keys': 8.29.0
-
   '@typescript-eslint/scope-manager@8.29.1':
     dependencies:
       '@typescript-eslint/types': 8.29.1
@@ -11337,28 +11307,12 @@ snapshots:
 
   '@typescript-eslint/types@8.27.0': {}
 
-  '@typescript-eslint/types@8.29.0': {}
-
   '@typescript-eslint/types@8.29.1': {}
 
   '@typescript-eslint/typescript-estree@8.27.0(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))':
     dependencies:
       '@typescript-eslint/types': 8.27.0
       '@typescript-eslint/visitor-keys': 8.27.0
-      debug: 4.4.0(supports-color@5.5.0)
-      fast-glob: 3.3.3
-      is-glob: 4.0.3
-      minimatch: 9.0.5
-      semver: 7.7.1
-      ts-api-utils: 2.1.0(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
-      typescript: 5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)
-    transitivePeerDependencies:
-      - supports-color
-
-  '@typescript-eslint/typescript-estree@8.29.0(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))':
-    dependencies:
-      '@typescript-eslint/types': 8.29.0
-      '@typescript-eslint/visitor-keys': 8.29.0
       debug: 4.4.0(supports-color@5.5.0)
       fast-glob: 3.3.3
       is-glob: 4.0.3
@@ -11394,17 +11348,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/utils@8.29.0(eslint@9.24.0(jiti@2.4.2))(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))':
-    dependencies:
-      '@eslint-community/eslint-utils': 4.5.1(eslint@9.24.0(jiti@2.4.2))
-      '@typescript-eslint/scope-manager': 8.29.0
-      '@typescript-eslint/types': 8.29.0
-      '@typescript-eslint/typescript-estree': 8.29.0(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
-      eslint: 9.24.0(jiti@2.4.2)
-      typescript: 5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)
-    transitivePeerDependencies:
-      - supports-color
-
   '@typescript-eslint/utils@8.29.1(eslint@9.24.0(jiti@2.4.2))(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))':
     dependencies:
       '@eslint-community/eslint-utils': 4.5.1(eslint@9.24.0(jiti@2.4.2))
@@ -11419,11 +11362,6 @@ snapshots:
   '@typescript-eslint/visitor-keys@8.27.0':
     dependencies:
       '@typescript-eslint/types': 8.27.0
-      eslint-visitor-keys: 4.2.0
-
-  '@typescript-eslint/visitor-keys@8.29.0':
-    dependencies:
-      '@typescript-eslint/types': 8.29.0
       eslint-visitor-keys: 4.2.0
 
   '@typescript-eslint/visitor-keys@8.29.1':
@@ -11503,19 +11441,19 @@ snapshots:
       - rollup
       - supports-color
 
-  '@vitejs/plugin-vue-jsx@4.1.2(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
+  '@vitejs/plugin-vue-jsx@4.1.2(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
     dependencies:
       '@babel/core': 7.26.10
       '@babel/plugin-transform-typescript': 7.27.0(@babel/core@7.26.10)
       '@vue/babel-plugin-jsx': 1.4.0(@babel/core@7.26.10)
-      vite: 6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
+      vite: 6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
       vue: 3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
     transitivePeerDependencies:
       - supports-color
 
-  '@vitejs/plugin-vue@5.2.3(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
+  '@vitejs/plugin-vue@5.2.3(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
     dependencies:
-      vite: 6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
+      vite: 6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
       vue: 3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
 
   '@vitest/expect@3.1.1':
@@ -11525,13 +11463,13 @@ snapshots:
       chai: 5.2.0
       tinyrainbow: 2.0.0
 
-  '@vitest/mocker@3.1.1(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))':
+  '@vitest/mocker@3.1.1(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))':
     dependencies:
       '@vitest/spy': 3.1.1
       estree-walker: 3.0.3
       magic-string: 0.30.17
     optionalDependencies:
-      vite: 6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
+      vite: 6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
 
   '@vitest/pretty-format@3.1.1':
     dependencies:
@@ -11647,14 +11585,14 @@ snapshots:
 
   '@vue/devtools-api@6.6.4': {}
 
-  '@vue/devtools-core@7.7.2(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
+  '@vue/devtools-core@7.7.2(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
     dependencies:
       '@vue/devtools-kit': 7.7.2
       '@vue/devtools-shared': 7.7.2
       mitt: 3.0.1
       nanoid: 5.1.5
       pathe: 2.0.3
-      vite-hot-client: 0.2.4(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))
+      vite-hot-client: 0.2.4(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))
       vue: 3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
     transitivePeerDependencies:
       - vite
@@ -11676,8 +11614,8 @@ snapshots:
   '@vue/eslint-config-prettier@10.2.0(@types/eslint@9.6.1)(eslint@9.24.0(jiti@2.4.2))(prettier@3.5.3)':
     dependencies:
       eslint: 9.24.0(jiti@2.4.2)
-      eslint-config-prettier: 10.1.1(eslint@9.24.0(jiti@2.4.2))
-      eslint-plugin-prettier: 5.2.6(@types/eslint@9.6.1)(eslint-config-prettier@10.1.1(eslint@9.24.0(jiti@2.4.2)))(eslint@9.24.0(jiti@2.4.2))(prettier@3.5.3)
+      eslint-config-prettier: 10.1.2(eslint@9.24.0(jiti@2.4.2))
+      eslint-plugin-prettier: 5.2.6(@types/eslint@9.6.1)(eslint-config-prettier@10.1.2(eslint@9.24.0(jiti@2.4.2)))(eslint@9.24.0(jiti@2.4.2))(prettier@3.5.3)
       prettier: 3.5.3
     transitivePeerDependencies:
       - '@types/eslint'
@@ -11741,13 +11679,13 @@ snapshots:
 
   '@vueuse/metadata@13.1.0': {}
 
-  '@vueuse/nuxt@13.1.0(magicast@0.3.5)(nuxt@3.16.2(@azure/cosmos@4.3.0)(@azure/storage-blob@12.27.0)(@parcel/watcher@2.5.1)(@types/node@22.14.0)(db0@0.3.1)(eslint@9.24.0(jiti@2.4.2))(ioredis@5.6.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.36.0)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
+  '@vueuse/nuxt@13.1.0(magicast@0.3.5)(nuxt@3.16.2(@azure/cosmos@4.3.0)(@azure/storage-blob@12.27.0)(@parcel/watcher@2.5.1)(@types/node@22.14.1)(db0@0.3.1)(eslint@9.24.0(jiti@2.4.2))(ioredis@5.6.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.36.0)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))':
     dependencies:
       '@nuxt/kit': 3.16.2(magicast@0.3.5)
       '@vueuse/core': 13.1.0(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       '@vueuse/metadata': 13.1.0
       local-pkg: 1.1.1
-      nuxt: 3.16.2(@azure/cosmos@4.3.0)(@azure/storage-blob@12.27.0)(@parcel/watcher@2.5.1)(@types/node@22.14.0)(db0@0.3.1)(eslint@9.24.0(jiti@2.4.2))(ioredis@5.6.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.36.0)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(yaml@2.7.0)
+      nuxt: 3.16.2(@azure/cosmos@4.3.0)(@azure/storage-blob@12.27.0)(@parcel/watcher@2.5.1)(@types/node@22.14.1)(db0@0.3.1)(eslint@9.24.0(jiti@2.4.2))(ioredis@5.6.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.36.0)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(yaml@2.7.0)
       vue: 3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
     transitivePeerDependencies:
       - magicast
@@ -12128,7 +12066,7 @@ snapshots:
       chokidar: 4.0.3
       confbox: 0.1.8
       defu: 6.1.4
-      dotenv: 16.4.7
+      dotenv: 16.5.0
       exsolve: 1.0.4
       giget: 2.0.0
       jiti: 2.4.2
@@ -12677,7 +12615,7 @@ snapshots:
     dependencies:
       type-fest: 4.37.0
 
-  dotenv@16.4.7: {}
+  dotenv@16.5.0: {}
 
   dprint@0.49.1:
     optionalDependencies:
@@ -12703,14 +12641,14 @@ snapshots:
 
   ee-first@1.1.1: {}
 
-  effect-app@2.38.4(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)):
+  effect-app@2.39.0(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)):
     dependencies:
-      '@effect/platform': 0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      '@effect/rpc': 0.55.10(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
-      '@effect/rpc-http': 0.52.4(@effect/platform@0.80.7(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      '@effect/platform': 0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      '@effect/rpc': 0.55.11(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
+      '@effect/rpc-http': 0.52.4(@effect/platform@0.80.8(patch_hash=17e8cf7ab52584efff0a7b5a27c0ab3345bcec581602c6ae9e24a660a6d899de)(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)))(effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7))
       '@tsconfig/strictest': 2.0.5
       date-fns: 4.1.0
-      effect: 3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
+      effect: 3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7)
       nanoid: 5.1.5
       path-parser: 6.1.0
       query-string: 9.1.1
@@ -12719,7 +12657,7 @@ snapshots:
       uuid: 11.1.0
       validator: 13.15.0
 
-  effect@3.14.7(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7):
+  effect@3.14.8(patch_hash=0430468793249604ffcae9ce60546b75a22fc9bb31ef117d6059ec71f72aa2d7):
     dependencies:
       '@standard-schema/spec': 1.0.0
       fast-check: 4.1.1
@@ -12918,7 +12856,7 @@ snapshots:
     optionalDependencies:
       source-map: 0.6.1
 
-  eslint-config-prettier@10.1.1(eslint@9.24.0(jiti@2.4.2)):
+  eslint-config-prettier@10.1.2(eslint@9.24.0(jiti@2.4.2)):
     dependencies:
       eslint: 9.24.0(jiti@2.4.2)
 
@@ -13045,7 +12983,7 @@ snapshots:
       prettier-linter-helpers: 1.0.0
       synckit: 0.8.8
 
-  eslint-plugin-prettier@5.2.6(@types/eslint@9.6.1)(eslint-config-prettier@10.1.1(eslint@9.24.0(jiti@2.4.2)))(eslint@9.24.0(jiti@2.4.2))(prettier@3.5.3):
+  eslint-plugin-prettier@5.2.6(@types/eslint@9.6.1)(eslint-config-prettier@10.1.2(eslint@9.24.0(jiti@2.4.2)))(eslint@9.24.0(jiti@2.4.2))(prettier@3.5.3):
     dependencies:
       eslint: 9.24.0(jiti@2.4.2)
       prettier: 3.5.3
@@ -13053,7 +12991,7 @@ snapshots:
       synckit: 0.11.2
     optionalDependencies:
       '@types/eslint': 9.6.1
-      eslint-config-prettier: 10.1.1(eslint@9.24.0(jiti@2.4.2))
+      eslint-config-prettier: 10.1.2(eslint@9.24.0(jiti@2.4.2))
 
   eslint-plugin-simple-import-sort@12.1.1(eslint@9.24.0(jiti@2.4.2)):
     dependencies:
@@ -14066,7 +14004,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -14680,7 +14618,7 @@ snapshots:
 
   normalize-range@0.1.2: {}
 
-  npm-check-updates@17.1.16: {}
+  npm-check-updates@17.1.18: {}
 
   npm-run-path@4.0.1:
     dependencies:
@@ -14699,15 +14637,15 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
 
-  nuxt@3.16.2(@azure/cosmos@4.3.0)(@azure/storage-blob@12.27.0)(@parcel/watcher@2.5.1)(@types/node@22.14.0)(db0@0.3.1)(eslint@9.24.0(jiti@2.4.2))(ioredis@5.6.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.36.0)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(yaml@2.7.0):
+  nuxt@3.16.2(@azure/cosmos@4.3.0)(@azure/storage-blob@12.27.0)(@parcel/watcher@2.5.1)(@types/node@22.14.1)(db0@0.3.1)(eslint@9.24.0(jiti@2.4.2))(ioredis@5.6.0)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.36.0)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(yaml@2.7.0):
     dependencies:
       '@nuxt/cli': 3.24.0(magicast@0.3.5)
       '@nuxt/devalue': 2.0.2
-      '@nuxt/devtools': 2.3.2(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
+      '@nuxt/devtools': 2.3.2(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       '@nuxt/kit': 3.16.2(magicast@0.3.5)
       '@nuxt/schema': 3.16.2
       '@nuxt/telemetry': 2.6.6(magicast@0.3.5)
-      '@nuxt/vite-builder': 3.16.2(@types/node@22.14.0)(eslint@9.24.0(jiti@2.4.2))(magicast@0.3.5)(optionator@0.9.4)(rollup@4.36.0)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(yaml@2.7.0)
+      '@nuxt/vite-builder': 3.16.2(@types/node@22.14.1)(eslint@9.24.0(jiti@2.4.2))(magicast@0.3.5)(optionator@0.9.4)(rollup@4.36.0)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))(yaml@2.7.0)
       '@oxc-parser/wasm': 0.60.0
       '@unhead/vue': 2.0.2(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
       '@vue/shared': 3.5.13
@@ -14766,7 +14704,7 @@ snapshots:
       vue-router: 4.5.0(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)))
     optionalDependencies:
       '@parcel/watcher': 2.5.1
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -15446,7 +15384,7 @@ snapshots:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
       long: 5.3.1
 
   protocols@2.0.2: {}
@@ -16746,27 +16684,27 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite-dev-rpc@1.0.7(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)):
+  vite-dev-rpc@1.0.7(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)):
     dependencies:
       birpc: 2.3.0
-      vite: 6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
-      vite-hot-client: 2.0.4(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))
+      vite: 6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
+      vite-hot-client: 2.0.4(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))
 
-  vite-hot-client@0.2.4(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)):
+  vite-hot-client@0.2.4(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)):
     dependencies:
-      vite: 6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
+      vite: 6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
 
-  vite-hot-client@2.0.4(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)):
+  vite-hot-client@2.0.4(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)):
     dependencies:
-      vite: 6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
+      vite: 6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
 
-  vite-node@3.1.1(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0):
+  vite-node@3.1.1(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0):
     dependencies:
       cac: 6.7.14
       debug: 4.4.0(supports-color@5.5.0)
       es-module-lexer: 1.6.0
       pathe: 2.0.3
-      vite: 6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
+      vite: 6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -16781,7 +16719,7 @@ snapshots:
       - tsx
       - yaml
 
-  vite-plugin-checker@0.9.1(eslint@9.24.0(jiti@2.4.2))(optionator@0.9.4)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))):
+  vite-plugin-checker@0.9.1(eslint@9.24.0(jiti@2.4.2))(optionator@0.9.4)(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue-tsc@2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))):
     dependencies:
       '@babel/code-frame': 7.26.2
       chokidar: 4.0.3
@@ -16791,7 +16729,7 @@ snapshots:
       strip-ansi: 7.1.0
       tiny-invariant: 1.3.3
       tinyglobby: 0.2.12
-      vite: 6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
+      vite: 6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
       vscode-uri: 3.1.0
     optionalDependencies:
       eslint: 9.24.0(jiti@2.4.2)
@@ -16799,7 +16737,7 @@ snapshots:
       typescript: 5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98)
       vue-tsc: 2.2.8(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
 
-  vite-plugin-inspect@11.0.0(@nuxt/kit@3.16.2(magicast@0.3.5))(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)):
+  vite-plugin-inspect@11.0.0(@nuxt/kit@3.16.2(magicast@0.3.5))(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)):
     dependencies:
       ansis: 3.17.0
       debug: 4.4.0(supports-color@5.5.0)
@@ -16809,41 +16747,41 @@ snapshots:
       perfect-debounce: 1.0.0
       sirv: 3.0.1
       unplugin-utils: 0.2.4
-      vite: 6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
-      vite-dev-rpc: 1.0.7(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))
+      vite: 6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
+      vite-dev-rpc: 1.0.7(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))
     optionalDependencies:
       '@nuxt/kit': 3.16.2(magicast@0.3.5)
     transitivePeerDependencies:
       - supports-color
 
-  vite-plugin-vue-tracer@0.1.3(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))):
+  vite-plugin-vue-tracer@0.1.3(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))):
     dependencies:
       estree-walker: 3.0.3
       exsolve: 1.0.4
       magic-string: 0.30.17
       pathe: 2.0.3
       source-map-js: 1.2.1
-      vite: 6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
+      vite: 6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
       vue: 3.5.13(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
 
-  vite-tsconfig-paths@5.1.4(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)):
+  vite-tsconfig-paths@5.1.4(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)):
     dependencies:
       debug: 4.4.0(supports-color@5.5.0)
       globrex: 0.1.2
       tsconfck: 3.1.5(typescript@5.8.3(patch_hash=7af373fd9f312fc5d8a2eaa8d73521d9506fdcc3acb360e7da5ef59524637f98))
     optionalDependencies:
-      vite: 6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
+      vite: 6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0):
+  vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0):
     dependencies:
       esbuild: 0.25.2
       postcss: 8.5.3
       rollup: 4.36.0
     optionalDependencies:
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
       fsevents: 2.3.3
       jiti: 2.4.2
       sass: 1.86.3
@@ -16851,10 +16789,10 @@ snapshots:
       tsx: 4.19.3
       yaml: 2.7.0
 
-  vitest@3.1.1(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0):
+  vitest@3.1.1(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0):
     dependencies:
       '@vitest/expect': 3.1.1
-      '@vitest/mocker': 3.1.1(vite@6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))
+      '@vitest/mocker': 3.1.1(vite@6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))
       '@vitest/pretty-format': 3.1.1
       '@vitest/runner': 3.1.1
       '@vitest/snapshot': 3.1.1
@@ -16870,11 +16808,11 @@ snapshots:
       tinyexec: 0.3.2
       tinypool: 1.0.2
       tinyrainbow: 2.0.0
-      vite: 6.2.5(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
-      vite-node: 3.1.1(@types/node@22.14.0)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
+      vite: 6.2.6(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
+      vite-node: 3.1.1(@types/node@22.14.1)(jiti@2.4.2)(sass@1.86.3)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 22.14.0
+      '@types/node': 22.14.1
     transitivePeerDependencies:
       - jiti
       - less
