@@ -1,5 +1,5 @@
-import { RepoConfig } from "#api/config"
-import { RepoDefault } from "#api/lib/layers"
+import { RepoConfig } from "#config"
+import { RepoDefault } from "#lib/layers"
 import { User, type UserId } from "#models/User"
 import { Model } from "@effect-app/infra"
 import { NotFoundError, NotLoggedInError } from "@effect-app/infra/errors"

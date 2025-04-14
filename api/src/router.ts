@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import * as MW from "#api/lib/middleware"
+import * as MW from "#lib/middleware"
 import { Router } from "@effect-app/infra/api/routing"
 import { reportError } from "@effect-app/infra/errorReporter"
 import { RpcSerialization } from "@effect/rpc"
@@ -28,14 +28,13 @@ const RootRoutes = <E, R>(
       const handleEvents = yield* MW.makeEvents
 
       const middleware = flow(
-        //MW.authTokenFromCookie(secret),
+        // MW.authTokenFromCookie(secret),
         MW.RequestContextMiddleware(),
         MW.gzip,
         MW.cors({
           credentials: true,
           allowedOrigins: env === "demo"
-            ? (origin) =>
-              demoOrigins.includes(origin)
+            ? (origin) => demoOrigins.includes(origin)
             : env === "prod"
             ? prodOrigins
             : localOrigins

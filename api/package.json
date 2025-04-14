@@ -55,14 +55,34 @@
     }
   },
   "imports": {
-    "#api/*": {
+    "#api": {
       "import": {
-        "types": "./dist/*.d.ts",
-        "default": "./dist/*.js"
+        "types": "./dist/api.d.ts",
+        "default": "./dist/api.js"
       },
       "require": {
-        "types": "./dist/*.d.ts",
-        "default": "./_cjs/*.cjs"
+        "types": "./dist/api.d.ts",
+        "default": "./_cjs/api.cjs"
+      }
+    },
+    "#config": {
+      "import": {
+        "types": "./dist/config.d.ts",
+        "default": "./dist/config.js"
+      },
+      "require": {
+        "types": "./dist/config.d.ts",
+        "default": "./_cjs/config.cjs"
+      }
+    },
+    "#lib/*": {
+      "import": {
+        "types": "./dist/lib/*.d.ts",
+        "default": "./dist/lib/*.js"
+      },
+      "require": {
+        "types": "./dist/lib/*.d.ts",
+        "default": "./_cjs/lib/*.cjs"
       }
     },
     "#core/*": {

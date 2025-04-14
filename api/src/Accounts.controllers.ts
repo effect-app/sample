@@ -1,6 +1,6 @@
-import { matchFor, Router } from "#api/lib/routing"
-import { UserRepo } from "#api/services"
+import { matchFor, Router } from "#lib/routing"
 import { AccountsRsc } from "#resources"
+import { UserRepo } from "#services"
 import { Effect } from "effect-app"
 
 export default Router(AccountsRsc)({

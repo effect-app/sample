@@ -1,6 +1,6 @@
-import { matchFor, Router } from "#api/lib/routing"
-import { Operations } from "#api/services"
+import { matchFor, Router } from "#lib/routing"
 import { OperationsRsc } from "#resources"
+import { Operations } from "#services"
 import { Effect } from "effect-app"
 import { OperationsDefault } from "./lib/layers.js"
 
