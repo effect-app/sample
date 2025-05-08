@@ -1,21 +1,59 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import * as MW from "#api/lib/middleware"
+import * as MW from "#lib/middleware"
+import { Router } from "@effect-app/infra/api/routing"
+import { reportError } from "@effect-app/infra/errorReporter"
 import { RpcSerialization } from "@effect/rpc"
-import { Console, Context, Effect, Layer } from "effect-app"
+import { FiberRef, flow } from "effect"
+import { Console, Effect, Layer } from "effect-app"
 import { HttpMiddleware, HttpRouter, HttpServer } from "effect-app/http"
 import { BaseConfig, MergedConfig } from "./config.js"
 import { Events } from "./services.js"
 
-const AllRoutes = HttpRouter
-  .Default
-  .use((router) =>
-    Effect.gen(function*() {
+const prodOrigins: string[] = []
+const demoOrigins: string[] = []
+
+const localOrigins = [
+  "http://localhost:4000"
+]
+
+const RootRoutes = <E, R>(
+  rpcRoutes: Layer<never, E, R>
+) =>
+  HttpRouter
+    .Default
+    .use(Effect.fnUntraced(function*(router) {
       const cfg = yield* BaseConfig
-      yield* router.get("/events", yield* MW.makeEvents)
-      yield* router.get("/.well-known/local/server-health", MW.serverHealth(cfg.apiVersion))
-    })
-  )
-  .pipe(Layer.provide([Events.Default]))
+      const { env } = yield* BaseConfig
+      const rpcRouter = yield* Router.router
+      const handleEvents = yield* MW.makeEvents
+
+      const middleware = flow(
+        // MW.authTokenFromCookie(secret),
+        MW.RequestContextMiddleware(),
+        MW.gzip,
+        MW.cors({
+          credentials: true,
+          allowedOrigins: env === "demo"
+            ? (origin) => demoOrigins.includes(origin)
+            : env === "prod"
+            ? prodOrigins
+            : localOrigins
+        }),
+        // we trust proxy and handle the x-forwarded etc headers
+        HttpMiddleware.xForwardedHeaders
+      )
+
+      yield* router.get(
+        "/.well-known/local/server-health",
+        MW.serverHealth(cfg.apiVersion).pipe(Effect.tapErrorCause(reportError("server-health error")))
+      )
+      yield* router.mountApp(
+        "/rpc",
+        rpcRouter.pipe(middleware)
+      )
+      yield* router.get("/events", handleEvents.pipe(Effect.tapErrorCause(reportError("events error")), middleware))
+    }))
+    .pipe(Layer.provide([Events.Default, Router.Live.pipe(Layer.provide(rpcRoutes))]))
 
 const logServer = Effect
   .gen(function*() {
@@ -27,26 +65,18 @@ const logServer = Effect
   })
   .pipe(Layer.effectDiscard)
 
-export class Test extends Context.Reference<Test>()("test123", { defaultValue: () => "no" }) {}
-
+const ConfigureTracer = Layer.effectDiscard(
+  FiberRef.set(
+    HttpMiddleware.currentTracerDisabledWhen,
+    (r) => r.method === "OPTIONS" || r.url === "/.well-known/local/server-health"
+  )
+)
 export const makeHttpServer = <E, R>(
-  router: Layer<never, E, R>
+  rpcRouter: Layer<never, E, R>
 ) =>
   logServer.pipe(
-    Layer.provide(HttpRouter.Default.unwrap((root) =>
-      root.pipe(
-        Effect.provideService(Test, "yes"),
-        MW.RequestContextMiddleware(),
-        MW.gzip,
-        MW.cors(),
-        // we trust proxy and handle the x-forwarded etc headers
-        HttpMiddleware.xForwardedHeaders,
-        HttpServer.serve(HttpMiddleware.logger)
-      )
-    )),
-    Layer.provide(router),
-    Layer.provide(AllRoutes),
+    Layer.provide(HttpRouter.Default.unwrap(HttpServer.serve(HttpMiddleware.logger))),
+    Layer.provide(RootRoutes(rpcRouter)),
     Layer.provide(RpcSerialization.layerJson),
-    Layer.provide(Layer.succeed(Test, "1"))
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    Layer.provide(ConfigureTracer)
   )

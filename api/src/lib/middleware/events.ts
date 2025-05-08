@@ -1,5 +1,5 @@
-import { Events } from "#api/services"
 import { ClientEvents } from "#resources"
+import { Events } from "#services"
 import { makeSSE } from "@effect-app/infra/api/middlewares"
 import { Effect } from "effect-app"
 

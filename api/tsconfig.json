@@ -16,8 +16,14 @@
       "#models/*": [
         "./src/models/*.js"
       ],
-      "#api/*": [
-        "./src/*.js"
+      "#config": [
+        "./src/config.js"
+      ],
+      "#lib/*": [
+        "./src/lib/.*.js"
+      ],
+      "#services": [
+        "./src/services.js"
       ]
     },
   },

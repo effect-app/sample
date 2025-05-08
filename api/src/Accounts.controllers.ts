@@ -1,15 +1,14 @@
-import { matchFor, Router } from "#api/lib/routing"
-import { UserRepo } from "#api/services"
+import { Router } from "#lib/routing"
 import { AccountsRsc } from "#resources"
-import { Effect } from "effect-app"
+import { UserRepo } from "#services"
 
 export default Router(AccountsRsc)({
   dependencies: [UserRepo.Default],
-  effect: Effect.gen(function*() {
+  *effect(match) {
     const userRepo = yield* UserRepo
 
-    return matchFor(AccountsRsc)({
+    return match({
       GetMe: userRepo.getCurrentUser
     })
-  })
+  }
 })

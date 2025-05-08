@@ -4,13 +4,25 @@ import fs from "fs"
 
 import rootPj from "../package.json"
 
+const getPath = (pack: string) => {
+  const isAbsolute = (rootPj.resolutions as any)[pack].startsWith("file:/")
+  let pathStr = (rootPj.resolutions as any)[pack].replace(
+    "file:",
+    isAbsolute ? "/" : "../",
+  )
+  if (isAbsolute) {
+    const currentPath = __dirname
+    const pathParts = currentPath.split("/")
+    const depth = pathParts.length
+    pathStr = "../".repeat(depth) + pathStr.substring(1)
+  }
+  return fileURLToPath(new URL(pathStr, import.meta.url))
+}
+
 // use `pnpm effa link` in the root project
 // `pnpm effa unlink` to revert
-const a = fs.existsSync("../libs")
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const localLibs = a || !!(rootPj.resolutions as any)["effect-app"]
-
-const b = a ? "../libs" : "../../../effect-app/libs"
+const localLibs = !!(rootPj.resolutions as any)["effect-app"]
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -30,12 +42,10 @@ export default defineNuxtConfig({
     "#models": fileURLToPath(new URL("../api/src/models", import.meta.url)),
     ...(localLibs
       ? {
-          "effect-app": fileURLToPath(
-            new URL(b + "/packages/effect-app/src", import.meta.url),
-          ),
-          "@effect-app/vue": fileURLToPath(
-            new URL(b + "/packages/vue/src", import.meta.url),
-          ),
+          effect: getPath("effect") + "/dist/esm",
+          "effect-app": getPath("effect-app") + "/dist",
+          "@effect-app/vue": getPath("@effect-app/vue") + "/src",
+          "@effect-app/vue-components": getPath("@effect-app/vue-components"),
         }
       : {}),
   },

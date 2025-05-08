@@ -1,4 +1,4 @@
-import { RepoDefault } from "#api/lib/layers"
+import { RepoDefault } from "#lib/layers"
 import { BlogPost } from "#models/Blog"
 import { UserFromIdResolver } from "#models/User"
 import { Model } from "@effect-app/infra"

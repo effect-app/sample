@@ -55,14 +55,34 @@
     }
   },
   "imports": {
-    "#api/*": {
+    "#api": {
       "import": {
-        "types": "./dist/*.d.ts",
-        "default": "./dist/*.js"
+        "types": "./dist/api.d.ts",
+        "default": "./dist/api.js"
       },
       "require": {
-        "types": "./dist/*.d.ts",
-        "default": "./_cjs/*.cjs"
+        "types": "./dist/api.d.ts",
+        "default": "./_cjs/api.cjs"
+      }
+    },
+    "#config": {
+      "import": {
+        "types": "./dist/config.d.ts",
+        "default": "./dist/config.js"
+      },
+      "require": {
+        "types": "./dist/config.d.ts",
+        "default": "./_cjs/config.cjs"
+      }
+    },
+    "#lib/*": {
+      "import": {
+        "types": "./dist/lib/*.d.ts",
+        "default": "./dist/lib/*.js"
+      },
+      "require": {
+        "types": "./dist/lib/*.d.ts",
+        "default": "./_cjs/lib/*.cjs"
       }
     },
     "#core/*": {
@@ -121,40 +141,40 @@
     "@azure/cosmos": "^4.3.0",
     "@azure/service-bus": "^7.9.5",
     "@azure/storage-blob": "^12.27.0",
-    "@effect-app/infra": "2.50.0",
-    "effect-app": "^2.37.0",
-    "@effect/platform": "^0.80.2",
-    "@effect/opentelemetry": "^0.45.2",
-    "@effect/platform-node": "0.76.5",
-    "@effect/rpc": "^0.55.3",
+    "@effect-app/infra": "2.55.1",
+    "effect-app": "^2.40.1",
+    "@effect/platform": "^0.80.20",
+    "@effect/opentelemetry": "^0.46.17",
+    "@effect/platform-node": "0.77.10",
+    "@effect/rpc": "^0.56.8",
     "@effect/rpc-http": "^0.52.4",
-    "@effect/vitest": "^0.20.2",
-    "@formatjs/cli": "^6.6.3",
+    "@effect/vitest": "^0.21.3",
+    "@formatjs/cli": "^6.7.1",
     "@formatjs/intl": "3.1.6",
-    "@mollie/api-client": "^4.2.0",
-    "@opentelemetry/auto-instrumentations-node": "^0.56.1",
-    "@opentelemetry/context-async-hooks": "^1.30.1",
-    "@opentelemetry/sdk-node": "^0.57.2",
-    "@sendgrid/mail": "^8.1.4",
-    "@sentry/node": "^9.10.0",
-    "@sentry/opentelemetry": "^9.10.0",
+    "@mollie/api-client": "^4.3.1",
+    "@opentelemetry/auto-instrumentations-node": "^0.58.1",
+    "@opentelemetry/context-async-hooks": "^2.0.0",
+    "@opentelemetry/sdk-node": "^0.200.0",
+    "@sendgrid/mail": "^8.1.5",
+    "@sentry/node": "9.14.0",
+    "@sentry/opentelemetry": "9.14.0",
     "connect": "^3.7.0",
     "cors": "^2.8.5",
     "cross-fetch": "^4.1.0",
     "date-fns": "^4.1.0",
-    "dotenv": "^16.4.7",
-    "effect": "^3.14.2",
-    "express": "^4.21.2",
+    "dotenv": "^16.5.0",
+    "effect": "^3.14.20",
+    "express": "^5.1.0",
     "express-compression": "^1.0.2",
     "express-oauth2-jwt-bearer": "^1.6.1",
-    "fast-check": "^4.0.0",
+    "fast-check": "^4.1.1",
     "jwks-rsa": "2.1.4",
     "jwt-decode": "^4.0.0",
     "object-hash": "^3.0.0",
     "papaparse": "^5.5.2",
     "redis": "^3.1.2",
     "redlock": "^5.0.0-beta.2",
-    "redoc": "^2.4.0",
+    "redoc": "^2.5.0",
     "redoc-express": "^2.1.0",
     "source-map-support": "^0.5.21",
     "stopwatch-node": "^1.1.0",
@@ -169,6 +189,6 @@
     "@types/redis": "^2.8.32",
     "@types/swagger-ui-express": "^4.1.8",
     "eslint-plugin-formatjs": "^5.3.1",
-    "typescript": "~5.8.2"
+    "typescript": "~5.8.3"
   }
 }
