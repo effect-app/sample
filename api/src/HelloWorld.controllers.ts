@@ -1,4 +1,4 @@
-import { matchFor, Router } from "#lib/routing"
+import { Router } from "#lib/routing"
 import { User } from "#models/User"
 import { HelloWorldRsc } from "#resources"
 import { GetHelloWorld } from "#resources/HelloWorld"
@@ -9,11 +9,11 @@ import { Effect, S } from "effect-app"
 
 export default Router(HelloWorldRsc)({
   dependencies: [UserRepo.Default],
-  effect: Effect.gen(function*() {
+  *effect(match) {
     const userRepo = yield* UserRepo
 
-    return matchFor(HelloWorldRsc)({
-      GetHelloWorld: Effect.fnUntraced(function*({ echo }) {
+    return match({
+      *GetHelloWorld({ echo }) {
         const context = yield* getRequestContext
         return yield* userRepo
           .tryGetCurrentUser
@@ -31,7 +31,7 @@ export default Router(HelloWorldRsc)({
               })
             )
           )
-      })
+      }
     })
-  })
+  }
 })
