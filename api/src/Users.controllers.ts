@@ -1,9 +1,9 @@
 import { Router } from "#lib/routing"
 import { UsersRsc } from "#resources"
 import type { UserView } from "#resources/views"
+import { Q, UserRepo } from "#services"
 import { Array } from "effect"
 import { Effect, Order } from "effect-app"
-import { Q, UserRepo } from "./services.js"
 
 export default Router(UsersRsc)({
   dependencies: [UserRepo.Default],

@@ -2,11 +2,11 @@ import { Router } from "#lib/routing"
 import { BlogPost } from "#models/Blog"
 import { BlogRsc } from "#resources"
 import { BogusEvent } from "#resources/Events"
+import { BlogPostRepo, Events, Operations, UserRepo } from "#services"
 import { Duration, Effect, Schedule } from "effect"
 import { Option } from "effect-app"
 import { NonEmptyString2k, NonNegativeInt } from "effect-app/Schema"
 import { OperationsDefault } from "./lib/layers.js"
-import { BlogPostRepo, Events, Operations, UserRepo } from "./services.js"
 
 export default Router(BlogRsc)({
   dependencies: [

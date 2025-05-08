@@ -2,10 +2,10 @@ import { Router } from "#lib/routing"
 import { User } from "#models/User"
 import { HelloWorldRsc } from "#resources"
 import { GetHelloWorld } from "#resources/HelloWorld"
+import { UserRepo } from "#services"
 import { getRequestContext } from "@effect-app/infra/api/setupRequest"
 import { generate } from "@effect-app/infra/test"
 import { Effect, S } from "effect-app"
-import { UserRepo } from "./services.js"
 
 export default Router(HelloWorldRsc)({
   dependencies: [UserRepo.Default],
