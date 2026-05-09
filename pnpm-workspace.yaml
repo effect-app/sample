@@ -3,13 +3,13 @@ packages:
   - frontend
   - e2e
 allowBuilds:
-  '@parcel/watcher': set this to true or false
-  '@scarf/scarf': set this to true or false
-  '@sentry/cli': set this to true or false
-  better-sqlite3: set this to true or false
-  core-js: set this to true or false
-  dprint: set this to true or false
-  esbuild: set this to true or false
-  msgpackr-extract: set this to true or false
-  protobufjs: set this to true or false
-  vue-demi: set this to true or false
+  '@parcel/watcher': false
+  '@scarf/scarf': false
+  '@sentry/cli': false
+  better-sqlite3: true
+  core-js: false
+  dprint: false
+  esbuild: false
+  msgpackr-extract: false
+  protobufjs: false
+  vue-demi: false
