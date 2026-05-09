@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { clientFor as clientFor_ } from "#resources/lib"
+import { UserViews } from "#resources/resolvers/UserResolver"
 import type { makeIntl } from "@effect-app/vue"
 import { Commander } from "@effect-app/vue/commander"
 import { Confirm } from "@effect-app/vue/confirm"
@@ -32,6 +33,7 @@ export const run = <A, E>(
 export const runSync = <A, E>(effect: Effect.Effect<A, E, RT>) => useRuntime().runSync(effect)
 
 const intlLayer = I18n.toLayer(Effect.sync(useIntl as ReturnType<typeof makeIntl>["useIntl"]))
+
 // TODO: use optional CurrentToastId to auto assign toastId when not null?
 const toastLayer = Toast_.Toast.toLayer(
   Effect.sync(() => {
@@ -50,8 +52,8 @@ const commanderLayer = Commander.Default.pipe(
   Layer.provide([intlLayer, toastLayer])
 )
 
-const globalLayers = Effect.sync(() => useRuntime().globalLayers).pipe(
-  Layer.unwrap
+const globalLayers = Layer.effect(UserViews, UserViews.make()).pipe(
+  Layer.provideMerge(Effect.sync(() => useRuntime().globalLayers).pipe(Layer.unwrap))
 )
 const viewLayers = Layer.mergeAll(Router.Default, intlLayer, toastLayer)
 const provideLayers = Layer

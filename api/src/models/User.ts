@@ -67,7 +67,7 @@ export class User extends S.Opaque<User, User.Encoded>()(S.Struct({
   name: FullName,
   email: S.Email,
   role: Role,
-  passwordHash: S.NonEmptyString255
+//  passwordHash: S.NonEmptyString255
 })) {
   static displayName(this: void, u: User) {
     return S.NonEmptyString2k(`${u.name.firstName} ${u.name.lastName}`)
