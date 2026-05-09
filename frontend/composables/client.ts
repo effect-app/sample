@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { clientFor as clientFor_ } from "#resources/lib"
-import { OperationsClient } from "#resources/Operations"
+import { UserViews } from "#resources/resolvers/UserResolver"
+import type { makeIntl } from "@effect-app/vue"
 import { Commander } from "@effect-app/vue/commander"
 import { Confirm } from "@effect-app/vue/confirm"
 import { I18n } from "@effect-app/vue/intl"
@@ -12,8 +13,6 @@ import { Effect, Layer, ManagedRuntime } from "effect-app"
 import { useToast } from "vue-toastification"
 import type { RT } from "~/plugins/runtime"
 import { useIntl } from "./intl"
-import { UserViews } from "#resources/resolvers/UserResolver"
-import type { makeIntl } from "@effect-app/vue"
 
 export { useToast } from "vue-toastification"
 
@@ -54,8 +53,8 @@ const commanderLayer = Commander.Default.pipe(
 )
 
 const globalLayers = Layer.effect(UserViews, UserViews.make()).pipe(
-  Layer.provideMerge(Effect.sync(() => useRuntime().globalLayers).pipe(Layer.unwrap
-)))
+  Layer.provideMerge(Effect.sync(() => useRuntime().globalLayers).pipe(Layer.unwrap))
+)
 const viewLayers = Layer.mergeAll(Router.Default, intlLayer, toastLayer)
 const provideLayers = Layer
   .mergeAll(
@@ -72,5 +71,3 @@ export const { Command, clientFor } = makeClient(
   clientFor_,
   Router.Default
 )
-
-export const useOperationsClient = () => useRuntime().runSync(OperationsClient)

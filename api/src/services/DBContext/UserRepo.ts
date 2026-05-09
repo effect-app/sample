@@ -5,9 +5,12 @@ import { Model } from "@effect-app/infra"
 import { NotFoundError, NotLoggedInError } from "@effect-app/infra/errors"
 import { generate } from "@effect-app/infra/test"
 import { Array, Context, Effect, Exit, Layer, Option, pipe, Request, RequestResolver, S } from "effect-app"
+import { fakerArb } from "effect-app/faker"
+import { UserProfileId } from "effect-app/ids"
+import { Email } from "effect-app/Schema"
+import fc from "fast-check"
 import { Q } from "../lib.js"
 import { UserProfile } from "../UserProfile.js"
-import { StringId } from "effect-app/Schema"
 
 export interface UserPersistenceModel extends S.Codec.Encoded<typeof User> {
   _etag: string | undefined
@@ -26,16 +29,18 @@ export class UserRepo extends Context.Service<UserRepo>()("UserRepo", {
           .range(1, 8)
           .map((_, i): User => {
             const g = generate(S.toArbitrary(User)).value
-            // const emailArb = fakerArb((_) => () =>
-            //   _
-            //     .internet
-            //     .exampleEmail({ firstName: g.name.firstName, lastName: g.name.lastName })
-            // )
-            return new User({
+            const emailArb = fakerArb((_) => () =>
+              _
+                .internet
+                .exampleEmail({ firstName: g.name.firstName, lastName: g.name.lastName })
+            )
+            const role = i === 0 || i === 1 ? "manager" : "user"
+            return User.make({
               ...g,
-              id: StringId.make(),
-              //email: Email(generate(emailArb(fc)).value),
-              role: i === 0 || i === 1 ? "manager" : "user"
+              id: UserProfileId("fake-user-" + i),
+              name: { firstName: S.NonEmptyString255(`Fake${i}First`), lastName: S.NonEmptyString255(`Fake${i}Last`) },
+              email: Email(generate(emailArb(fc)).value),
+              role
             })
           }),
         Array.toNonEmptyArray,

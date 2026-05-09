@@ -4,6 +4,5 @@ export { ClientEvents } from "./resources/Events.js"
 export * as AccountsRsc from "./resources/Accounts.js"
 export * as BlogRsc from "./resources/Blog.js"
 export * as HelloWorldRsc from "./resources/HelloWorld.js"
-export * as OperationsRsc from "./resources/Operations.js"
 export * as UsersRsc from "./resources/Users.js"
 // codegen:end

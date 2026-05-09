@@ -2,3 +2,14 @@ packages:
   - api
   - frontend
   - e2e
+allowBuilds:
+  '@parcel/watcher': false
+  '@scarf/scarf': false
+  '@sentry/cli': false
+  better-sqlite3: true
+  core-js: false
+  dprint: false
+  esbuild: false
+  msgpackr-extract: false
+  protobufjs: false
+  vue-demi: false
